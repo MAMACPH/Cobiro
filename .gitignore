@@ -5,3 +5,5 @@ vendor
 .DS_Store
 storage
 storage/*
+storage/logs/web.log
+storage/logs/web.log
