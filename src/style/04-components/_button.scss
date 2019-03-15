@@ -1,1 +1,17 @@
+$button-bg: $blue;
+$button-border-radius: 5px;
+$button-border-color: $blue;
+$button-padding-vertical: 0.5em;
+$button-padding-horizontal: 2em;
+
 @import '~baseguide/scss/baseguide/04-components/button';
+
+.btn-large {
+	font-size: 1.5rem;
+	padding: 1rem 2rem;
+}
+
+.btn-secondary {
+	background-color: transparent;
+	color: $blue;
+}
