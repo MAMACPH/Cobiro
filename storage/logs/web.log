@@ -27303,3 +27303,215 @@ $_SERVER = [
     'DB_PORT' => '8889'
     'DEFAULT_SITE_URL' => 'http://localhost:8888'
 ]
+2019-03-15 06:33:00 [-][-][-][info][yii\db\Connection::open] Opening DB connection: mysql:host=localhost;dbname=craft_cobiro;port=8889;
+2019-03-15 06:33:00 [-][-][-][profile begin][yii\db\Connection::open] Opening DB connection: mysql:host=localhost;dbname=craft_cobiro;port=8889;
+2019-03-15 06:33:00 [-][-][-][profile end][yii\db\Connection::open] Opening DB connection: mysql:host=localhost;dbname=craft_cobiro;port=8889;
+2019-03-15 06:33:00 [-][-][-][info][yii\db\Command::query] SHOW TABLES
+2019-03-15 06:33:00 [-][-][-][profile begin][yii\db\Command::query] SHOW TABLES
+2019-03-15 06:33:00 [-][-][-][profile end][yii\db\Command::query] SHOW TABLES
+2019-03-15 06:33:00 [-][-][-][info][yii\db\Command::query] SELECT `s`.`id`, `s`.`groupId`, `s`.`name`, `s`.`handle`, `language`, `s`.`primary`, `s`.`hasUrls`, `s`.`baseUrl`, `s`.`sortOrder`, `s`.`uid`
+FROM `test_sites` `s`
+INNER JOIN `test_sitegroups` `sg` ON `sg`.`id` = `s`.`groupId`
+WHERE (`s`.`dateDeleted` IS NULL) AND (`sg`.`dateDeleted` IS NULL)
+ORDER BY `sg`.`name`, `s`.`sortOrder`
+2019-03-15 06:33:00 [-][-][-][profile begin][yii\db\Command::query] SELECT `s`.`id`, `s`.`groupId`, `s`.`name`, `s`.`handle`, `language`, `s`.`primary`, `s`.`hasUrls`, `s`.`baseUrl`, `s`.`sortOrder`, `s`.`uid`
+FROM `test_sites` `s`
+INNER JOIN `test_sitegroups` `sg` ON `sg`.`id` = `s`.`groupId`
+WHERE (`s`.`dateDeleted` IS NULL) AND (`sg`.`dateDeleted` IS NULL)
+ORDER BY `sg`.`name`, `s`.`sortOrder`
+2019-03-15 06:33:00 [-][-][-][profile end][yii\db\Command::query] SELECT `s`.`id`, `s`.`groupId`, `s`.`name`, `s`.`handle`, `language`, `s`.`primary`, `s`.`hasUrls`, `s`.`baseUrl`, `s`.`sortOrder`, `s`.`uid`
+FROM `test_sites` `s`
+INNER JOIN `test_sitegroups` `sg` ON `sg`.`id` = `s`.`groupId`
+WHERE (`s`.`dateDeleted` IS NULL) AND (`sg`.`dateDeleted` IS NULL)
+ORDER BY `sg`.`name`, `s`.`sortOrder`
+2019-03-15 06:33:00 [-][-][-][info][yii\db\Command::query] SELECT *
+FROM `test_info`
+LIMIT 1
+2019-03-15 06:33:00 [-][-][-][profile begin][yii\db\Command::query] SELECT *
+FROM `test_info`
+LIMIT 1
+2019-03-15 06:33:00 [-][-][-][profile end][yii\db\Command::query] SELECT *
+FROM `test_info`
+LIMIT 1
+2019-03-15 06:33:00 [-][-][-][info][yii\web\Session::open] Session started
+2019-03-15 06:33:00 [-][-][-][info][yii\db\Command::query] SELECT `id`, `handle`, `version`, `schemaVersion`, `licenseKeyStatus`, `installDate`, `licensedEdition`
+FROM `test_plugins`
+2019-03-15 06:33:00 [-][-][-][profile begin][yii\db\Command::query] SELECT `id`, `handle`, `version`, `schemaVersion`, `licenseKeyStatus`, `installDate`, `licensedEdition`
+FROM `test_plugins`
+2019-03-15 06:33:00 [-][-][-][profile end][yii\db\Command::query] SELECT `id`, `handle`, `version`, `schemaVersion`, `licenseKeyStatus`, `installDate`, `licensedEdition`
+FROM `test_plugins`
+2019-03-15 06:33:00 [-][-][-][trace][craft\web\Application::_processActionRequest] Route requested: 'users/get-remaining-session-time'
+2019-03-15 06:33:00 [-][-][-][trace][yii\base\Controller::runAction] Route to run: users/get-remaining-session-time
+2019-03-15 06:33:00 [-][-][-][trace][yii\base\InlineAction::runWithParams] Running action: craft\controllers\UsersController::actionGetRemainingSessionTime()
+2019-03-15 06:33:00 [-][-][-][info][application] $_GET = [
+    'p' => 'admin/actions/users/get-remaining-session-time'
+    'dontExtendSession' => '1'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '1031b8c41dfff97a311a7ac99863bdc5_username' => 'd86e5e784f188326a9ce477b021ae4b6301f4c2c3fd3eace75a05295edfb3e46a:2:{i:0;s:41:\"1031b8c41dfff97a311a7ac99863bdc5_username\";i:1;s:8:\"MAMAdmin\";}'
+    'CraftSessionId' => 'mrdueqe5caa8cpfpngh293cjbk'
+    'CRAFT_CSRF_TOKEN' => '••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••'
+    'io' => 'TfRjLsqaycfKTm1NAAAF'
+]
+
+$_SESSION = [
+    'bd62416aa8538ede709019a5e113eea5__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost:8888'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36'
+    'HTTP_REFERER' => 'http://localhost:8888/admin/utilities/updates'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'da-DK,da;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => '1031b8c41dfff97a311a7ac99863bdc5_username=d86e5e784f188326a9ce477b021ae4b6301f4c2c3fd3eace75a05295edfb3e46a%3A2%3A%7Bi%3A0%3Bs%3A41%3A%221031b8c41dfff97a311a7ac99863bdc5_username%22%3Bi%3A1%3Bs%3A8%3A%22MAMAdmin%22%3B%7D; CraftSessionId=mrdueqe5caa8cpfpngh293cjbk; CRAFT_CSRF_TOKEN=3d00491deefd8ff22c9943d58db5a2b5bbb6f137d79afd8ae0d088fa957d0498a%3A2%3A%7Bi%3A0%3Bs%3A16%3A%22CRAFT_CSRF_TOKEN%22%3Bi%3A1%3Bs%3A40%3A%22Y5cNviRF10KHmcgJqBSVSRyTzZ2X0Kn2I24PzWC9%22%3B%7D; io=TfRjLsqaycfKTm1NAAAF'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.34 (Unix) mod_wsgi/3.5 Python/2.7.13 PHP/7.2.10 mod_ssl/2.2.34 OpenSSL/1.0.2o DAV/2 mod_fastcgi/mod_fastcgi-SNAP-0910052141 mod_perl/2.0.9 Perl/v5.24.0'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8888'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Users/roejkum/Documents/Development/Cobiro/Cobiro/web'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Users/roejkum/Documents/Development/Cobiro/Cobiro/web/index.php'
+    'REMOTE_PORT' => '59365'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'p=admin/actions/users/get-remaining-session-time&dontExtendSession=1'
+    'REQUEST_URI' => '/index.php?p=admin/actions/users/get-remaining-session-time&dontExtendSession=1'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1552656780.392
+    'REQUEST_TIME' => 1552656780
+    'argv' => [
+        0 => 'p=admin/actions/users/get-remaining-session-time&dontExtendSession=1'
+    ]
+    'argc' => 1
+    'ENVIRONMENT' => 'dev'
+    'SECURITY_KEY' => '••••••••••••••••••••••••••••••••'
+    'DB_DRIVER' => 'mysql'
+    'DB_SERVER' => 'localhost'
+    'DB_USER' => 'root'
+    'DB_PASSWORD' => '••••'
+    'DB_DATABASE' => 'craft_cobiro'
+    'DB_SCHEMA' => 'public'
+    'DB_TABLE_PREFIX' => 'test_'
+    'DB_PORT' => '8889'
+    'DEFAULT_SITE_URL' => 'http://localhost:8888'
+]
+2019-03-15 06:34:01 [-][-][-][info][yii\db\Connection::open] Opening DB connection: mysql:host=localhost;dbname=craft_cobiro;port=8889;
+2019-03-15 06:34:01 [-][-][-][profile begin][yii\db\Connection::open] Opening DB connection: mysql:host=localhost;dbname=craft_cobiro;port=8889;
+2019-03-15 06:34:01 [-][-][-][profile end][yii\db\Connection::open] Opening DB connection: mysql:host=localhost;dbname=craft_cobiro;port=8889;
+2019-03-15 06:34:01 [-][-][-][info][yii\db\Command::query] SHOW TABLES
+2019-03-15 06:34:01 [-][-][-][profile begin][yii\db\Command::query] SHOW TABLES
+2019-03-15 06:34:01 [-][-][-][profile end][yii\db\Command::query] SHOW TABLES
+2019-03-15 06:34:01 [-][-][-][info][yii\db\Command::query] SELECT `s`.`id`, `s`.`groupId`, `s`.`name`, `s`.`handle`, `language`, `s`.`primary`, `s`.`hasUrls`, `s`.`baseUrl`, `s`.`sortOrder`, `s`.`uid`
+FROM `test_sites` `s`
+INNER JOIN `test_sitegroups` `sg` ON `sg`.`id` = `s`.`groupId`
+WHERE (`s`.`dateDeleted` IS NULL) AND (`sg`.`dateDeleted` IS NULL)
+ORDER BY `sg`.`name`, `s`.`sortOrder`
+2019-03-15 06:34:01 [-][-][-][profile begin][yii\db\Command::query] SELECT `s`.`id`, `s`.`groupId`, `s`.`name`, `s`.`handle`, `language`, `s`.`primary`, `s`.`hasUrls`, `s`.`baseUrl`, `s`.`sortOrder`, `s`.`uid`
+FROM `test_sites` `s`
+INNER JOIN `test_sitegroups` `sg` ON `sg`.`id` = `s`.`groupId`
+WHERE (`s`.`dateDeleted` IS NULL) AND (`sg`.`dateDeleted` IS NULL)
+ORDER BY `sg`.`name`, `s`.`sortOrder`
+2019-03-15 06:34:01 [-][-][-][profile end][yii\db\Command::query] SELECT `s`.`id`, `s`.`groupId`, `s`.`name`, `s`.`handle`, `language`, `s`.`primary`, `s`.`hasUrls`, `s`.`baseUrl`, `s`.`sortOrder`, `s`.`uid`
+FROM `test_sites` `s`
+INNER JOIN `test_sitegroups` `sg` ON `sg`.`id` = `s`.`groupId`
+WHERE (`s`.`dateDeleted` IS NULL) AND (`sg`.`dateDeleted` IS NULL)
+ORDER BY `sg`.`name`, `s`.`sortOrder`
+2019-03-15 06:34:01 [-][-][-][info][yii\db\Command::query] SELECT *
+FROM `test_info`
+LIMIT 1
+2019-03-15 06:34:01 [-][-][-][profile begin][yii\db\Command::query] SELECT *
+FROM `test_info`
+LIMIT 1
+2019-03-15 06:34:01 [-][-][-][profile end][yii\db\Command::query] SELECT *
+FROM `test_info`
+LIMIT 1
+2019-03-15 06:34:01 [-][-][-][info][yii\web\Session::open] Session started
+2019-03-15 06:34:01 [-][-][-][info][yii\db\Command::query] SELECT `id`, `handle`, `version`, `schemaVersion`, `licenseKeyStatus`, `installDate`, `licensedEdition`
+FROM `test_plugins`
+2019-03-15 06:34:01 [-][-][-][profile begin][yii\db\Command::query] SELECT `id`, `handle`, `version`, `schemaVersion`, `licenseKeyStatus`, `installDate`, `licensedEdition`
+FROM `test_plugins`
+2019-03-15 06:34:01 [-][-][-][profile end][yii\db\Command::query] SELECT `id`, `handle`, `version`, `schemaVersion`, `licenseKeyStatus`, `installDate`, `licensedEdition`
+FROM `test_plugins`
+2019-03-15 06:34:01 [-][-][-][trace][craft\web\Application::_processActionRequest] Route requested: 'users/get-remaining-session-time'
+2019-03-15 06:34:01 [-][-][-][trace][yii\base\Controller::runAction] Route to run: users/get-remaining-session-time
+2019-03-15 06:34:01 [-][-][-][trace][yii\base\InlineAction::runWithParams] Running action: craft\controllers\UsersController::actionGetRemainingSessionTime()
+2019-03-15 06:34:01 [-][-][-][info][application] $_GET = [
+    'p' => 'admin/actions/users/get-remaining-session-time'
+    'dontExtendSession' => '1'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '1031b8c41dfff97a311a7ac99863bdc5_username' => 'd86e5e784f188326a9ce477b021ae4b6301f4c2c3fd3eace75a05295edfb3e46a:2:{i:0;s:41:\"1031b8c41dfff97a311a7ac99863bdc5_username\";i:1;s:8:\"MAMAdmin\";}'
+    'CraftSessionId' => 'mrdueqe5caa8cpfpngh293cjbk'
+    'CRAFT_CSRF_TOKEN' => '••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••'
+    'io' => 'TfRjLsqaycfKTm1NAAAF'
+]
+
+$_SESSION = [
+    'bd62416aa8538ede709019a5e113eea5__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost:8888'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36'
+    'HTTP_REFERER' => 'http://localhost:8888/admin/utilities/updates'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'da-DK,da;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => '1031b8c41dfff97a311a7ac99863bdc5_username=d86e5e784f188326a9ce477b021ae4b6301f4c2c3fd3eace75a05295edfb3e46a%3A2%3A%7Bi%3A0%3Bs%3A41%3A%221031b8c41dfff97a311a7ac99863bdc5_username%22%3Bi%3A1%3Bs%3A8%3A%22MAMAdmin%22%3B%7D; CraftSessionId=mrdueqe5caa8cpfpngh293cjbk; CRAFT_CSRF_TOKEN=3d00491deefd8ff22c9943d58db5a2b5bbb6f137d79afd8ae0d088fa957d0498a%3A2%3A%7Bi%3A0%3Bs%3A16%3A%22CRAFT_CSRF_TOKEN%22%3Bi%3A1%3Bs%3A40%3A%22Y5cNviRF10KHmcgJqBSVSRyTzZ2X0Kn2I24PzWC9%22%3B%7D; io=TfRjLsqaycfKTm1NAAAF'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.34 (Unix) mod_wsgi/3.5 Python/2.7.13 PHP/7.2.10 mod_ssl/2.2.34 OpenSSL/1.0.2o DAV/2 mod_fastcgi/mod_fastcgi-SNAP-0910052141 mod_perl/2.0.9 Perl/v5.24.0'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8888'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Users/roejkum/Documents/Development/Cobiro/Cobiro/web'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Users/roejkum/Documents/Development/Cobiro/Cobiro/web/index.php'
+    'REMOTE_PORT' => '59640'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'p=admin/actions/users/get-remaining-session-time&dontExtendSession=1'
+    'REQUEST_URI' => '/index.php?p=admin/actions/users/get-remaining-session-time&dontExtendSession=1'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1552656841.801
+    'REQUEST_TIME' => 1552656841
+    'argv' => [
+        0 => 'p=admin/actions/users/get-remaining-session-time&dontExtendSession=1'
+    ]
+    'argc' => 1
+    'ENVIRONMENT' => 'dev'
+    'SECURITY_KEY' => '••••••••••••••••••••••••••••••••'
+    'DB_DRIVER' => 'mysql'
+    'DB_SERVER' => 'localhost'
+    'DB_USER' => 'root'
+    'DB_PASSWORD' => '••••'
+    'DB_DATABASE' => 'craft_cobiro'
+    'DB_SCHEMA' => 'public'
+    'DB_TABLE_PREFIX' => 'test_'
+    'DB_PORT' => '8889'
+    'DEFAULT_SITE_URL' => 'http://localhost:8888'
+]
