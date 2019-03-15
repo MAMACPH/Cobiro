@@ -7,3 +7,5 @@ storage
 storage/*
 storage/logs/web.log
 storage/logs/web.log
+composer.phar
+web/cpresources
