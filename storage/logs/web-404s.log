@@ -7775,3 +7775,601 @@ $_SERVER = [
     'DB_PORT' => '8889'
     'DEFAULT_SITE_URL' => 'http://localhost:8888'
 ]
+2019-03-15 08:54:56 [-][3][uboq53pupm1idf5pe9jjeuh03c][info][yii\db\Connection::open] Opening DB connection: mysql:host=localhost;dbname=craft_cobiro;port=8889;
+2019-03-15 08:54:56 [-][3][uboq53pupm1idf5pe9jjeuh03c][profile begin][yii\db\Connection::open] Opening DB connection: mysql:host=localhost;dbname=craft_cobiro;port=8889;
+2019-03-15 08:54:56 [-][3][uboq53pupm1idf5pe9jjeuh03c][profile end][yii\db\Connection::open] Opening DB connection: mysql:host=localhost;dbname=craft_cobiro;port=8889;
+2019-03-15 08:54:56 [-][3][uboq53pupm1idf5pe9jjeuh03c][info][yii\db\Command::query] SHOW TABLES
+2019-03-15 08:54:56 [-][3][uboq53pupm1idf5pe9jjeuh03c][profile begin][yii\db\Command::query] SHOW TABLES
+2019-03-15 08:54:56 [-][3][uboq53pupm1idf5pe9jjeuh03c][profile end][yii\db\Command::query] SHOW TABLES
+2019-03-15 08:54:56 [-][3][uboq53pupm1idf5pe9jjeuh03c][info][yii\db\Command::query] SELECT `s`.`id`, `s`.`groupId`, `s`.`name`, `s`.`handle`, `language`, `s`.`primary`, `s`.`hasUrls`, `s`.`baseUrl`, `s`.`sortOrder`, `s`.`uid`
+FROM `test_sites` `s`
+INNER JOIN `test_sitegroups` `sg` ON `sg`.`id` = `s`.`groupId`
+WHERE (`s`.`dateDeleted` IS NULL) AND (`sg`.`dateDeleted` IS NULL)
+ORDER BY `sg`.`name`, `s`.`sortOrder`
+2019-03-15 08:54:56 [-][3][uboq53pupm1idf5pe9jjeuh03c][profile begin][yii\db\Command::query] SELECT `s`.`id`, `s`.`groupId`, `s`.`name`, `s`.`handle`, `language`, `s`.`primary`, `s`.`hasUrls`, `s`.`baseUrl`, `s`.`sortOrder`, `s`.`uid`
+FROM `test_sites` `s`
+INNER JOIN `test_sitegroups` `sg` ON `sg`.`id` = `s`.`groupId`
+WHERE (`s`.`dateDeleted` IS NULL) AND (`sg`.`dateDeleted` IS NULL)
+ORDER BY `sg`.`name`, `s`.`sortOrder`
+2019-03-15 08:54:56 [-][3][uboq53pupm1idf5pe9jjeuh03c][profile end][yii\db\Command::query] SELECT `s`.`id`, `s`.`groupId`, `s`.`name`, `s`.`handle`, `language`, `s`.`primary`, `s`.`hasUrls`, `s`.`baseUrl`, `s`.`sortOrder`, `s`.`uid`
+FROM `test_sites` `s`
+INNER JOIN `test_sitegroups` `sg` ON `sg`.`id` = `s`.`groupId`
+WHERE (`s`.`dateDeleted` IS NULL) AND (`sg`.`dateDeleted` IS NULL)
+ORDER BY `sg`.`name`, `s`.`sortOrder`
+2019-03-15 08:54:56 [-][3][uboq53pupm1idf5pe9jjeuh03c][info][yii\db\Command::query] SELECT *
+FROM `test_info`
+LIMIT 1
+2019-03-15 08:54:56 [-][3][uboq53pupm1idf5pe9jjeuh03c][profile begin][yii\db\Command::query] SELECT *
+FROM `test_info`
+LIMIT 1
+2019-03-15 08:54:56 [-][3][uboq53pupm1idf5pe9jjeuh03c][profile end][yii\db\Command::query] SELECT *
+FROM `test_info`
+LIMIT 1
+2019-03-15 08:54:56 [-][3][uboq53pupm1idf5pe9jjeuh03c][info][yii\web\Session::open] Session started
+2019-03-15 08:54:56 [-][3][uboq53pupm1idf5pe9jjeuh03c][info][yii\db\Command::query] SELECT `preferences`
+FROM `test_userpreferences`
+WHERE `userId`=3
+LIMIT 1
+2019-03-15 08:54:56 [-][3][uboq53pupm1idf5pe9jjeuh03c][profile begin][yii\db\Command::query] SELECT `preferences`
+FROM `test_userpreferences`
+WHERE `userId`=3
+LIMIT 1
+2019-03-15 08:54:56 [-][3][uboq53pupm1idf5pe9jjeuh03c][profile end][yii\db\Command::query] SELECT `preferences`
+FROM `test_userpreferences`
+WHERE `userId`=3
+LIMIT 1
+2019-03-15 08:54:56 [-][3][uboq53pupm1idf5pe9jjeuh03c][info][yii\db\Command::query] SELECT `id`, `handle`, `version`, `schemaVersion`, `licenseKeyStatus`, `installDate`, `licensedEdition`
+FROM `test_plugins`
+2019-03-15 08:54:56 [-][3][uboq53pupm1idf5pe9jjeuh03c][profile begin][yii\db\Command::query] SELECT `id`, `handle`, `version`, `schemaVersion`, `licenseKeyStatus`, `installDate`, `licensedEdition`
+FROM `test_plugins`
+2019-03-15 08:54:56 [-][3][uboq53pupm1idf5pe9jjeuh03c][profile end][yii\db\Command::query] SELECT `id`, `handle`, `version`, `schemaVersion`, `licenseKeyStatus`, `installDate`, `licensedEdition`
+FROM `test_plugins`
+2019-03-15 08:54:56 [-][3][uboq53pupm1idf5pe9jjeuh03c][info][yii\db\Command::query] SELECT `id`
+FROM `test_sessions`
+WHERE (`token`='-Ygu1zikmiyUFc1IZ0ApY-kbfZx2PUjcahe5xBjr6ZZE-8tc--Ry7bipBBJYv-BGxxFdWkkD1evlxlXC4v8_zR2X8KstlIC_av7P') AND (`userId`=3)
+LIMIT 1
+2019-03-15 08:54:56 [-][3][uboq53pupm1idf5pe9jjeuh03c][profile begin][yii\db\Command::query] SELECT `id`
+FROM `test_sessions`
+WHERE (`token`='-Ygu1zikmiyUFc1IZ0ApY-kbfZx2PUjcahe5xBjr6ZZE-8tc--Ry7bipBBJYv-BGxxFdWkkD1evlxlXC4v8_zR2X8KstlIC_av7P') AND (`userId`=3)
+LIMIT 1
+2019-03-15 08:54:56 [-][3][uboq53pupm1idf5pe9jjeuh03c][profile end][yii\db\Command::query] SELECT `id`
+FROM `test_sessions`
+WHERE (`token`='-Ygu1zikmiyUFc1IZ0ApY-kbfZx2PUjcahe5xBjr6ZZE-8tc--Ry7bipBBJYv-BGxxFdWkkD1evlxlXC4v8_zR2X8KstlIC_av7P') AND (`userId`=3)
+LIMIT 1
+2019-03-15 08:54:56 [-][3][uboq53pupm1idf5pe9jjeuh03c][info][yii\db\Command::query] SHOW FULL COLUMNS FROM `test_sessions`
+2019-03-15 08:54:56 [-][3][uboq53pupm1idf5pe9jjeuh03c][profile begin][yii\db\Command::query] SHOW FULL COLUMNS FROM `test_sessions`
+2019-03-15 08:54:56 [-][3][uboq53pupm1idf5pe9jjeuh03c][profile end][yii\db\Command::query] SHOW FULL COLUMNS FROM `test_sessions`
+2019-03-15 08:54:56 [-][3][uboq53pupm1idf5pe9jjeuh03c][info][yii\db\Command::query] SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'test_sessions' AND kcu.table_name = 'test_sessions'
+2019-03-15 08:54:56 [-][3][uboq53pupm1idf5pe9jjeuh03c][profile begin][yii\db\Command::query] SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'test_sessions' AND kcu.table_name = 'test_sessions'
+2019-03-15 08:54:56 [-][3][uboq53pupm1idf5pe9jjeuh03c][profile end][yii\db\Command::query] SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'test_sessions' AND kcu.table_name = 'test_sessions'
+2019-03-15 08:54:56 [-][3][uboq53pupm1idf5pe9jjeuh03c][info][yii\db\Command::query] SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name,
+    rc.UPDATE_RULE,
+    rc.DELETE_RULE
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'test_sessions' AND kcu.table_name = 'test_sessions'
+2019-03-15 08:54:56 [-][3][uboq53pupm1idf5pe9jjeuh03c][profile begin][yii\db\Command::query] SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name,
+    rc.UPDATE_RULE,
+    rc.DELETE_RULE
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'test_sessions' AND kcu.table_name = 'test_sessions'
+2019-03-15 08:54:56 [-][3][uboq53pupm1idf5pe9jjeuh03c][profile end][yii\db\Command::query] SELECT
+    kcu.constraint_name,
+    kcu.column_name,
+    kcu.referenced_table_name,
+    kcu.referenced_column_name,
+    rc.UPDATE_RULE,
+    rc.DELETE_RULE
+FROM information_schema.referential_constraints AS rc
+JOIN information_schema.key_column_usage AS kcu ON
+    (
+        kcu.constraint_catalog = rc.constraint_catalog OR
+        (kcu.constraint_catalog IS NULL AND rc.constraint_catalog IS NULL)
+    ) AND
+    kcu.constraint_schema = rc.constraint_schema AND
+    kcu.constraint_name = rc.constraint_name
+WHERE rc.constraint_schema = database() AND kcu.table_schema = database()
+AND rc.table_name = 'test_sessions' AND kcu.table_name = 'test_sessions'
+2019-03-15 08:54:56 [-][3][uboq53pupm1idf5pe9jjeuh03c][info][yii\db\Command::execute] UPDATE `test_sessions` SET `dateUpdated`='2019-03-15 15:54:56' WHERE `id`='1'
+2019-03-15 08:54:56 [-][3][uboq53pupm1idf5pe9jjeuh03c][profile begin][yii\db\Command::execute] UPDATE `test_sessions` SET `dateUpdated`='2019-03-15 15:54:56' WHERE `id`='1'
+2019-03-15 08:54:56 [-][3][uboq53pupm1idf5pe9jjeuh03c][profile end][yii\db\Command::execute] UPDATE `test_sessions` SET `dateUpdated`='2019-03-15 15:54:56' WHERE `id`='1'
+2019-03-15 08:54:56 [-][3][uboq53pupm1idf5pe9jjeuh03c][info][yii\db\Command::query] SELECT `fields`.`id`, `fields`.`dateCreated`, `fields`.`dateUpdated`, `fields`.`groupId`, `fields`.`name`, `fields`.`handle`, `fields`.`context`, `fields`.`instructions`, `fields`.`translationMethod`, `fields`.`translationKeyFormat`, `fields`.`type`, `fields`.`settings`, `fields`.`uid`, `fields`.`searchable`
+FROM `test_fields` `fields`
+ORDER BY `fields`.`name`, `fields`.`handle`
+2019-03-15 08:54:56 [-][3][uboq53pupm1idf5pe9jjeuh03c][profile begin][yii\db\Command::query] SELECT `fields`.`id`, `fields`.`dateCreated`, `fields`.`dateUpdated`, `fields`.`groupId`, `fields`.`name`, `fields`.`handle`, `fields`.`context`, `fields`.`instructions`, `fields`.`translationMethod`, `fields`.`translationKeyFormat`, `fields`.`type`, `fields`.`settings`, `fields`.`uid`, `fields`.`searchable`
+FROM `test_fields` `fields`
+ORDER BY `fields`.`name`, `fields`.`handle`
+2019-03-15 08:54:56 [-][3][uboq53pupm1idf5pe9jjeuh03c][profile end][yii\db\Command::query] SELECT `fields`.`id`, `fields`.`dateCreated`, `fields`.`dateUpdated`, `fields`.`groupId`, `fields`.`name`, `fields`.`handle`, `fields`.`context`, `fields`.`instructions`, `fields`.`translationMethod`, `fields`.`translationKeyFormat`, `fields`.`type`, `fields`.`settings`, `fields`.`uid`, `fields`.`searchable`
+FROM `test_fields` `fields`
+ORDER BY `fields`.`name`, `fields`.`handle`
+2019-03-15 08:54:56 [-][3][uboq53pupm1idf5pe9jjeuh03c][info][yii\db\Command::query] SELECT `users`.`password`, `elements`.`id`, `elements`.`fieldLayoutId`, `elements`.`uid`, `elements`.`enabled`, `elements`.`archived`, `elements`.`dateCreated`, `elements`.`dateUpdated`, `elements_sites`.`slug`, `elements_sites`.`uri`, `elements_sites`.`enabled` AS `enabledForSite`, `users`.`username`, `users`.`firstName`, `users`.`lastName`, `users`.`email`, `users`.`admin`, `users`.`locked`, `users`.`pending`, `users`.`suspended`, `users`.`lastLoginDate`, `users`.`lockoutDate`, `users`.`photoId`, `users`.`hasDashboard`, `content`.`id` AS `contentId`, `content`.`field_tekst`
+FROM (SELECT `elements`.`id` AS `elementsId`, `elements_sites`.`id` AS `elementsSitesId`, `content`.`id` AS `contentId`
+FROM `test_elements` `elements`
+INNER JOIN `test_users` `users` ON `users`.`id` = `elements`.`id`
+INNER JOIN `test_elements_sites` `elements_sites` ON `elements_sites`.`elementId` = `elements`.`id`
+INNER JOIN `test_content` `content` ON `content`.`elementId` = `elements`.`id`
+WHERE (`elements_sites`.`siteId`='1') AND (`content`.`siteId`='1') AND (`elements`.`id`=3) AND (`elements`.`archived`=FALSE) AND (`elements`.`dateDeleted` IS NULL)
+ORDER BY `users`.`username`
+LIMIT 1) `subquery`
+INNER JOIN `test_users` `users` ON `users`.`id` = `subquery`.`elementsId`
+INNER JOIN `test_elements` `elements` ON `elements`.`id` = `subquery`.`elementsId`
+INNER JOIN `test_elements_sites` `elements_sites` ON `elements_sites`.`id` = `subquery`.`elementsSitesId`
+INNER JOIN `test_content` `content` ON `content`.`id` = `subquery`.`contentId`
+ORDER BY `users`.`username`
+2019-03-15 08:54:56 [-][3][uboq53pupm1idf5pe9jjeuh03c][profile begin][yii\db\Command::query] SELECT `users`.`password`, `elements`.`id`, `elements`.`fieldLayoutId`, `elements`.`uid`, `elements`.`enabled`, `elements`.`archived`, `elements`.`dateCreated`, `elements`.`dateUpdated`, `elements_sites`.`slug`, `elements_sites`.`uri`, `elements_sites`.`enabled` AS `enabledForSite`, `users`.`username`, `users`.`firstName`, `users`.`lastName`, `users`.`email`, `users`.`admin`, `users`.`locked`, `users`.`pending`, `users`.`suspended`, `users`.`lastLoginDate`, `users`.`lockoutDate`, `users`.`photoId`, `users`.`hasDashboard`, `content`.`id` AS `contentId`, `content`.`field_tekst`
+FROM (SELECT `elements`.`id` AS `elementsId`, `elements_sites`.`id` AS `elementsSitesId`, `content`.`id` AS `contentId`
+FROM `test_elements` `elements`
+INNER JOIN `test_users` `users` ON `users`.`id` = `elements`.`id`
+INNER JOIN `test_elements_sites` `elements_sites` ON `elements_sites`.`elementId` = `elements`.`id`
+INNER JOIN `test_content` `content` ON `content`.`elementId` = `elements`.`id`
+WHERE (`elements_sites`.`siteId`='1') AND (`content`.`siteId`='1') AND (`elements`.`id`=3) AND (`elements`.`archived`=FALSE) AND (`elements`.`dateDeleted` IS NULL)
+ORDER BY `users`.`username`
+LIMIT 1) `subquery`
+INNER JOIN `test_users` `users` ON `users`.`id` = `subquery`.`elementsId`
+INNER JOIN `test_elements` `elements` ON `elements`.`id` = `subquery`.`elementsId`
+INNER JOIN `test_elements_sites` `elements_sites` ON `elements_sites`.`id` = `subquery`.`elementsSitesId`
+INNER JOIN `test_content` `content` ON `content`.`id` = `subquery`.`contentId`
+ORDER BY `users`.`username`
+2019-03-15 08:54:56 [-][3][uboq53pupm1idf5pe9jjeuh03c][profile end][yii\db\Command::query] SELECT `users`.`password`, `elements`.`id`, `elements`.`fieldLayoutId`, `elements`.`uid`, `elements`.`enabled`, `elements`.`archived`, `elements`.`dateCreated`, `elements`.`dateUpdated`, `elements_sites`.`slug`, `elements_sites`.`uri`, `elements_sites`.`enabled` AS `enabledForSite`, `users`.`username`, `users`.`firstName`, `users`.`lastName`, `users`.`email`, `users`.`admin`, `users`.`locked`, `users`.`pending`, `users`.`suspended`, `users`.`lastLoginDate`, `users`.`lockoutDate`, `users`.`photoId`, `users`.`hasDashboard`, `content`.`id` AS `contentId`, `content`.`field_tekst`
+FROM (SELECT `elements`.`id` AS `elementsId`, `elements_sites`.`id` AS `elementsSitesId`, `content`.`id` AS `contentId`
+FROM `test_elements` `elements`
+INNER JOIN `test_users` `users` ON `users`.`id` = `elements`.`id`
+INNER JOIN `test_elements_sites` `elements_sites` ON `elements_sites`.`elementId` = `elements`.`id`
+INNER JOIN `test_content` `content` ON `content`.`elementId` = `elements`.`id`
+WHERE (`elements_sites`.`siteId`='1') AND (`content`.`siteId`='1') AND (`elements`.`id`=3) AND (`elements`.`archived`=FALSE) AND (`elements`.`dateDeleted` IS NULL)
+ORDER BY `users`.`username`
+LIMIT 1) `subquery`
+INNER JOIN `test_users` `users` ON `users`.`id` = `subquery`.`elementsId`
+INNER JOIN `test_elements` `elements` ON `elements`.`id` = `subquery`.`elementsId`
+INNER JOIN `test_elements_sites` `elements_sites` ON `elements_sites`.`id` = `subquery`.`elementsSitesId`
+INNER JOIN `test_content` `content` ON `content`.`id` = `subquery`.`contentId`
+ORDER BY `users`.`username`
+2019-03-15 08:54:56 [-][3][uboq53pupm1idf5pe9jjeuh03c][trace][craft\web\UrlManager::_getTokenRoute] [
+    'rule' => 'Token',
+    'match' => false,
+    'parent' => null,
+]
+2019-03-15 08:54:56 [-][3][uboq53pupm1idf5pe9jjeuh03c][trace][craft\web\UrlManager::_getMatchedElementRoute] [
+    'rule' => 'Element URI: index.php',
+    'match' => false,
+    'parent' => null,
+]
+2019-03-15 08:54:56 [-][3][uboq53pupm1idf5pe9jjeuh03c][trace][craft\web\UrlManager::_getMatchedUrlRoute] [
+    'rule' => 'URL Rule: categories',
+    'match' => false,
+    'parent' => null,
+]
+2019-03-15 08:54:56 [-][3][uboq53pupm1idf5pe9jjeuh03c][trace][craft\web\UrlManager::_getMatchedUrlRoute] [
+    'rule' => 'URL Rule: categories/<groupHandle:(?:[a-zA-Z][a-zA-Z0-9_]*)>',
+    'match' => false,
+    'parent' => null,
+]
+2019-03-15 08:54:56 [-][3][uboq53pupm1idf5pe9jjeuh03c][trace][craft\web\UrlManager::_getMatchedUrlRoute] [
+    'rule' => 'URL Rule: categories/<groupHandle:(?:[a-zA-Z][a-zA-Z0-9_]*)>/new',
+    'match' => false,
+    'parent' => null,
+]
+2019-03-15 08:54:56 [-][3][uboq53pupm1idf5pe9jjeuh03c][trace][craft\web\UrlManager::_getMatchedUrlRoute] [
+    'rule' => 'URL Rule: categories/<groupHandle:(?:[a-zA-Z][a-zA-Z0-9_]*)>/<categoryId:\\d+><slug:(?:-[^\\/]*)?>',
+    'match' => false,
+    'parent' => null,
+]
+2019-03-15 08:54:56 [-][3][uboq53pupm1idf5pe9jjeuh03c][trace][craft\web\UrlManager::_getMatchedUrlRoute] [
+    'rule' => 'URL Rule: categories/<groupHandle:(?:[a-zA-Z][a-zA-Z0-9_]*)>/<categoryId:\\d+><slug:(?:-[^\\/]*)?>/<siteHandle:(?:[a-zA-Z][a-zA-Z0-9_]*)>',
+    'match' => false,
+    'parent' => null,
+]
+2019-03-15 08:54:56 [-][3][uboq53pupm1idf5pe9jjeuh03c][trace][craft\web\UrlManager::_getMatchedUrlRoute] [
+    'rule' => 'URL Rule: categories/<groupHandle:(?:[a-zA-Z][a-zA-Z0-9_]*)>/new/<siteHandle:(?:[a-zA-Z][a-zA-Z0-9_]*)>',
+    'match' => false,
+    'parent' => null,
+]
+2019-03-15 08:54:56 [-][3][uboq53pupm1idf5pe9jjeuh03c][trace][craft\web\UrlManager::_getMatchedUrlRoute] [
+    'rule' => 'URL Rule: dashboard',
+    'match' => false,
+    'parent' => null,
+]
+2019-03-15 08:54:56 [-][3][uboq53pupm1idf5pe9jjeuh03c][trace][craft\web\UrlManager::_getMatchedUrlRoute] [
+    'rule' => 'URL Rule: entries/<sectionHandle:(?:[a-zA-Z][a-zA-Z0-9_]*)>',
+    'match' => false,
+    'parent' => null,
+]
+2019-03-15 08:54:56 [-][3][uboq53pupm1idf5pe9jjeuh03c][trace][craft\web\UrlManager::_getMatchedUrlRoute] [
+    'rule' => 'URL Rule: entries/<sectionHandle:(?:[a-zA-Z][a-zA-Z0-9_]*)>/new',
+    'match' => false,
+    'parent' => null,
+]
+2019-03-15 08:54:56 [-][3][uboq53pupm1idf5pe9jjeuh03c][trace][craft\web\UrlManager::_getMatchedUrlRoute] [
+    'rule' => 'URL Rule: entries/<sectionHandle:(?:[a-zA-Z][a-zA-Z0-9_]*)>/new/<siteHandle:(?:[a-zA-Z][a-zA-Z0-9_]*)>',
+    'match' => false,
+    'parent' => null,
+]
+2019-03-15 08:54:56 [-][3][uboq53pupm1idf5pe9jjeuh03c][trace][craft\web\UrlManager::_getMatchedUrlRoute] [
+    'rule' => 'URL Rule: entries/<sectionHandle:(?:[a-zA-Z][a-zA-Z0-9_]*)>/<entryId:\\d+><slug:(?:-[^\\/]*)?>',
+    'match' => false,
+    'parent' => null,
+]
+2019-03-15 08:54:56 [-][3][uboq53pupm1idf5pe9jjeuh03c][trace][craft\web\UrlManager::_getMatchedUrlRoute] [
+    'rule' => 'URL Rule: entries/<sectionHandle:(?:[a-zA-Z][a-zA-Z0-9_]*)>/<entryId:\\d+><slug:(?:-[^\\/]*)?>/<siteHandle:(?:[a-zA-Z][a-zA-Z0-9_]*)>',
+    'match' => false,
+    'parent' => null,
+]
+2019-03-15 08:54:56 [-][3][uboq53pupm1idf5pe9jjeuh03c][trace][craft\web\UrlManager::_getMatchedUrlRoute] [
+    'rule' => 'URL Rule: entries/<sectionHandle:(?:[a-zA-Z][a-zA-Z0-9_]*)>/<entryId:\\d+><slug:(?:-[^\\/]*?)?>/drafts/<draftId:\\d+>',
+    'match' => false,
+    'parent' => null,
+]
+2019-03-15 08:54:56 [-][3][uboq53pupm1idf5pe9jjeuh03c][trace][craft\web\UrlManager::_getMatchedUrlRoute] [
+    'rule' => 'URL Rule: entries/<sectionHandle:(?:[a-zA-Z][a-zA-Z0-9_]*)>/<entryId:\\d+><slug:(?:-[^\\/]*)?>/versions/<versionId:\\d+>',
+    'match' => false,
+    'parent' => null,
+]
+2019-03-15 08:54:56 [-][3][uboq53pupm1idf5pe9jjeuh03c][trace][craft\web\UrlManager::_getMatchedUrlRoute] [
+    'rule' => 'URL Rule: globals',
+    'match' => false,
+    'parent' => null,
+]
+2019-03-15 08:54:56 [-][3][uboq53pupm1idf5pe9jjeuh03c][trace][craft\web\UrlManager::_getMatchedUrlRoute] [
+    'rule' => 'URL Rule: globals/<globalSetHandle:(?:[a-zA-Z][a-zA-Z0-9_]*)>',
+    'match' => false,
+    'parent' => null,
+]
+2019-03-15 08:54:56 [-][3][uboq53pupm1idf5pe9jjeuh03c][trace][craft\web\UrlManager::_getMatchedUrlRoute] [
+    'rule' => 'URL Rule: globals/<siteHandle:(?:[a-zA-Z][a-zA-Z0-9_]*)>/<globalSetHandle:(?:[a-zA-Z][a-zA-Z0-9_]*)>',
+    'match' => false,
+    'parent' => null,
+]
+2019-03-15 08:54:56 [-][3][uboq53pupm1idf5pe9jjeuh03c][trace][craft\web\UrlManager::_getMatchedUrlRoute] [
+    'rule' => 'URL Rule: myaccount',
+    'match' => false,
+    'parent' => null,
+]
+2019-03-15 08:54:56 [-][3][uboq53pupm1idf5pe9jjeuh03c][trace][craft\web\UrlManager::_getMatchedUrlRoute] [
+    'rule' => 'URL Rule: update',
+    'match' => false,
+    'parent' => null,
+]
+2019-03-15 08:54:56 [-][3][uboq53pupm1idf5pe9jjeuh03c][trace][craft\web\UrlManager::_getMatchedUrlRoute] [
+    'rule' => 'URL Rule: settings/assets',
+    'match' => false,
+    'parent' => null,
+]
+2019-03-15 08:54:56 [-][3][uboq53pupm1idf5pe9jjeuh03c][trace][craft\web\UrlManager::_getMatchedUrlRoute] [
+    'rule' => 'URL Rule: settings/assets/volumes/new',
+    'match' => false,
+    'parent' => null,
+]
+2019-03-15 08:54:56 [-][3][uboq53pupm1idf5pe9jjeuh03c][trace][craft\web\UrlManager::_getMatchedUrlRoute] [
+    'rule' => 'URL Rule: settings/assets/volumes/<volumeId:\\d+>',
+    'match' => false,
+    'parent' => null,
+]
+2019-03-15 08:54:56 [-][3][uboq53pupm1idf5pe9jjeuh03c][trace][craft\web\UrlManager::_getMatchedUrlRoute] [
+    'rule' => 'URL Rule: settings/assets/transforms',
+    'match' => false,
+    'parent' => null,
+]
+2019-03-15 08:54:56 [-][3][uboq53pupm1idf5pe9jjeuh03c][trace][craft\web\UrlManager::_getMatchedUrlRoute] [
+    'rule' => 'URL Rule: settings/assets/transforms/new',
+    'match' => false,
+    'parent' => null,
+]
+2019-03-15 08:54:56 [-][3][uboq53pupm1idf5pe9jjeuh03c][trace][craft\web\UrlManager::_getMatchedUrlRoute] [
+    'rule' => 'URL Rule: settings/assets/transforms/<transformHandle:(?:[a-zA-Z][a-zA-Z0-9_]*)>',
+    'match' => false,
+    'parent' => null,
+]
+2019-03-15 08:54:56 [-][3][uboq53pupm1idf5pe9jjeuh03c][trace][craft\web\UrlManager::_getMatchedUrlRoute] [
+    'rule' => 'URL Rule: settings/categories',
+    'match' => false,
+    'parent' => null,
+]
+2019-03-15 08:54:56 [-][3][uboq53pupm1idf5pe9jjeuh03c][trace][craft\web\UrlManager::_getMatchedUrlRoute] [
+    'rule' => 'URL Rule: settings/categories/new',
+    'match' => false,
+    'parent' => null,
+]
+2019-03-15 08:54:56 [-][3][uboq53pupm1idf5pe9jjeuh03c][trace][craft\web\UrlManager::_getMatchedUrlRoute] [
+    'rule' => 'URL Rule: settings/categories/<groupId:\\d+>',
+    'match' => false,
+    'parent' => null,
+]
+2019-03-15 08:54:56 [-][3][uboq53pupm1idf5pe9jjeuh03c][trace][craft\web\UrlManager::_getMatchedUrlRoute] [
+    'rule' => 'URL Rule: settings/email',
+    'match' => false,
+    'parent' => null,
+]
+2019-03-15 08:54:56 [-][3][uboq53pupm1idf5pe9jjeuh03c][trace][craft\web\UrlManager::_getMatchedUrlRoute] [
+    'rule' => 'URL Rule: settings/fields/<groupId:\\d+>',
+    'match' => false,
+    'parent' => null,
+]
+2019-03-15 08:54:56 [-][3][uboq53pupm1idf5pe9jjeuh03c][trace][craft\web\UrlManager::_getMatchedUrlRoute] [
+    'rule' => 'URL Rule: settings/fields/new',
+    'match' => false,
+    'parent' => null,
+]
+2019-03-15 08:54:56 [-][3][uboq53pupm1idf5pe9jjeuh03c][trace][craft\web\UrlManager::_getMatchedUrlRoute] [
+    'rule' => 'URL Rule: settings/fields/edit/<fieldId:\\d+>',
+    'match' => false,
+    'parent' => null,
+]
+2019-03-15 08:54:56 [-][3][uboq53pupm1idf5pe9jjeuh03c][trace][craft\web\UrlManager::_getMatchedUrlRoute] [
+    'rule' => 'URL Rule: settings/general',
+    'match' => false,
+    'parent' => null,
+]
+2019-03-15 08:54:56 [-][3][uboq53pupm1idf5pe9jjeuh03c][trace][craft\web\UrlManager::_getMatchedUrlRoute] [
+    'rule' => 'URL Rule: settings/globals/new',
+    'match' => false,
+    'parent' => null,
+]
+2019-03-15 08:54:56 [-][3][uboq53pupm1idf5pe9jjeuh03c][trace][craft\web\UrlManager::_getMatchedUrlRoute] [
+    'rule' => 'URL Rule: settings/globals/<globalSetId:\\d+>',
+    'match' => false,
+    'parent' => null,
+]
+2019-03-15 08:54:56 [-][3][uboq53pupm1idf5pe9jjeuh03c][trace][craft\web\UrlManager::_getMatchedUrlRoute] [
+    'rule' => 'URL Rule: settings/plugins/<handle>',
+    'match' => false,
+    'parent' => null,
+]
+2019-03-15 08:54:56 [-][3][uboq53pupm1idf5pe9jjeuh03c][trace][craft\web\UrlManager::_getMatchedUrlRoute] [
+    'rule' => 'URL Rule: settings/routes',
+    'match' => false,
+    'parent' => null,
+]
+2019-03-15 08:54:56 [-][3][uboq53pupm1idf5pe9jjeuh03c][trace][craft\web\UrlManager::_getMatchedUrlRoute] [
+    'rule' => 'URL Rule: settings/sections',
+    'match' => false,
+    'parent' => null,
+]
+2019-03-15 08:54:56 [-][3][uboq53pupm1idf5pe9jjeuh03c][trace][craft\web\UrlManager::_getMatchedUrlRoute] [
+    'rule' => 'URL Rule: settings/sections/new',
+    'match' => false,
+    'parent' => null,
+]
+2019-03-15 08:54:56 [-][3][uboq53pupm1idf5pe9jjeuh03c][trace][craft\web\UrlManager::_getMatchedUrlRoute] [
+    'rule' => 'URL Rule: settings/sections/<sectionId:\\d+>',
+    'match' => false,
+    'parent' => null,
+]
+2019-03-15 08:54:56 [-][3][uboq53pupm1idf5pe9jjeuh03c][trace][craft\web\UrlManager::_getMatchedUrlRoute] [
+    'rule' => 'URL Rule: settings/sections/<sectionId:\\d+>/entrytypes',
+    'match' => false,
+    'parent' => null,
+]
+2019-03-15 08:54:56 [-][3][uboq53pupm1idf5pe9jjeuh03c][trace][craft\web\UrlManager::_getMatchedUrlRoute] [
+    'rule' => 'URL Rule: settings/sections/<sectionId:\\d+>/entrytypes/new',
+    'match' => false,
+    'parent' => null,
+]
+2019-03-15 08:54:56 [-][3][uboq53pupm1idf5pe9jjeuh03c][trace][craft\web\UrlManager::_getMatchedUrlRoute] [
+    'rule' => 'URL Rule: settings/sections/<sectionId:\\d+>/entrytypes/<entryTypeId:\\d+>',
+    'match' => false,
+    'parent' => null,
+]
+2019-03-15 08:54:56 [-][3][uboq53pupm1idf5pe9jjeuh03c][trace][craft\web\UrlManager::_getMatchedUrlRoute] [
+    'rule' => 'URL Rule: settings/sites',
+    'match' => false,
+    'parent' => null,
+]
+2019-03-15 08:54:56 [-][3][uboq53pupm1idf5pe9jjeuh03c][trace][craft\web\UrlManager::_getMatchedUrlRoute] [
+    'rule' => 'URL Rule: settings/sites/new',
+    'match' => false,
+    'parent' => null,
+]
+2019-03-15 08:54:56 [-][3][uboq53pupm1idf5pe9jjeuh03c][trace][craft\web\UrlManager::_getMatchedUrlRoute] [
+    'rule' => 'URL Rule: settings/sites/<siteId:\\d+>',
+    'match' => false,
+    'parent' => null,
+]
+2019-03-15 08:54:56 [-][3][uboq53pupm1idf5pe9jjeuh03c][trace][craft\web\UrlManager::_getMatchedUrlRoute] [
+    'rule' => 'URL Rule: settings/tags',
+    'match' => false,
+    'parent' => null,
+]
+2019-03-15 08:54:56 [-][3][uboq53pupm1idf5pe9jjeuh03c][trace][craft\web\UrlManager::_getMatchedUrlRoute] [
+    'rule' => 'URL Rule: settings/tags/new',
+    'match' => false,
+    'parent' => null,
+]
+2019-03-15 08:54:56 [-][3][uboq53pupm1idf5pe9jjeuh03c][trace][craft\web\UrlManager::_getMatchedUrlRoute] [
+    'rule' => 'URL Rule: settings/tags/<tagGroupId:\\d+>',
+    'match' => false,
+    'parent' => null,
+]
+2019-03-15 08:54:56 [-][3][uboq53pupm1idf5pe9jjeuh03c][trace][craft\web\UrlManager::_getMatchedUrlRoute] [
+    'rule' => 'URL Rule: settings/users',
+    'match' => false,
+    'parent' => null,
+]
+2019-03-15 08:54:56 [-][3][uboq53pupm1idf5pe9jjeuh03c][trace][craft\web\UrlManager::_getMatchedUrlRoute] [
+    'rule' => 'URL Rule: utilities',
+    'match' => false,
+    'parent' => null,
+]
+2019-03-15 08:54:56 [-][3][uboq53pupm1idf5pe9jjeuh03c][trace][craft\web\UrlManager::_getMatchedUrlRoute] [
+    'rule' => 'URL Rule: utilities/<id:[\\w\\-]+>',
+    'match' => false,
+    'parent' => null,
+]
+2019-03-15 08:54:56 [-][3][uboq53pupm1idf5pe9jjeuh03c][trace][craft\web\UrlManager::_getMatchedUrlRoute] [
+    'rule' => 'URL Rule: plugin-store',
+    'match' => false,
+    'parent' => null,
+]
+2019-03-15 08:54:56 [-][3][uboq53pupm1idf5pe9jjeuh03c][trace][craft\web\UrlManager::_getMatchedUrlRoute] [
+    'rule' => 'URL Rule: plugin-store/callback',
+    'match' => false,
+    'parent' => null,
+]
+2019-03-15 08:54:56 [-][3][uboq53pupm1idf5pe9jjeuh03c][trace][craft\web\UrlManager::_getMatchedUrlRoute] [
+    'rule' => 'URL Rule: plugin-store/<url:(.*)>',
+    'match' => false,
+    'parent' => null,
+]
+2019-03-15 08:54:56 [-][3][uboq53pupm1idf5pe9jjeuh03c][trace][craft\web\UrlManager::_getTemplateRoute] [
+    'rule' => 'Template: index.php',
+    'match' => true,
+    'parent' => null,
+]
+2019-03-15 08:54:56 [-][3][uboq53pupm1idf5pe9jjeuh03c][trace][yii\web\Application::handleRequest] Route requested: 'templates/render'
+2019-03-15 08:54:56 [-][3][uboq53pupm1idf5pe9jjeuh03c][trace][yii\base\Controller::runAction] Route to run: templates/render
+2019-03-15 08:54:56 [-][3][uboq53pupm1idf5pe9jjeuh03c][trace][yii\base\InlineAction::runWithParams] Running action: craft\controllers\TemplatesController::actionRender()
+2019-03-15 08:54:56 [-][3][uboq53pupm1idf5pe9jjeuh03c][error][yii\web\HttpException:404] yii\web\NotFoundHttpException: Template not found: index.php in /Users/roejkum/Documents/Development/Cobiro/Cobiro/vendor/craftcms/cms/src/controllers/TemplatesController.php:70
+Stack trace:
+#0 [internal function]: craft\controllers\TemplatesController->actionRender('index.php', Array)
+#1 /Users/roejkum/Documents/Development/Cobiro/Cobiro/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#2 /Users/roejkum/Documents/Development/Cobiro/Cobiro/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#3 /Users/roejkum/Documents/Development/Cobiro/Cobiro/vendor/craftcms/cms/src/web/Controller.php(109): yii\base\Controller->runAction('render', Array)
+#4 /Users/roejkum/Documents/Development/Cobiro/Cobiro/vendor/yiisoft/yii2/base/Module.php(528): craft\web\Controller->runAction('render', Array)
+#5 /Users/roejkum/Documents/Development/Cobiro/Cobiro/vendor/craftcms/cms/src/web/Application.php(297): yii\base\Module->runAction('templates/rende...', Array)
+#6 /Users/roejkum/Documents/Development/Cobiro/Cobiro/vendor/yiisoft/yii2/web/Application.php(103): craft\web\Application->runAction('templates/rende...', Array)
+#7 /Users/roejkum/Documents/Development/Cobiro/Cobiro/vendor/craftcms/cms/src/web/Application.php(286): yii\web\Application->handleRequest(Object(craft\web\Request))
+#8 /Users/roejkum/Documents/Development/Cobiro/Cobiro/vendor/yiisoft/yii2/base/Application.php(386): craft\web\Application->handleRequest(Object(craft\web\Request))
+#9 /Users/roejkum/Documents/Development/Cobiro/Cobiro/web/index.php(21): yii\base\Application->run()
+#10 {main}
+2019-03-15 08:54:56 [-][3][uboq53pupm1idf5pe9jjeuh03c][trace][yii\base\View::renderFile] Rendering view file: /Users/roejkum/Documents/Development/Cobiro/Cobiro/vendor/yiisoft/yii2/views/errorHandler/exception.php
+2019-03-15 08:54:56 [-][3][uboq53pupm1idf5pe9jjeuh03c][trace][yii\base\View::renderFile] Rendering view file: /Users/roejkum/Documents/Development/Cobiro/Cobiro/vendor/yiisoft/yii2/views/errorHandler/callStackItem.php
+2019-03-15 08:54:56 [-][3][uboq53pupm1idf5pe9jjeuh03c][trace][yii\base\View::renderFile] Rendering view file: /Users/roejkum/Documents/Development/Cobiro/Cobiro/vendor/yiisoft/yii2/views/errorHandler/callStackItem.php
+2019-03-15 08:54:56 [-][3][uboq53pupm1idf5pe9jjeuh03c][trace][yii\base\View::renderFile] Rendering view file: /Users/roejkum/Documents/Development/Cobiro/Cobiro/vendor/yiisoft/yii2/views/errorHandler/callStackItem.php
+2019-03-15 08:54:56 [-][3][uboq53pupm1idf5pe9jjeuh03c][trace][yii\base\View::renderFile] Rendering view file: /Users/roejkum/Documents/Development/Cobiro/Cobiro/vendor/yiisoft/yii2/views/errorHandler/callStackItem.php
+2019-03-15 08:54:56 [-][3][uboq53pupm1idf5pe9jjeuh03c][trace][yii\base\View::renderFile] Rendering view file: /Users/roejkum/Documents/Development/Cobiro/Cobiro/vendor/yiisoft/yii2/views/errorHandler/callStackItem.php
+2019-03-15 08:54:56 [-][3][uboq53pupm1idf5pe9jjeuh03c][trace][yii\base\View::renderFile] Rendering view file: /Users/roejkum/Documents/Development/Cobiro/Cobiro/vendor/yiisoft/yii2/views/errorHandler/callStackItem.php
+2019-03-15 08:54:56 [-][3][uboq53pupm1idf5pe9jjeuh03c][trace][yii\base\View::renderFile] Rendering view file: /Users/roejkum/Documents/Development/Cobiro/Cobiro/vendor/yiisoft/yii2/views/errorHandler/callStackItem.php
+2019-03-15 08:54:56 [-][3][uboq53pupm1idf5pe9jjeuh03c][trace][yii\base\View::renderFile] Rendering view file: /Users/roejkum/Documents/Development/Cobiro/Cobiro/vendor/yiisoft/yii2/views/errorHandler/callStackItem.php
+2019-03-15 08:54:56 [-][3][uboq53pupm1idf5pe9jjeuh03c][trace][yii\base\View::renderFile] Rendering view file: /Users/roejkum/Documents/Development/Cobiro/Cobiro/vendor/yiisoft/yii2/views/errorHandler/callStackItem.php
+2019-03-15 08:54:56 [-][3][uboq53pupm1idf5pe9jjeuh03c][trace][yii\base\View::renderFile] Rendering view file: /Users/roejkum/Documents/Development/Cobiro/Cobiro/vendor/yiisoft/yii2/views/errorHandler/callStackItem.php
+2019-03-15 08:54:56 [-][3][uboq53pupm1idf5pe9jjeuh03c][trace][yii\base\View::renderFile] Rendering view file: /Users/roejkum/Documents/Development/Cobiro/Cobiro/vendor/yiisoft/yii2/views/errorHandler/callStackItem.php
+2019-03-15 08:54:56 [-][3][uboq53pupm1idf5pe9jjeuh03c][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '1031b8c41dfff97a311a7ac99863bdc5_username' => 'd86e5e784f188326a9ce477b021ae4b6301f4c2c3fd3eace75a05295edfb3e46a:2:{i:0;s:41:\"1031b8c41dfff97a311a7ac99863bdc5_username\";i:1;s:8:\"MAMAdmin\";}'
+    'io' => 'vmuw2kBvNRrZfiwiAAAG'
+    'CraftSessionId' => 'uboq53pupm1idf5pe9jjeuh03c'
+    '1031b8c41dfff97a311a7ac99863bdc5_identity' => '637131235ff56d7e9a5c8b546ed7ac1d504e310be76a55b68ff5cd9ca44151bba:2:{i:0;s:41:\"1031b8c41dfff97a311a7ac99863bdc5_identity\";i:1;s:248:\"[3,\"[\\\"-Ygu1zikmiyUFc1IZ0ApY-kbfZx2PUjcahe5xBjr6ZZE-8tc--Ry7bipBBJYv-BGxxFdWkkD1evlxlXC4v8_zR2X8KstlIC_av7P\\\",null,\\\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36\\\"]\",3600]\";}'
+    'CRAFT_CSRF_TOKEN' => '•••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••'
+]
+
+$_SESSION = [
+    'bd62416aa8538ede709019a5e113eea5__flash' => []
+    '1031b8c41dfff97a311a7ac99863bdc5__token' => '••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••'
+    '1031b8c41dfff97a311a7ac99863bdc5__id' => 3
+    '1031b8c41dfff97a311a7ac99863bdc5__expire' => 1552668896
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost:8888'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'da-DK,da;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => '1031b8c41dfff97a311a7ac99863bdc5_username=d86e5e784f188326a9ce477b021ae4b6301f4c2c3fd3eace75a05295edfb3e46a%3A2%3A%7Bi%3A0%3Bs%3A41%3A%221031b8c41dfff97a311a7ac99863bdc5_username%22%3Bi%3A1%3Bs%3A8%3A%22MAMAdmin%22%3B%7D; io=vmuw2kBvNRrZfiwiAAAG; CraftSessionId=uboq53pupm1idf5pe9jjeuh03c; 1031b8c41dfff97a311a7ac99863bdc5_identity=637131235ff56d7e9a5c8b546ed7ac1d504e310be76a55b68ff5cd9ca44151bba%3A2%3A%7Bi%3A0%3Bs%3A41%3A%221031b8c41dfff97a311a7ac99863bdc5_identity%22%3Bi%3A1%3Bs%3A248%3A%22%5B3%2C%22%5B%5C%22-Ygu1zikmiyUFc1IZ0ApY-kbfZx2PUjcahe5xBjr6ZZE-8tc--Ry7bipBBJYv-BGxxFdWkkD1evlxlXC4v8_zR2X8KstlIC_av7P%5C%22%2Cnull%2C%5C%22Mozilla%2F5.0+%28Macintosh%3B+Intel+Mac+OS+X+10_14_0%29+AppleWebKit%2F537.36+%28KHTML%2C+like+Gecko%29+Chrome%2F72.0.3626.121+Safari%2F537.36%5C%22%5D%22%2C3600%5D%22%3B%7D; CRAFT_CSRF_TOKEN=03c9c9b329cb9a48aab88e8a755c9324db1d9e1965d64c984083e0094777bc70a%3A2%3A%7Bi%3A0%3Bs%3A16%3A%22CRAFT_CSRF_TOKEN%22%3Bi%3A1%3Bs%3A208%3A%22Y5cNviRF10KHmcgJqBSVSRyTzZ2X0Kn2I24PzWC9%7Cbd7cf582854cb3e81ec79cddd2fc0f83de610e744ddce35dec9bd3ce211c4f85Y5cNviRF10KHmcgJqBSVSRyTzZ2X0Kn2I24PzWC9%7C3%7C%242y%2413%24PWqQT4Hkf1q3BRH9QuBK7eOA6VJejsI6GjiD0BpbN1fV9QVWiosTW%22%3B%7D'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.2.34 (Unix) mod_wsgi/3.5 Python/2.7.13 PHP/7.2.10 mod_ssl/2.2.34 OpenSSL/1.0.2o DAV/2 mod_fastcgi/mod_fastcgi-SNAP-0910052141 mod_perl/2.0.9 Perl/v5.24.0'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '8888'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/Users/roejkum/Documents/Development/Cobiro/Cobiro/web'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Users/roejkum/Documents/Development/Cobiro/Cobiro/web/index.php'
+    'REMOTE_PORT' => '57743'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/index.php/admin/index.php'
+    'SCRIPT_NAME' => '/index.php'
+    'PATH_INFO' => '/admin/index.php'
+    'PATH_TRANSLATED' => '/Users/roejkum/Documents/Development/Cobiro/Cobiro/web/admin/index.php'
+    'PHP_SELF' => '/index.php/admin/index.php'
+    'REQUEST_TIME_FLOAT' => 1552665296.501
+    'REQUEST_TIME' => 1552665296
+    'argv' => []
+    'argc' => 0
+    'ENVIRONMENT' => 'dev'
+    'SECURITY_KEY' => '••••••••••••••••••••••••••••••••'
+    'DB_DRIVER' => 'mysql'
+    'DB_SERVER' => 'localhost'
+    'DB_USER' => 'root'
+    'DB_PASSWORD' => '••••'
+    'DB_DATABASE' => 'craft_cobiro'
+    'DB_SCHEMA' => 'public'
+    'DB_TABLE_PREFIX' => 'test_'
+    'DB_PORT' => '8889'
+    'DEFAULT_SITE_URL' => 'http://localhost:8888'
+]
