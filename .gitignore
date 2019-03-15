@@ -1,5 +1,5 @@
+node_modules
 .env
 .idea
-vendor
+/vendor
 .DS_Store
-node_modules
