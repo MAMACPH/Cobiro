@@ -1,0 +1,165 @@
+nav {
+	border-bottom: 1px solid #DDDDDD;
+	padding: 1rem 0;
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+	right: 0;
+	background-color: $white;
+	max-height: 100vh;
+    overflow: scroll;
+
+	.brand img {
+		width: 8rem;
+	}
+
+	li a {
+		font-size: 1rem;
+		color: $grey;
+
+		&.active, &:hover {
+			color: $blue;
+			text-decoration: none;
+		}
+	}
+	.main-menu-cta .btn {
+		padding: 0.4em 1.2em;
+	}
+	.menu-toggle {
+		display: none;
+	}
+
+	/******* Submenu *******/
+
+		.submenu {
+			position: fixed;
+			width: 100%;
+			top: 70px;
+			left: 0;
+			right: 0;
+			background-color: $white;
+			padding: 0;
+			max-height: 0;
+			overflow: hidden;
+			transition: all 0.4s ease;
+
+			@include mq($until: lg) {
+				position: relative;
+			}
+
+			.submenu-icon {
+				width: 3.125rem;
+				display: block;
+				clear: both;
+			}
+
+			a {
+				color: $blue;
+			}
+
+			.submenu-title {
+				padding: 1rem 0;
+				display: block;
+			}
+		}
+
+		.expand {
+			.submenu {
+				max-height: 2000px;
+				padding: 2rem 0;
+				border-bottom: 1px solid #DDDDDD;
+			}
+		}
+
+
+	@include mq($until: lg) {
+		.main-menu-inner {
+			padding-top: 2rem;
+		}
+
+		/******* Toggle *******/
+		.menu-toggle {
+			background: transparent;
+			border: none;
+			display: block;
+			position: absolute;
+			right: 0;
+			top: 50%;
+			transform: translateY(-50%);
+			z-index: 999;
+
+			&:hover, &:active, &:focus {
+				background: transparent;
+				border: none;
+			}
+				.top-bar {
+					transform: rotate(45deg);
+					transform-origin: 10% 200%;
+				}
+				.bottom-bar {
+					transform: rotate(-45deg);
+					transform-origin: 10% -60%;
+				}
+				.middle-bar {
+					opacity: 0;
+				}
+			.icon-bar {
+				background-color: $blue;
+				display: block;
+				height: 2px;
+				border-radius: 5px;
+				width: 18px;
+				transition: all 0.2s ease 0.2s;
+				margin-top: 4px;
+			}
+		}
+
+		.list-inline {
+			display: block;
+			margin: auto;
+			text-align: center;
+
+			li {
+				padding: 1rem 0;
+			}
+		}
+		.main-menu-cta {
+			text-align: center;
+			padding: 1rem 0;
+		}
+		.main-menu-inner, .main-menu-cta{
+			max-height: 2000px;
+			transition: all 0.4s ease;
+		}
+
+		/******* Toggle *******/
+		&.closed {
+			.main-menu-inner, .main-menu-cta {
+				padding: 0;
+				max-height: 0;
+				min-height: 0;
+				overflow: hidden;
+			}
+			.menu-toggle {
+				.top-bar {
+					transform: rotate(0);
+				}
+				.bottom-bar {
+					transform: rotate(0);
+				}
+				.bottom-bar {
+					margin-bottom: 4px;
+				}
+				.middle-bar {
+					opacity: 1;
+				}
+
+			}
+
+
+		}
+	}
+
+
+}

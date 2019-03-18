@@ -84,7 +84,11 @@
         -webkit-justify-content: space-between;
         -moz-justify-content: space-between;
         justify-content: space-between;
-    }
+	}
+
+	.col-auto-#{$breakpoint} {
+		width: auto;
+	}
 }
 
 .first-sm, .first-md {
@@ -92,4 +96,9 @@
 }
 .last-sm, .last-md {
     order: 1;
+}
+
+
+.row:after {
+	content: none;
 }
