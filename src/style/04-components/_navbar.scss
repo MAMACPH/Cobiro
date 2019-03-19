@@ -44,6 +44,11 @@ nav {
 			overflow: hidden;
 			transition: all 0.4s ease;
 
+			a, li, img {
+				opacity: 0;
+				transition: all 0.4s ease;
+			}
+
 			@include mq($until: lg) {
 				position: relative;
 			}
@@ -69,6 +74,10 @@ nav {
 				max-height: 2000px;
 				padding: 2rem 0;
 				border-bottom: 1px solid #DDDDDD;
+
+				a, li, img {
+					opacity: 1;
+				}
 			}
 		}
 
@@ -131,6 +140,7 @@ nav {
 		.main-menu-inner, .main-menu-cta{
 			max-height: 2000px;
 			transition: all 0.4s ease;
+			opacity: 1;
 		}
 
 		/******* Toggle *******/
@@ -140,6 +150,7 @@ nav {
 				max-height: 0;
 				min-height: 0;
 				overflow: hidden;
+				opacity: 0;
 			}
 			.menu-toggle {
 				.top-bar {
