@@ -3,7 +3,8 @@ $white: #fff;
 $blue: #304FFE;
 $yellow: #FCF22B;
 $lightgrey: #F9FBFC;
-$grey: #4F525F;
+$grey: #D6D6D6;
+$darkgrey: #4F525F;
 
 $colors: (
 	black: $black,
@@ -11,6 +12,8 @@ $colors: (
 	blue: $blue,
 	yellor: $yellow,
 	lightgrey: $lightgrey,
+	grey: $grey,
+	darkgrey: $darkgrey,
 );
 
 @import '~baseguide/scss/baseguide/00-settings/settings';
