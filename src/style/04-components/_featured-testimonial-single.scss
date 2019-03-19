@@ -1,0 +1,16 @@
+.testimonal-box {
+	padding: 2.5rem 5rem;
+
+	@include mq($until: md) {
+		flex-direction: column;
+		padding: 2rem;
+	}
+
+	.testimonial-image-wrapper {
+		margin-right: 2.5rem;
+	}
+	.testimonial-image {
+		width: 7.5rem;
+		max-width: 7.5rem;
+	}
+}
