@@ -1,1 +1,21 @@
 @import '~baseguide/scss/baseguide/05-utilities/space';
+
+.section {
+	margin-top: 80px;
+	margin-bottom: 80px;
+}
+
+.img-responsive {
+	max-width: 100%;
+	height: 500px;
+	background-color: lightgray;
+}
+
+.text-margin {
+	margin: 60px;
+}
+
+.center {
+	display: flex;
+	align-items: center;
+}
