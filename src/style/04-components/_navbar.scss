@@ -8,7 +8,11 @@ nav {
 	right: 0;
 	background-color: $white;
 	max-height: 100vh;
-    overflow: scroll;
+	z-index: 200;
+
+	@include mq($until: lg) {
+		overflow: scroll;
+	}
 
 	.brand img {
 		width: 8rem;
