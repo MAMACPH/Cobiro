@@ -84,12 +84,28 @@
         -webkit-justify-content: space-between;
         -moz-justify-content: space-between;
         justify-content: space-between;
-    }
+	}
+	.col-auto-#{$breakpoint} {
+		width: auto;
+	}
+	.first-#{$breakpoint} {
+		order: -1;
+	}
+	.last-#{$breakpoint} {
+		order: 1;
+	}
 }
 
-.first-sm, .first-md {
-    order: -1;
+.flex {
+	display: flex;
 }
-.last-sm, .last-md {
-    order: 1;
+
+.row:after {
+	content: none;
+}
+
+.center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
