@@ -1,29 +1,46 @@
 (function() {
+
+	// Initial variables
 	const body = document.querySelector('body');
 	const mainMenu = document.querySelector('nav.main-menu');
-	const mainMenuHeight = mainMenu.offsetHeight;
 	const menuToggle = document.querySelector('.menu-toggle');
 	const subMenu = document.getElementsByClassName('has-submenu');
+	let mainMenuHeight = mainMenu.offsetHeight;
 
+	// Setting initial padding-top on body equal to height of navbar
 	body.style.paddingTop = mainMenuHeight + 'px';
-	console.log(body.style)
-	mainMenu.addEventListener( 'click', menuClickHandler );
 
+	// Event listeners for clicks and browser resize
+	mainMenu.addEventListener( 'click', menuClickHandler, false );
+	window.addEventListener( "resize", windowResizeHandler, false );
+
+	// Handling resizing of the browser
+	function windowResizeHandler () {
+
+		mainMenuHeight = mainMenu.offsetHeight;
+		body.style.paddingTop = mainMenuHeight + 'px';
+
+	}
+
+	// Handling all clicks on navbar
 	function menuClickHandler (event) {
 
+		// If the clicked element is the burger-menu
 		if ( event.target ===  menuToggle ) {
 
 			mainMenu.classList.toggle('closed');
-			console.log('clicked menu toggle');
 
 		} else {
+		// Else loop over menu items within subMenu with submenus and check if the clicked element is equal to it
 
 			for ( var i = 0; i <= subMenu.length; i++ ) {
+
 				if ( subMenu[i] === event.target ) {
-					console.log('clicked submenu', subMenu[i].nextElementSibling);
+					// Add a class to the parent element of the clicked subMenu[i] item in the subMenu array
 					subMenu[i].parentNode.classList.toggle('expand');
 					subMenu[i].nextElementSibling.style.top = mainMenuHeight - 1 + 'px';
 				}
+
 			}
 		}
 	}
