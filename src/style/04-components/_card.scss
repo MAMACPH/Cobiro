@@ -22,15 +22,75 @@
 			margin: 0;
 		}
 	}
+
+	&.people {
+		flex-direction: column;
+
+		.people-description {
+			transition: height 0.4s ease;
+		}
+
+		@include mq($until: md) {
+
+			.people-description {
+				max-height: 0;
+				overflow: hidden;
+				transition: all 0.4s ease;
+			}
+
+			&.expand {
+				.people-description {
+					max-height: 75rem;
+				}
+			}
+
+			.card-header-wrapper {
+				display: flex;
+				width: 100%;
+				align-items: center;
+				flex-direction: row;
+				justify-content: flex-start;
+				margin-bottom: 1.25rem;
+				position: relative;
+
+				img {
+					margin-bottom: 0;
+				}
+				&>div {
+					width: 100%;
+				}
+				.social-icon {
+					position: absolute;
+					right: 0;
+					top: 0;
+				}
+			}
+		}
+
+		@include mq($until: md) {
+			button {
+				width: 100%;
+			}
+		}
+	}
 	@include mq($until: md) {
 		display: flex;
 		align-items: flex-start;
 		padding: 1.25rem;
+		margin-top: 1.25rem;
 
 		img {
 			width: 3rem;
 			max-width: 3rem;
 			margin-right: 1rem;
+
+			&.card-img-large {
+				width: 5rem;
+				max-width: 5rem;
+				margin-right: 1rem;
+			}
 		}
+
+
 	}
 }
