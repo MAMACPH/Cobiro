@@ -2,7 +2,7 @@
 
 @include loop-breakpoints {
 
-    .text-center-#{$breakpoint} {
+  .text-center-#{$breakpoint} {
 		text-align: center!important;
 	}
 	.text-left-#{$breakpoint} {
