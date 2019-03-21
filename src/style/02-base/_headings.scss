@@ -35,19 +35,19 @@ p, a {
 
 
 @include mq($until: md) {
-	h1 {
+	h1, .h1 {
 		font-size: 2rem;
 	}
-	h2 {
+	h2, .h2 {
 		font-size: 1.5rem;
 	}
-	h3 {
+	h3, .h3 {
 		font-size: 1.25rem;
 	}
-	h4 {
+	h4, .h4 {
 		font-size: 1.125rem;
 	}
-	h5 {
+	h5, .h5 {
 		font-size: 0.875rem;
 	}
 	p, a {
