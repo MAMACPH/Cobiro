@@ -36,9 +36,19 @@
 			for ( var i = 0; i <= subMenu.length; i++ ) {
 
 				if ( subMenu[i] === event.target ) {
+
+
 					// Add a class to the parent element of the clicked subMenu[i] item in the subMenu array
 					subMenu[i].parentNode.classList.toggle('expand');
 					subMenu[i].nextElementSibling.style.top = mainMenuHeight - 1 + 'px';
+
+					if ( subMenu[i].parentNode.classList.contains('expand') ) {
+						subMenu[i].nextElementSibling.style.maxHeight = subMenu[i].nextElementSibling.children[0].offsetHeight + 'px';
+					} else {
+						subMenu[i].nextElementSibling.style.maxHeight = null;
+					}
+					// subMenu[i].nextElementSibling.style.maxHeight = mainMenuHeight - 1 + 'px';
+					console.log('poop', subMenu[i].nextElementSibling.children[0].offsetHeight);
 				}
 
 			}
