@@ -1,5 +1,5 @@
 nav {
-	border-bottom: 1px solid #DDDDDD;
+	border-bottom: 1px solid $mediumgrey;
 	padding: 1rem 0;
 	position: fixed;
 	width: 100%;
@@ -82,7 +82,7 @@ nav {
 
 		.expand {
 			.submenu {
-				border-bottom: 1px solid #DDDDDD;
+				border-bottom: 1px solid $mediumgrey;
 
 				.container {
 					transform: translateY(0);
