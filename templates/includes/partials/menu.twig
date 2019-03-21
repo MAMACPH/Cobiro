@@ -1,4 +1,4 @@
-<nav class="main-menu closed">
+<nav class="main-menu closed" id="navbar">
 	<div class="container">
 		<div class="row between-xs middle-xs">
 
@@ -9,8 +9,8 @@
 							<div class="brand">
 								<a href="/" ><img src="{{url('includes/img/logo.svg')}}" alt="Cobiro logo"/></a>
 							</div>
-							<button class="menu-toggle btn" aria-controls="primary-menu" aria-label="Menu"
-								aria-expanded="menuClosed">
+							<button class="menu-toggle btn" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation"
+								>
 								<span class="icon-bar top-bar"></span>
 								<span class="icon-bar middle-bar"></span>
 								<span class="icon-bar bottom-bar"></span>
@@ -78,8 +78,8 @@
 			</div>
 
 			<div class="col col-auto-lg main-menu-cta">
-				<button class="btn btn-secondary">Log in</button>
-				<button class="btn">Sign up free</button>
+				<button class="btn btn-secondary" aria-label="Log in">Log in</button>
+				<button class="btn" aria-label="Sign up free">Sign up free</button>
 			</div>
 
 		</div>

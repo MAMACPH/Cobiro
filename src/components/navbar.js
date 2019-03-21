@@ -28,6 +28,12 @@
 		// If the clicked element is the burger-menu
 		if ( event.target ===  menuToggle ) {
 
+			if( mainMenu.classList.contains('closed') ) {
+				menuToggle.setAttribute("aria-expanded", 'true');
+			} else {
+				menuToggle.setAttribute("aria-expanded", 'false');
+			}
+
 			mainMenu.classList.toggle('closed');
 
 		} else {
