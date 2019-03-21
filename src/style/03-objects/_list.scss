@@ -1,1 +1,14 @@
 @import '~baseguide/scss/baseguide/03-objects/list';
+
+.list-unstyled {
+	list-style-type: none;
+	padding-left: 20px;
+
+	&::before {
+		content: '';
+		background-image: url('../../../web/includes/img/checkmark.svg');
+		background-size: 28px 28px;
+		height: 28px;
+		width: 28px;
+	}
+}
