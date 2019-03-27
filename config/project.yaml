@@ -1,4 +1,4 @@
-dateModified: 1553697687
+dateModified: 1553715645
 email:
   fromEmail: mrn@mamacph.dk
   fromName: 'Craft test'
@@ -1430,6 +1430,127 @@ matrixBlockTypes:
               0ff79530-187f-4012-bfe8-d71ec9e52cc5:
                 required: true
                 sortOrder: 17
+  989ca4d1-de8f-46c5-8e66-f4e2fd1bbfc2:
+    field: 00c0812c-1bc5-4e9d-b707-b341f15b40ea
+    name: 'Accordion Faq'
+    handle: accordionFaq
+    sortOrder: 9
+    fields:
+      4c7aafbd-c6e2-4c46-a295-c2ceac17f0d8:
+        name: Heading
+        handle: heading
+        instructions: ''
+        searchable: true
+        translationMethod: none
+        translationKeyFormat: null
+        type: craft\fields\PlainText
+        settings:
+          placeholder: ''
+          code: ''
+          multiline: ''
+          initialRows: '4'
+          charLimit: ''
+          columnType: text
+        contentColumnType: text
+        fieldGroup: null
+      6d4b9858-b2cd-41ef-8451-36de038753d5:
+        name: Text
+        handle: text
+        instructions: ''
+        searchable: true
+        translationMethod: none
+        translationKeyFormat: null
+        type: craft\redactor\Field
+        settings:
+          redactorConfig: ''
+          purifierConfig: ''
+          cleanupHtml: '1'
+          purifyHtml: '1'
+          columnType: text
+          availableVolumes: ''
+          availableTransforms: '*'
+        contentColumnType: text
+        fieldGroup: null
+      d175ac94-d7ad-4251-bf97-2c375d686fdc:
+        name: Faqs
+        handle: faqs
+        instructions: ''
+        searchable: true
+        translationMethod: none
+        translationKeyFormat: null
+        type: craft\fields\Table
+        settings:
+          addRowLabel: 'Tilføj en række'
+          maxRows: '20'
+          minRows: '2'
+          columns:
+            col1:
+              heading: Title
+              handle: title
+              width: ''
+              type: singleline
+            col2:
+              heading: Text
+              handle: text
+              width: ''
+              type: singleline
+          defaults:
+            -
+              col1: ''
+              col2: ''
+          columnType: text
+        contentColumnType: text
+        fieldGroup: null
+    fieldLayouts:
+      0cb90c5c-6725-411e-823e-51de953a5be6:
+        tabs:
+          -
+            name: Content
+            sortOrder: 1
+            fields:
+              4c7aafbd-c6e2-4c46-a295-c2ceac17f0d8:
+                required: true
+                sortOrder: 1
+              6d4b9858-b2cd-41ef-8451-36de038753d5:
+                required: true
+                sortOrder: 2
+              d175ac94-d7ad-4251-bf97-2c375d686fdc:
+                required: true
+                sortOrder: 3
+  8d3cba86-1516-46a2-bf93-86e09b24b26e:
+    field: 00c0812c-1bc5-4e9d-b707-b341f15b40ea
+    name: 'Text Editor'
+    handle: textEditor
+    sortOrder: 10
+    fields:
+      80e47da4-19fd-4a7c-aaaa-54dcee293446:
+        name: Text
+        handle: text
+        instructions: ''
+        searchable: true
+        translationMethod: none
+        translationKeyFormat: null
+        type: craft\redactor\Field
+        settings:
+          redactorConfig: ''
+          purifierConfig: ''
+          cleanupHtml: '1'
+          purifyHtml: '1'
+          columnType: text
+          availableVolumes: ''
+          availableTransforms: '*'
+        contentColumnType: text
+        fieldGroup: null
+    fieldLayouts:
+      530b7ea0-515d-4a4b-82e1-f3e675ad54a2:
+        tabs:
+          -
+            name: Content
+            sortOrder: 1
+            fields:
+              80e47da4-19fd-4a7c-aaaa-54dcee293446:
+                required: true
+                sortOrder: 1
 plugins:
   ckeditor:
     edition: standard

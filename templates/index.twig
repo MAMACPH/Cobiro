@@ -116,12 +116,27 @@
 
 		{% include 'includes/sections/3-up-people.twig' with blockContent %}
 
+	{% elseif block.type == "accordionFaq" %}
+
+		{% set blockContent = {
+			heading : block.heading,
+			text : block.text,
+			faqs : block.faqs
+		} %}
+
+		{% include 'includes/sections/accordion-faq.twig' with blockContent %}
+
+	{% elseif block.type == "textEditor" %}
+
+		{% set blockContent = { text : block.text } %}
+
+		{% include 'includes/sections/text-editor.twig' with blockContent %}
+
 	{% endif %}
 {% endfor %}
 
 {#
 
-{% include 'includes/sections/accordion-faq.twig' with pageContent %}
 {% include 'includes/sections/text-editor.twig' with pageContent %}
 {% include 'includes/sections/list-pricing.twig' with pageContent %}
 

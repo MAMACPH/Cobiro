@@ -2,36 +2,31 @@
 	<div class="container">
 		<div class="row">
 			<div class="col col-xs-12 text-center space-xs-up">
-				<h2>Frequently Asked Questions</h2>
-				<p>Get help here or ask our <a href="#">Support Center</a></p>
-			</div>
-			<div class="col col-xs-12 accordion">
-				<div class="card text-left">
-					<h5>Title Xsmall</h5>
-					<button class="btn btn-accordion btn-toggle btn-secondary active" onclick="accordionClickHandler(event)" aria-label="Expand accordion panel"><span>+</span></button>
-					<p class="small accordion-text expanded-accordion">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce facilisis faucibus sem, sit amet vestibulum mauris vehicula quis. Fusce cursus venenatis diam et sagittis. Vestibulum eleifend massa magna, quis vestibulum augue ultrices nec. Sed euismod libero eu dui pellentesque, efficitur interdum nisi elementum. Pellentesque faucibus purus ac ullamcorper facilisis. Quisque placerat posuere nunc, id viverra dolor tincidunt a. Donec pharetra sollicitudin purus, in dapibus ex gravida eget. Nulla blandit libero sit amet ligula vestibulum ultrices. Proin eget hendrerit est. Aliquam mauris mi, tempor ut cursus sit amet, semper quis enim. Nulla finibus nulla velit, sed sodales orci dapibus ut.</p>
-				</div>
-			</div>
-			<div class="col col-xs-12 accordion">
-				<div class="card text-left">
-					<h5>Title Xsmall</h5>
-					<button class="btn btn-accordion btn-toggle btn-secondary" onclick="accordionClickHandler(event)" aria-label="Expand accordion panel"><span>+</span></button>
-					<p class="small accordion-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce facilisis faucibus sem, sit amet vestibulum mauris vehicula quis. Fusce cursus venenatis diam et sagittis. Vestibulum eleifend massa magna, quis vestibulum augue ultrices nec. Sed euismod libero eu dui pellentesque, efficitur interdum nisi elementum. Pellentesque faucibus purus ac ullamcorper facilisis. Quisque placerat posuere nunc, id viverra dolor tincidunt a. Donec pharetra sollicitudin purus, in dapibus ex gravida eget. Nulla blandit libero sit amet ligula vestibulum ultrices. Proin eget hendrerit est. Aliquam mauris mi, tempor ut cursus sit amet, semper quis enim. Nulla finibus nulla velit, sed sodales orci dapibus ut.</p>
-				</div>
-			</div>
-			<div class="col col-xs-12 accordion">
-				<div class="card text-left">
-					<h5>Title Xsmall</h5>
-					<button class="btn btn-accordion btn-toggle btn-secondary" onclick="accordionClickHandler(event)" aria-label="Expand accordion panel"><span>+</span></button>
-					<p class="small accordion-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce facilisis faucibus sem, sit amet vestibulum mauris vehicula quis. Fusce cursus venenatis diam et sagittis. Vestibulum eleifend massa magna, quis vestibulum augue ultrices nec. Sed euismod libero eu dui pellentesque, efficitur interdum nisi elementum. Pellentesque faucibus purus ac ullamcorper facilisis. Quisque placerat posuere nunc, id viverra dolor tincidunt a. Donec pharetra sollicitudin purus, in dapibus ex gravida eget. Nulla blandit libero sit amet ligula vestibulum ultrices. Proin eget hendrerit est. Aliquam mauris mi, tempor ut cursus sit amet, semper quis enim. Nulla finibus nulla velit, sed sodales orci dapibus ut.</p>
-				</div>
-			</div>
-			<div class="col col-xs-12 accordion">
-				<div class="card text-left">
-					<h5>Title Xsmall</h5>
-					<button class="btn btn-accordion btn-toggle btn-secondary" onclick="accordionClickHandler(event)" aria-label="Expand accordion panel"><span>+</span></button>
-					<p class="small accordion-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce facilisis faucibus sem, sit amet vestibulum mauris vehicula quis. Fusce cursus venenatis diam et sagittis. Vestibulum eleifend massa magna, quis vestibulum augue ultrices nec. Sed euismod libero eu dui pellentesque, efficitur interdum nisi elementum. Pellentesque faucibus purus ac ullamcorper facilisis. Quisque placerat posuere nunc, id viverra dolor tincidunt a. Donec pharetra sollicitudin purus, in dapibus ex gravida eget. Nulla blandit libero sit amet ligula vestibulum ultrices. Proin eget hendrerit est. Aliquam mauris mi, tempor ut cursus sit amet, semper quis enim. Nulla finibus nulla velit, sed sodales orci dapibus ut.</p>
-				</div>
+				<h2>{{ heading }}</h2>
+				{{ text }}
+				{% if faqs|length %}
+					{% for faq in faqs %}
+
+						{% if loop.first %}
+							{% set classes = {
+								activeClass : 'active',
+								expandedClass : 'expanded-accordion'
+							} %}
+						{% else %}
+							{% set classes = {
+								activeClass : '',
+								expandedClass : ''
+							} %}
+						{% endif %}
+						<div class="col col-xs-12 accordion">
+							<div class="card text-left">
+								<h5>{{faq.title}}</h5>
+								<button class="btn btn-accordion btn-toggle btn-secondary {{  classes.activeClass }}" onclick="accordionClickHandler(event)" aria-label="Expand accordion panel"><span>+</span></button>
+								<p class="small accordion-text {{  classes.expandedClass }}">{{faq.text}}</p>
+							</div>
+						</div>
+					{% endfor %}
+				{% endif %}
 			</div>
 		</div>
 	</div>
