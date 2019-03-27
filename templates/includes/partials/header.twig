@@ -1,12 +1,79 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="{{ craft.app.locale }}">
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta charset="utf-8" />
-    <title>{{ title }}</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-	<meta name="referrer" content="origin-when-cross-origin" />
-	<meta name="description" content="Test" />
+	{% if entry is defined and entry.slug != 'homepage' %}
+		{% set pageTitle = entry['seoTitle'] is defined and entry.seoTitle ? entry.seoTitle : (title ?? entry.title) %}
+		{% set pageTitleDivider = '|' %}
+	{% endif %}
+	<title>{{ [pageTitle ?? null, pageTitleDivider ?? null, siteName]|join(' ')|trim }}</title>
+	<script>document.documentElement.className = document.documentElement.className.replace(/(\s|^)no-js(\s|$)/, '$1js$2');window.isTouch = !!("ontouchstart" in window); if (!window.isTouch) {document.documentElement.className += " no-touch";}</script>
+	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-WNJH22W');</script>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	{# SEO Tags #}
+	{% set seoDesc = entry['seoDesc'] ?? null %}
+	{% if seoDesc %}
+		<meta name="description" content="{{ seoDesc }}">
+		<meta property="og:description" content="{{ seoDesc }}">
+	{% endif %}
+
+	{# Search engine indexing #}
+	{% if craft.config.disableIndexing %}
+		<meta name="robots" content="noindex,follow">
+	{% endif %}
+
+	{% set seoTitle = entry['seoTitle'] ?? null %}
+	{% if entry is defined and entry.slug != 'homepage' %}
+		<meta property="og:title" content="{{ seoTitle ?: entry.title }}">
+	{% endif %}
+
+	{% set seoThumb = entry['seoThumb'][0] ?? null %}
+	{% if seoThumb %}
+		{% set seoThumbTransform = { mode: 'crop', width: 1200, height: 630, quality: 100 } %}
+		<meta property="og:image" content="{{ seoThumb.getUrl(seoThumbTransform) }}">
+		<meta property="og:image:width" content="{{ seoThumb.getWidth(seoThumbTransform) }}" />
+		<meta property="og:image:height" content="{{ seoThumb.getHeight(seoThumbTransform) }}" />
+	{% endif %}
+
+	<meta property="og:site_name" content="{{ siteName }}">
+	<meta property="og:locale" content="{{ craft.app.locale }}">
+	<meta property="og:url" content="{{ craft.request.url }}">
+	<meta property="og:type" content="website">
+
+	{# Alternate languages
+	{% set currentLocaleId = craft.i18n.getCurrentLocale().getId() %}
+	{% for localeId in craft.i18n.getSiteLocaleIds() %}
+		{% if entry is defined %}
+			{% set localeEntry = craft.entries.id(entry.id).locale(localeId).first %}
+		{% endif %}
+		<link rel="{{ currentLocaleId == localeId ? 'canonical' : 'alternate' }}" hreflang="{{ localeId }}" href="{{ localeEntry.getUrl() ?? craft.config.siteUrl[localeId] }}" />
+	{% endfor %}
+	#}
+
+	{# Favicons #}
+	{% set faviconPath = 'includes/img/favicons' %}
+	<link rel="apple-touch-icon-precomposed" sizes="57x57" href="{{ faviconPath }}/apple-touch-icon-57x57.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{ faviconPath }}/apple-touch-icon-114x114.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{ faviconPath }}/apple-touch-icon-72x72.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ faviconPath }}/apple-touch-icon-144x144.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="60x60" href="{{ faviconPath }}/apple-touch-icon-60x60.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="120x120" href="{{ faviconPath }}/apple-touch-icon-120x120.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="76x76" href="{{ faviconPath }}/apple-touch-icon-76x76.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="152x152" href="{{ faviconPath }}/apple-touch-icon-152x152.png" />
+	<link rel="icon" type="image/png" href="{{ faviconPath }}/favicon-196x196.png" sizes="196x196" />
+	<link rel="icon" type="image/png" href="{{ faviconPath }}/favicon-96x96.png" sizes="96x96" />
+	<link rel="icon" type="image/png" href="{{ faviconPath }}/favicon-32x32.png" sizes="32x32" />
+	<link rel="icon" type="image/png" href="{{ faviconPath }}/favicon-16x16.png" sizes="16x16" />
+	<link rel="icon" type="image/png" href="{{ faviconPath }}/favicon-128.png" sizes="128x128" />
+
+	{# CSS #}
 	<link rel="stylesheet" type="text/css" href="includes/css/style.css">
 </head>
 <body>
