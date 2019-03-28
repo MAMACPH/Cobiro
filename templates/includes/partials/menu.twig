@@ -1,7 +1,10 @@
+
+{# Create an entry query with the 'section' and 'limit' parameters #}
+{% set mainMenu = craft.entries.section('mainMenu').level(1).all() %}
+
 <nav class="main-menu closed" id="navbar">
 	<div class="container">
 		<div class="row between-xs middle-xs">
-
 			<div class="col col-auto-lg">
 				<div class="container-fluid">
 					<div class="row start-xs middle-xs">
@@ -9,8 +12,7 @@
 							<div class="brand">
 								<a href="/" ><img src="includes/img/logo.svg" alt="Cobiro logo"/></a>
 							</div>
-							<button class="menu-toggle btn" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation"
-								>
+							<button class="menu-toggle btn" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
 								<span class="icon-bar top-bar"></span>
 								<span class="icon-bar middle-bar"></span>
 								<span class="icon-bar bottom-bar"></span>
@@ -18,71 +20,48 @@
 						</div>
 						<div class="col col-auto-lg main-menu-inner">
 							<ul class="list-inline">
-								<li class=""><a href="#" class="has-submenu">Why Cobiro?</a><div class="submenu"></div></li>
-								<li class="">
-									<a href="#" class="active has-submenu">Solutions</a>
-
-									<div class="submenu">
-										<div class="container">
-											<div class="row">
-												<div class="col col-xs-12 col-lg-3">
-													<img class="submenu-icon" src="includes/img/pen.svg" alt="ikon"/>
-													<a class="submenu-title" href="#">Create</a>
-													<ul class="list-unstyled">
-														<li><a href="#">Search</a></li>
-														<li><a href="#">Search</a></li>
-														<li><a href="#">Search</a></li>
-														<li><a href="#">Search</a></li>
-													</ul>
-												</div>
-												<div class="col  col-xs-12 col-lg-3">
-													<img class="submenu-icon" src="includes/img/pen.svg" alt="ikon"/>
-													<a class="submenu-title" href="#">Connect</a>
-													<ul class="list-unstyled">
-														<li><a href="#">Search</a></li>
-														<li><a href="#">Search</a></li>
-														<li><a href="#">Search</a></li>
-														<li><a href="#" >Search</a></li>
-													</ul>
-												</div>
-												<div class="col col-xs-12 col-lg-3">
-													<img class="submenu-icon" src="includes/img/pen.svg" alt="ikon"/>
-													<a class="submenu-title" href="#">Automate</a>
-													<ul class="list-unstyled">
-														<li><a href="#">Search</a></li>
-														<li><a href="#">Search</a></li>
-														<li><a href="#">Search</a></li>
-														<li><a href="#">Search</a></li>
-													</ul>
-												</div>
-												<div class=" col col-xs-12 col-lg-3">
-													<img class="submenu-icon" src="includes/img/pen.svg" alt="ikon"/>
-													<a class="submenu-title" href="#">Report</a>
-													<ul class="list-unstyled">
-														<li><a href="#">Search</a></li>
-														<li><a href="#">Search</a></li>
-														<li><a href="#">Search</a></li>
-														<li><a href="#">Search</a></li>
-													</ul>
+								{% for menuItem in mainMenu %}
+									{% if menuItem.level == 1 %}
+									{% set url = menuItem.linkedEntry.first() ? menuItem.linkedEntry.first().url : menuItem.externalUrl %}
+										<li class="">
+											<a class="{{ url == entry.url ? 'active' }} {{ menuItem.hasDescendants() ? 'has-submenu' }}"
+											href="{{ menuItem.linkedEntry.first() ? menuItem.linkedEntry.first().url : menuItem.externalUrl ? '#' : '#'}}"
+											{{ menuItem.openInNewWindow ? 'target="_blank"' : '' }}>{{ menuItem.title }}</a>
+											{% if menuItem.hasDescendants() %}
+											<div class="submenu">
+												<div class="container">
+													<div class="row">
+														{% for subMenuItems in menuItem.descendants.level(2) %}
+															<div class="col col-xs-12 col-lg-3">
+																{% if subMenuItems.icon %}
+																	<img class="submenu-icon" src="{{ subMenuItems.icon.first().url }}" alt="{{ subMenuItems.icon.first().title }}"/>
+																{% endif %}
+																<a class="submenu-title" href="#">{{ subMenuItems.title }}</a>
+																{% if subMenuItems.hasDescendants() %}
+																	<ul class="list-unstyled">
+																	{% for subSubMenuItems in subMenuItems.descendants.level(3) %}
+																		<li><a href="#">{{ subSubMenuItems.title }}</a></li>
+																	{% endfor %}
+																</ul>
+																{% endif %}
+															</div>
+														{% endfor %}
+													</div>
 												</div>
 											</div>
-										</div>
-									<div>
-								</li>
-								<li><a href="#">Pricing</a></li>
-								<li><a href="#">Company</a></li>
+											{% endif %}
+										</li>
+									{% endif %}
+								{% endfor %}
 							</ul>
 						</div>
 					</div>
 				</div>
 			</div>
-
 			<div class="col col-auto-lg main-menu-cta">
 				<button class="btn btn-secondary" aria-label="Log in">Log in</button>
 				<button class="btn" aria-label="Sign up free">Sign up free</button>
 			</div>
-
 		</div>
 	</div>
-
 </nav>

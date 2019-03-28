@@ -1,4 +1,4 @@
-dateModified: 1553715645
+dateModified: 1553765995
 email:
   fromEmail: mrn@mamacph.dk
   fromName: 'Craft test'
@@ -8,6 +8,8 @@ fieldGroups:
     name: Sektioner
   dcaef338-2577-47e2-8b21-76e6fe9e7d14:
     name: SEO
+  ac81f6ee-7c74-417c-8be9-5aa992dcc2f3:
+    name: 'Menu Item'
 fields:
   00c0812c-1bc5-4e9d-b707-b341f15b40ea:
     name: Sections
@@ -85,6 +87,77 @@ fields:
       localizeRelations: false
     contentColumnType: string
     fieldGroup: dcaef338-2577-47e2-8b21-76e6fe9e7d14
+  7f4512a5-166e-4688-b83d-87fc21f2a118:
+    name: 'Linked Entry'
+    handle: linkedEntry
+    instructions: ''
+    searchable: true
+    translationMethod: site
+    translationKeyFormat: null
+    type: craft\fields\Entries
+    settings:
+      sources:
+        - singles
+        - 'section:aebcc222-f778-4b0b-8456-c203042d4448'
+      source: null
+      targetSiteId: null
+      viewMode: null
+      limit: '1'
+      selectionLabel: ''
+      localizeRelations: false
+    contentColumnType: string
+    fieldGroup: ac81f6ee-7c74-417c-8be9-5aa992dcc2f3
+  d6af72ee-cda0-4a29-ba02-636df4752359:
+    name: 'Open in new window'
+    handle: openInNewWindow
+    instructions: ''
+    searchable: true
+    translationMethod: none
+    translationKeyFormat: null
+    type: craft\fields\Lightswitch
+    settings:
+      default: ''
+    contentColumnType: boolean
+    fieldGroup: ac81f6ee-7c74-417c-8be9-5aa992dcc2f3
+  dd662521-26c5-47ea-acce-8144738d1348:
+    name: 'External URL'
+    handle: externalUrl
+    instructions: ''
+    searchable: true
+    translationMethod: none
+    translationKeyFormat: null
+    type: craft\fields\Url
+    settings:
+      placeholder: ''
+    contentColumnType: string
+    fieldGroup: ac81f6ee-7c74-417c-8be9-5aa992dcc2f3
+  275b91b4-ed59-4536-a974-7000f0e28107:
+    name: Icon
+    handle: icon
+    instructions: 'Is only shown on the first level of submenus'
+    searchable: true
+    translationMethod: site
+    translationKeyFormat: null
+    type: craft\fields\Assets
+    settings:
+      useSingleFolder: '1'
+      defaultUploadLocationSource: 'volume:ae062ac1-010f-452c-b80a-2e93f2b870e1'
+      defaultUploadLocationSubpath: ''
+      singleUploadLocationSource: 'volume:ae062ac1-010f-452c-b80a-2e93f2b870e1'
+      singleUploadLocationSubpath: ''
+      restrictFiles: '1'
+      allowedKinds:
+        - image
+      sources:
+        - 'volume:ae062ac1-010f-452c-b80a-2e93f2b870e1'
+      source: null
+      targetSiteId: null
+      viewMode: large
+      limit: '1'
+      selectionLabel: ''
+      localizeRelations: false
+    contentColumnType: string
+    fieldGroup: ac81f6ee-7c74-417c-8be9-5aa992dcc2f3
 matrixBlockTypes:
   4e9d94c9-7f15-4f43-987c-8d7734164059:
     field: 00c0812c-1bc5-4e9d-b707-b341f15b40ea
@@ -1650,6 +1723,48 @@ sections:
                   97271e18-146f-4490-8201-abb72553b6c4:
                     required: false
                     sortOrder: 3
+  61370530-f586-4b1c-bab0-7cb4f6014de7:
+    name: 'Main Menu'
+    handle: mainMenu
+    type: structure
+    enableVersioning: true
+    propagateEntries: true
+    siteSettings:
+      16e863b7-d327-40e4-bf32-c2e9f6965a86:
+        enabledByDefault: true
+        hasUrls: false
+        uriFormat: null
+        template: null
+    structure:
+      uid: d8d0bc0d-29b3-440e-9365-dc6d2e41c43e
+      maxLevels: '3'
+    entryTypes:
+      893f3fd4-22cf-408a-af34-152c2279281f:
+        name: 'Main Menu'
+        handle: mainMenu
+        hasTitleField: true
+        titleLabel: Titel
+        titleFormat: ''
+        sortOrder: 1
+        fieldLayouts:
+          681c45dd-9154-4a91-923b-17580c12afce:
+            tabs:
+              -
+                name: 'Menu Item'
+                sortOrder: 1
+                fields:
+                  7f4512a5-166e-4688-b83d-87fc21f2a118:
+                    required: false
+                    sortOrder: 1
+                  dd662521-26c5-47ea-acce-8144738d1348:
+                    required: false
+                    sortOrder: 2
+                  d6af72ee-cda0-4a29-ba02-636df4752359:
+                    required: false
+                    sortOrder: 3
+                  275b91b4-ed59-4536-a974-7000f0e28107:
+                    required: false
+                    sortOrder: 4
 siteGroups:
   927d84e1-054c-4029-9418-6bcb17c367a2:
     name: 'Craft test'
