@@ -27,6 +27,7 @@
 
 		// If the clicked element is the burger-menu
 		if ( event.target ===  menuToggle ) {
+			event.preventDefault();
 
 			if( mainMenu.classList.contains('closed') ) {
 				menuToggle.setAttribute("aria-expanded", 'true');
@@ -42,7 +43,7 @@
 			for ( var i = 0; i <= subMenu.length; i++ ) {
 
 				if ( subMenu[i] === event.target ) {
-
+					event.preventDefault();
 
 					// Add a class to the parent element of the clicked subMenu[i] item in the subMenu array
 					subMenu[i].parentNode.classList.toggle('expand');

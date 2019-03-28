@@ -33,6 +33,10 @@ p, a {
 	}
 }
 
+.text-editor-wrapper p {
+	font-size: 1.125rem !important;
+}
+
 
 @include mq($until: md) {
 	h1, .h1 {
@@ -54,6 +58,11 @@ p, a {
 		font-size: 1rem;
 
 		&.small {
+			font-size: 1rem !important;
+		}
+	}
+	.text-editor-wrapper {
+		p {
 			font-size: 1rem !important;
 		}
 	}

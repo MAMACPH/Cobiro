@@ -31,18 +31,21 @@ return [
     // Dev environment settings
     'dev' => [
         // Dev Mode (see https://craftcms.com/guides/what-dev-mode-does)
-        'devMode' => true,
+		'devMode' => true,
+		'disableIndexing' => true,
     ],
 
     // Staging environment settings
     'staging' => [
         // Prevent administrative changes from being made on staging
-        'allowAdminChanges' => false,
+		'allowAdminChanges' => false,
+		'disableIndexing' => true,
     ],
 
     // Production environment settings
     'production' => [
         // Prevent administrative changes from being made on production
-        'allowAdminChanges' => false,
+		'allowAdminChanges' => false,
+		'disableIndexing' => false,
     ],
 ];
