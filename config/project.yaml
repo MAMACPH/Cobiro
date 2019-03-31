@@ -1,4 +1,4 @@
-dateModified: 1553765995
+dateModified: 1553858478
 email:
   fromEmail: mrn@mamacph.dk
   fromName: 'Craft test'
@@ -1624,6 +1624,164 @@ matrixBlockTypes:
               80e47da4-19fd-4a7c-aaaa-54dcee293446:
                 required: true
                 sortOrder: 1
+  c57e1a63-85e5-4803-b81c-95a2e15c3a8c:
+    field: 00c0812c-1bc5-4e9d-b707-b341f15b40ea
+    name: 'List Pricing'
+    handle: listPricing
+    sortOrder: 11
+    fields:
+      5ffe23f0-f09e-4ae6-9053-3264dd4344fa:
+        name: Heading
+        handle: heading
+        instructions: ''
+        searchable: true
+        translationMethod: none
+        translationKeyFormat: null
+        type: craft\fields\PlainText
+        settings:
+          placeholder: ''
+          code: ''
+          multiline: ''
+          initialRows: '4'
+          charLimit: ''
+          columnType: text
+        contentColumnType: text
+        fieldGroup: null
+      c3bd0b75-8ffa-4fd7-ae4d-e371b615f53f:
+        name: Text
+        handle: text
+        instructions: ''
+        searchable: true
+        translationMethod: none
+        translationKeyFormat: null
+        type: craft\fields\PlainText
+        settings:
+          placeholder: ''
+          code: ''
+          multiline: ''
+          initialRows: '4'
+          charLimit: ''
+          columnType: text
+        contentColumnType: text
+        fieldGroup: null
+      ea26d53d-4a07-4d80-b3f8-ce9de2a4e4c3:
+        name: Pricings
+        handle: pricings
+        instructions: ''
+        searchable: true
+        translationMethod: none
+        translationKeyFormat: null
+        type: craft\fields\Table
+        settings:
+          addRowLabel: 'Tilføj en række'
+          maxRows: '2'
+          minRows: '2'
+          columns:
+            col1:
+              heading: Titel
+              handle: titel
+              width: ''
+              type: singleline
+            col2:
+              heading: Price
+              handle: price
+              width: ''
+              type: number
+            col3:
+              heading: Text
+              handle: text
+              width: ''
+              type: multiline
+            col4:
+              heading: 'Link Title'
+              handle: linkTitle
+              width: ''
+              type: singleline
+            col5:
+              heading: Link
+              handle: href
+              width: ''
+              type: singleline
+          defaults:
+            -
+              col1: ''
+              col2: ''
+              col3: ''
+              col4: ''
+              col5: ''
+          columnType: text
+        contentColumnType: text
+        fieldGroup: null
+      4728c073-6c3a-482d-87a5-c42732deaf46:
+        name: 'Base Features'
+        handle: baseFeatures
+        instructions: ''
+        searchable: true
+        translationMethod: none
+        translationKeyFormat: null
+        type: craft\fields\Table
+        settings:
+          addRowLabel: 'Add feature'
+          maxRows: ''
+          minRows: '1'
+          columns:
+            col1:
+              heading: Feature
+              handle: feature
+              width: ''
+              type: singleline
+          defaults:
+            -
+              col1: ''
+          columnType: text
+        contentColumnType: text
+        fieldGroup: null
+      9273248b-353f-40d0-85dc-1141a1b1341f:
+        name: 'Premium Features'
+        handle: premiumFeatures
+        instructions: ''
+        searchable: true
+        translationMethod: none
+        translationKeyFormat: null
+        type: craft\fields\Table
+        settings:
+          addRowLabel: 'Add feature'
+          maxRows: ''
+          minRows: '1'
+          columns:
+            col1:
+              heading: Feature
+              handle: feature
+              width: ''
+              type: singleline
+          defaults:
+            -
+              col1: ''
+          columnType: text
+        contentColumnType: text
+        fieldGroup: null
+    fieldLayouts:
+      2804b3fb-e832-4132-86b0-a2f62ce3d054:
+        tabs:
+          -
+            name: Content
+            sortOrder: 1
+            fields:
+              5ffe23f0-f09e-4ae6-9053-3264dd4344fa:
+                required: true
+                sortOrder: 1
+              c3bd0b75-8ffa-4fd7-ae4d-e371b615f53f:
+                required: true
+                sortOrder: 2
+              ea26d53d-4a07-4d80-b3f8-ce9de2a4e4c3:
+                required: true
+                sortOrder: 3
+              4728c073-6c3a-482d-87a5-c42732deaf46:
+                required: true
+                sortOrder: 4
+              9273248b-353f-40d0-85dc-1141a1b1341f:
+                required: true
+                sortOrder: 5
 plugins:
   ckeditor:
     edition: standard
@@ -1635,7 +1793,17 @@ plugins:
     schemaVersion: 2.2.2
 sections:
   4013a702-e7ee-4b83-80dc-b9d9c30daaa9:
+    name: Forside
+    handle: forside
+    type: single
     enableVersioning: true
+    propagateEntries: true
+    siteSettings:
+      16e863b7-d327-40e4-bf32-c2e9f6965a86:
+        enabledByDefault: true
+        hasUrls: true
+        uriFormat: __home__
+        template: index
     entryTypes:
       7a687599-b3b9-462e-b934-609439377df6:
         name: Forside
@@ -1667,16 +1835,6 @@ sections:
                   97271e18-146f-4490-8201-abb72553b6c4:
                     required: false
                     sortOrder: 3
-    handle: forside
-    name: Forside
-    propagateEntries: true
-    siteSettings:
-      16e863b7-d327-40e4-bf32-c2e9f6965a86:
-        enabledByDefault: true
-        hasUrls: true
-        template: index
-        uriFormat: __home__
-    type: single
   aebcc222-f778-4b0b-8456-c203042d4448:
     name: Pages
     handle: pages

@@ -132,11 +132,19 @@
 
 		{% include 'includes/sections/text-editor.twig' with blockContent %}
 
+	{% elseif block.type == "listPricing" %}
+
+		{% set blockContent = {
+			heading : block.heading,
+			text : block.text,
+			pricings : block.pricings,
+			baseFeatures : block.baseFeatures,
+			premiumFeatures : block.premiumFeatures
+		} %}
+
+		{% include 'includes/sections/list-pricing.twig' with blockContent %}
+
 	{% endif %}
 {% endfor %}
-
-{#
-	{% include 'includes/sections/list-pricing.twig' with pageContent %}
-#}
 
 {% include 'includes/partials/footer.twig' %}

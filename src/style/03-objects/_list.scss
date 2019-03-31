@@ -1,7 +1,13 @@
 @import '~baseguide/scss/baseguide/03-objects/list';
 
 .price-list li {
-	line-height: 2rem;
+	margin-bottom: 1rem;
+	padding-left: 2.5em;
+	position: relative;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
 
 	&::before {
 		content: '';
@@ -9,9 +15,10 @@
 		display: inline-block;
 		background-repeat: no-repeat;
 		background-position: 50% 50%;
-		top: 50%;
-		right: 0;
-		width: 2em;
+		top: 0.3em;
+		left: 0;
+		width: 1em;
 		height: 1em;
+		position: absolute;
 	}
 }
