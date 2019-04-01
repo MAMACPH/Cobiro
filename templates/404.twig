@@ -1,0 +1,18 @@
+{% set entry = { slug : '404', title : 'The page could not be found', url : '/404'} %}
+{% set pageContent = { title : 'The page could not be found' } %}
+
+{% include 'includes/partials/header.twig' with pageContent %}
+
+<section class="section">
+	<div class="container">
+		<div class="row center-xs">
+			<div class="col col-xs-12 col-sm-6 text-center">
+				<h1>Missing page</h1>
+				<p>{{ entry.title }}</p>
+				<a href="/" class="btn btn-large">Go to the frontpage</a>
+			</div>
+		</div>
+	</div>
+</section>
+
+{% include 'includes/partials/footer.twig' %}
