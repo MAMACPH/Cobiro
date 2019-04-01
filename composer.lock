@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "2ada55d8dcaa974edb3f91bbd511a9c3",
+    "content-hash": "758ea19b30e52e1c209955c2939ff3a0",
     "packages": [
         {
             "name": "cebe/markdown",
@@ -286,56 +286,6 @@
                 "validator"
             ],
             "time": "2019-03-26T10:23:26+00:00"
-        },
-        {
-            "name": "craftcms/ckeditor",
-            "version": "1.0.0-beta.2",
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/ckeditor/zipball/185f6064cc135d717cf7b43c93aff2063ce399f1",
-                "reference": "185f6064cc135d717cf7b43c93aff2063ce399f1",
-                "shasum": ""
-            },
-            "require": {
-                "craftcms/cms": "^3.0.0-RC1"
-            },
-            "type": "craft-plugin",
-            "extra": {
-                "name": "CKEditor",
-                "handle": "ckeditor",
-                "changelogUrl": "https://raw.githubusercontent.com/craftcms/ckeditor/master/CHANGELOG.md",
-                "downloadUrl": "https://github.com/craftcms/ckeditor/archive/master.zip"
-            },
-            "autoload": {
-                "psr-4": {
-                    "craft\\ckeditor\\": "src/"
-                }
-            },
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Pixel & Tonic",
-                    "homepage": "https://pixelandtonic.com/"
-                }
-            ],
-            "description": "Edit rich text content in Craft CMS using CKEditor.",
-            "keywords": [
-                "ckeditor",
-                "cms",
-                "craftcms",
-                "html",
-                "yii2"
-            ],
-            "support": {
-                "email": "support@craftcms.com",
-                "issues": "https://github.com/craftcms/ckeditor/issues?state=open",
-                "source": "https://github.com/craftcms/ckeditor",
-                "docs": "https://github.com/craftcms/ckeditor",
-                "rss": "https://github.com/craftcms/ckeditor/commits/master.atom"
-            },
-            "time": "2018-01-15T18:06:22+00:00"
         },
         {
             "name": "craftcms/cms",
@@ -1276,6 +1226,55 @@
                 "shell"
             ],
             "time": "2018-07-07T07:35:36+00:00"
+        },
+        {
+            "name": "monachilada/craft-matrixtoolbar",
+            "version": "1.0.6",
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/monachilada/craft-matrixtoolbar/zipball/97c862ace5f5633972e8b7f81e4161eb4c06af78",
+                "reference": "97c862ace5f5633972e8b7f81e4161eb4c06af78",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^3.0.27"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "name": "Matrix Toolbar",
+                "handle": "matrixtoolbar",
+                "hasCpSettings": false,
+                "hasCpSection": false,
+                "changelogUrl": "https://raw.githubusercontent.com/monachilada/craft-matrixtoolbar/master/CHANGELOG.md",
+                "class": "monachilada\\matrixtoolbar\\MatrixToolbar"
+            },
+            "autoload": {
+                "psr-4": {
+                    "monachilada\\matrixtoolbar\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Mike Pierce",
+                    "homepage": "https://michaelpierce.trade/"
+                }
+            ],
+            "description": "Expand, collapse, change the status of, or delete multiple blocks in a Matrix field simultaneously.",
+            "keywords": [
+                "cms",
+                "craft",
+                "craft-plugin",
+                "craftcms",
+                "matrix toolbar"
+            ],
+            "support": {
+                "docs": "https://github.com/monachilada/craft-matrixtoolbar/blob/master/README.md",
+                "issues": "https://github.com/monachilada/craft-matrixtoolbar/issues"
+            },
+            "time": "2018-10-11T15:05:48+00:00"
         },
         {
             "name": "paragonie/random_compat",
@@ -2880,9 +2879,7 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "craftcms/ckeditor": 10
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
