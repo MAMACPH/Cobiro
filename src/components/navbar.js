@@ -53,6 +53,7 @@
 		}
 	}
 	function overlayClickHander() {
+		console.log(subMenu);
 		for ( var i = 0; i < subMenu.length; i++ ) {
 			if ( subMenu[i].parentNode.classList.contains('expand') ) {
 				expandSubMenu(i);
