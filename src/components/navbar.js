@@ -5,6 +5,7 @@
 	const mainMenu = document.querySelector('nav.main-menu');
 	const menuToggle = document.querySelector('.menu-toggle');
 	const subMenu = document.getElementsByClassName('has-submenu');
+	const navbarOverlay = document.querySelector('.navbar-overlay');
 	let mainMenuHeight = mainMenu.offsetHeight;
 
 	// Setting initial padding-top on body equal to height of navbar
@@ -46,19 +47,33 @@
 					event.preventDefault();
 
 					// Add a class to the parent element of the clicked subMenu[i] item in the subMenu array
-					subMenu[i].parentNode.classList.toggle('expand');
-					subMenu[i].nextElementSibling.style.top = mainMenuHeight - 1 + 'px';
-
-					if ( subMenu[i].parentNode.classList.contains('expand') ) {
-						subMenu[i].nextElementSibling.style.maxHeight = subMenu[i].nextElementSibling.children[0].offsetHeight + 'px';
-					} else {
-						subMenu[i].nextElementSibling.style.maxHeight = null;
-					}
-					// subMenu[i].nextElementSibling.style.maxHeight = mainMenuHeight - 1 + 'px';
-					console.log('poop', subMenu[i].nextElementSibling.children[0].offsetHeight);
+					expandSubMenu(i);
 				}
-
 			}
 		}
 	}
+	function overlayClickHander() {
+		console.log(subMenu);
+		for ( var i = 0; i < subMenu.length; i++ ) {
+			if ( subMenu[i].parentNode.classList.contains('expand') ) {
+				expandSubMenu(i);
+			}
+		}
+	}
+
+	function expandSubMenu(i) {
+		subMenu[i].parentNode.classList.toggle('expand');
+		body.classList.toggle('submenu-expanded');
+
+		subMenu[i].nextElementSibling.style.top = mainMenuHeight - 1 + 'px';
+
+		if ( subMenu[i].parentNode.classList.contains('expand') ) {
+			subMenu[i].nextElementSibling.style.maxHeight = subMenu[i].nextElementSibling.children[0].offsetHeight + 'px';
+			navbarOverlay.addEventListener( 'click', overlayClickHander, false );
+		} else {
+			subMenu[i].nextElementSibling.style.maxHeight = null;
+			navbarOverlay.removeEventListener( 'click', overlayClickHander);
+		}
+	}
+
 }());
