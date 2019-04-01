@@ -1,4 +1,4 @@
-dateModified: 1553858478
+dateModified: 1554066035
 email:
   fromEmail: mrn@mamacph.dk
   fromName: 'Craft test'
@@ -1783,14 +1783,14 @@ matrixBlockTypes:
                 required: true
                 sortOrder: 5
 plugins:
-  ckeditor:
-    edition: standard
-    enabled: true
-    schemaVersion: 1.0.0
   redactor:
     edition: standard
     enabled: true
     schemaVersion: 2.2.2
+  matrixtoolbar:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.4
 sections:
   4013a702-e7ee-4b83-80dc-b9d9c30daaa9:
     name: Forside
