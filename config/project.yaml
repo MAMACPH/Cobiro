@@ -1,4 +1,4 @@
-dateModified: 1554066035
+dateModified: 1554111418
 email:
   fromEmail: mrn@mamacph.dk
   fromName: 'Craft test'
@@ -10,6 +10,8 @@ fieldGroups:
     name: SEO
   ac81f6ee-7c74-417c-8be9-5aa992dcc2f3:
     name: 'Menu Item'
+  3e1b343d-299e-4249-b25c-f253b389dd33:
+    name: 'Footer Menu Item'
 fields:
   00c0812c-1bc5-4e9d-b707-b341f15b40ea:
     name: Sections
@@ -158,6 +160,21 @@ fields:
       localizeRelations: false
     contentColumnType: string
     fieldGroup: ac81f6ee-7c74-417c-8be9-5aa992dcc2f3
+  e5c446c9-5f70-481b-8542-f6a0f535f3a1:
+    name: 'Menu Item'
+    handle: menuItem
+    instructions: ''
+    searchable: true
+    translationMethod: site
+    translationKeyFormat: null
+    type: craft\fields\Matrix
+    settings:
+      minBlocks: ''
+      maxBlocks: ''
+      contentTable: '{{%matrixcontent_menuitem}}'
+      localizeBlocks: false
+    contentColumnType: string
+    fieldGroup: 3e1b343d-299e-4249-b25c-f253b389dd33
 matrixBlockTypes:
   4e9d94c9-7f15-4f43-987c-8d7734164059:
     field: 00c0812c-1bc5-4e9d-b707-b341f15b40ea
@@ -1782,6 +1799,167 @@ matrixBlockTypes:
               9273248b-353f-40d0-85dc-1141a1b1341f:
                 required: true
                 sortOrder: 5
+  e1001b0a-8398-4ad5-8fd8-e124d2af8eb2:
+    field: e5c446c9-5f70-481b-8542-f6a0f535f3a1
+    name: 'Internal Link'
+    handle: internalLink
+    sortOrder: 1
+    fields:
+      7b9441a2-d74f-4743-9316-3b630c17d3d4:
+        name: 'Link Title'
+        handle: linkTitle
+        instructions: ''
+        searchable: true
+        translationMethod: none
+        translationKeyFormat: null
+        type: craft\fields\PlainText
+        settings:
+          placeholder: ''
+          code: ''
+          multiline: ''
+          initialRows: '4'
+          charLimit: ''
+          columnType: text
+        contentColumnType: text
+        fieldGroup: null
+      a6ea4984-9d99-4a81-a926-9edb074b66c0:
+        name: Link
+        handle: href
+        instructions: ''
+        searchable: true
+        translationMethod: site
+        translationKeyFormat: null
+        type: craft\fields\Entries
+        settings:
+          sources:
+            - 'section:aebcc222-f778-4b0b-8456-c203042d4448'
+          source: null
+          targetSiteId: null
+          viewMode: null
+          limit: ''
+          selectionLabel: ''
+          localizeRelations: false
+        contentColumnType: string
+        fieldGroup: null
+    fieldLayouts:
+      3d18fd38-2e78-4e69-95e4-f05761f03f6e:
+        tabs:
+          -
+            name: Content
+            sortOrder: 1
+            fields:
+              7b9441a2-d74f-4743-9316-3b630c17d3d4:
+                required: true
+                sortOrder: 1
+              a6ea4984-9d99-4a81-a926-9edb074b66c0:
+                required: false
+                sortOrder: 2
+  aa9ba992-8226-4588-a9dd-c44f1f281ba1:
+    field: e5c446c9-5f70-481b-8542-f6a0f535f3a1
+    name: 'External Link'
+    handle: externalLink
+    sortOrder: 2
+    fields:
+      5838764d-6e42-4993-8779-7594cca62230:
+        name: 'Link Title'
+        handle: linkTitle
+        instructions: ''
+        searchable: true
+        translationMethod: none
+        translationKeyFormat: null
+        type: craft\fields\PlainText
+        settings:
+          placeholder: ''
+          code: ''
+          multiline: ''
+          initialRows: '4'
+          charLimit: ''
+          columnType: text
+        contentColumnType: text
+        fieldGroup: null
+      e79d0156-6d2d-4c4a-ad07-4a0079dbbc12:
+        name: Link
+        handle: href
+        instructions: ''
+        searchable: true
+        translationMethod: none
+        translationKeyFormat: null
+        type: craft\fields\Url
+        settings:
+          placeholder: ''
+        contentColumnType: string
+        fieldGroup: null
+    fieldLayouts:
+      c7b6d0f2-f9a9-493d-bc6f-ef58ea645c82:
+        tabs:
+          -
+            name: Content
+            sortOrder: 1
+            fields:
+              5838764d-6e42-4993-8779-7594cca62230:
+                required: false
+                sortOrder: 1
+              e79d0156-6d2d-4c4a-ad07-4a0079dbbc12:
+                required: true
+                sortOrder: 2
+  9f0f7e20-49d1-479d-b20a-eb4ea79f19d2:
+    field: e5c446c9-5f70-481b-8542-f6a0f535f3a1
+    name: Image
+    handle: image
+    sortOrder: 3
+    fields:
+      2514c3ad-f198-407a-8101-37237b94a4df:
+        name: Image
+        handle: image
+        instructions: ''
+        searchable: true
+        translationMethod: site
+        translationKeyFormat: null
+        type: craft\fields\Assets
+        settings:
+          useSingleFolder: '1'
+          defaultUploadLocationSource: 'volume:ae062ac1-010f-452c-b80a-2e93f2b870e1'
+          defaultUploadLocationSubpath: ''
+          singleUploadLocationSource: 'volume:ae062ac1-010f-452c-b80a-2e93f2b870e1'
+          singleUploadLocationSubpath: ''
+          restrictFiles: '1'
+          allowedKinds:
+            - image
+          sources:
+            - 'volume:ae062ac1-010f-452c-b80a-2e93f2b870e1'
+          source: null
+          targetSiteId: null
+          viewMode: large
+          limit: '1'
+          selectionLabel: ''
+          localizeRelations: false
+        contentColumnType: string
+        fieldGroup: null
+      d21a9379-77c7-48fc-817c-e8845ce40217:
+        name: Link
+        handle: href
+        instructions: 'Insert link if the image should have a link.'
+        searchable: true
+        translationMethod: none
+        translationKeyFormat: null
+        type: craft\fields\Url
+        settings:
+          placeholder: ''
+        contentColumnType: string
+        fieldGroup: null
+    fieldLayouts:
+      4e3872db-ccca-453a-892f-1b6e0d3370a5:
+        tabs:
+          -
+            name: Content
+            sortOrder: 1
+            fields:
+              2514c3ad-f198-407a-8101-37237b94a4df:
+                required: true
+                sortOrder: 1
+              d21a9379-77c7-48fc-817c-e8845ce40217:
+                required: false
+                sortOrder: 2
 plugins:
   redactor:
     edition: standard
@@ -1923,6 +2101,36 @@ sections:
                   275b91b4-ed59-4536-a974-7000f0e28107:
                     required: false
                     sortOrder: 4
+  0c1aaf65-ccb1-4121-92d4-bd4bf85b6007:
+    name: 'Footer Menu'
+    handle: footerMenu
+    type: channel
+    enableVersioning: true
+    propagateEntries: true
+    siteSettings:
+      16e863b7-d327-40e4-bf32-c2e9f6965a86:
+        enabledByDefault: true
+        hasUrls: false
+        uriFormat: null
+        template: null
+    entryTypes:
+      9b16676e-d453-4e7f-b40f-704796bf42b5:
+        name: 'Footer Menu'
+        handle: footerMenu
+        hasTitleField: true
+        titleLabel: Tittel
+        titleFormat: ''
+        sortOrder: 1
+        fieldLayouts:
+          89e758b3-5951-45b0-aaab-0feba3f43890:
+            tabs:
+              -
+                name: 'Footer Menu Item'
+                sortOrder: 1
+                fields:
+                  e5c446c9-5f70-481b-8542-f6a0f535f3a1:
+                    required: false
+                    sortOrder: 1
 siteGroups:
   927d84e1-054c-4029-9418-6bcb17c367a2:
     name: 'Craft test'
