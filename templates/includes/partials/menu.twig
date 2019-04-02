@@ -22,24 +22,26 @@
 							<ul class="list-inline">
 								{% for menuItem in mainMenu %}
 									{% if menuItem.level == 1 %}
-									{% set url = menuItem.linkedEntry.first() ? menuItem.linkedEntry.first().url : menuItem.externalUrl %}
+									{% set url = menuItem.linkedEntry.one() ? menuItem.linkedEntry.one().url : menuItem.externalUrl %}
 										<li class="">
 											<a class="{{ url == entry.url ? 'active' }} {{ menuItem.hasDescendants() ? 'has-submenu' }}"
-											href="{{ menuItem.linkedEntry.first() ? menuItem.linkedEntry.first().url : menuItem.externalUrl ? '#' : '#'}}"
+											href="{{ menuItem.linkedEntry.one() ? menuItem.linkedEntry.one().url : menuItem.externalUrl ? '#' : '#'}}"
 											{{ menuItem.openInNewWindow ? 'target="_blank"' : '' }}>{{ menuItem.title }}</a>
 											{% if menuItem.hasDescendants() %}
 											<div class="submenu">
 												<div class="container">
 													<div class="row">
-														{% for subMenuItems in menuItem.descendants.level(2) %}
+														{% set subMenuItemsFetchedLevelTwo = menuItem.descendants.level(2).all()%}
+														{% for subMenuItems in subMenuItemsFetchedLevelTwo %}
 															<div class="col col-xs-12 col-lg-3">
 																{% if subMenuItems.icon %}
-																	<img class="submenu-icon" src="{{ subMenuItems.icon.first().url }}" alt="{{ subMenuItems.icon.first().title }}"/>
+																	<img class="submenu-icon" src="{{ subMenuItems.icon.one().url }}" alt="{{ subMenuItems.icon.one().title }}"/>
 																{% endif %}
 																<a class="submenu-title" href="#">{{ subMenuItems.title }}</a>
 																{% if subMenuItems.hasDescendants() %}
 																	<ul class="list-unstyled">
-																	{% for subSubMenuItems in subMenuItems.descendants.level(3) %}
+																	{% set subMenuItemsFetchedLevelThree = subMenuItems.descendants.level(3).all()%}
+																	{% for subSubMenuItems in subMenuItemsFetchedLevelThree %}
 																		<li><a href="#">{{ subSubMenuItems.title }}</a></li>
 																	{% endfor %}
 																</ul>
