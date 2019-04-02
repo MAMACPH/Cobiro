@@ -12,7 +12,7 @@
 			text : block.text,
 			link : block.href,
 			linkText : block.linkText,
-			image : block.image.first()
+			image : block.image.one()
 		} %}
 
 		{% include 'includes/sections/jumbo-header.twig' with blockContent %}
@@ -20,7 +20,7 @@
 	{% elseif block.type == "featuredTestimonalSingle" %}
 
 		{% set blockContent = {
-			image : block.image.first(),
+			image : block.image.one(),
 			quote : block.quote,
 			person : block.person
 		} %}
@@ -32,7 +32,7 @@
 		{% set blockContent = {
 			heading : block.heading,
 			text : block.text,
-			image1 : block.image1.first(),
+			image1 : block.image1.one(),
 			title1 : block.title1,
 			text1 : block.text1,
 			linkText1 : block.linkText1,
@@ -66,7 +66,7 @@
 			text : block.text,
 			link : block.href,
 			linkText : block.linkText,
-			image : block.image.first()
+			image : block.image.one()
 		} %}
 
 		{% include 'includes/sections/explanation-left.twig' with blockContent %}
@@ -78,7 +78,7 @@
 			text : block.text,
 			link : block.href,
 			linkText : block.linkText,
-			image : block.image.first()
+			image : block.image.one()
 		} %}
 
 		{% include 'includes/sections/explanation-right.twig' with blockContent %}
@@ -99,7 +99,7 @@
 		{% set blockContent = {
 			heading : block.heading,
 			text : block.text,
-			image1 : block.image1.first(),
+			image1 : block.image1.one(),
 			title1 : block.title1,
 			subtitle1 : block.subtitle1,
 			text1 : block.text1,

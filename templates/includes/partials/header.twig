@@ -25,7 +25,7 @@
 	{% endif %}
 
 	{# Search engine indexing #}
-	{% if craft.config.disableIndexing %}
+	{% if craft.app.config.general.disableIndexing %}
 		<meta name="robots" content="noindex,follow">
 	{% endif %}
 
@@ -44,7 +44,7 @@
 
 	<meta property="og:site_name" content="{{ siteName }}">
 	<meta property="og:locale" content="{{ craft.app.locale }}">
-	<meta property="og:url" content="{{ craft.request.url }}">
+	<meta property="og:url" content="{{ craft.app.request.absoluteUrl }}">
 	<meta property="og:type" content="website">
 
 	{# Alternate languages
