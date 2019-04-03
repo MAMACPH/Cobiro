@@ -8,14 +8,16 @@
 			text : block.text,
 			link : block.href,
 			linkText : block.linkText,
-			image : block.image.one()
+			image : block.image.one(),
+			backgroundColor : block.backgroundColor
 		} %}
 	{% include 'includes/sections/jumbo-header.twig' with blockContent %}
 	{% elseif block.type == "featuredTestimonalSingle" %}
 		{% set blockContent = {
 			image : block.image.one(),
 			quote : block.quote,
-			person : block.person
+			person : block.person,
+			backgroundColor : block.backgroundColor
 		} %}
 	{% include 'includes/sections/featured-testimonal-single.twig' with blockContent %}
 	{% elseif block.type == "threeUp" %}
@@ -34,14 +36,16 @@
 			title3 : block.title3,
 			text3 : block.text3,
 			linkText3 : block.linkText3,
-			link3 : block.link3
+			link3 : block.link3,
+			backgroundColor : block.backgroundColor
 		} %}
 	{% include 'includes/sections/3-up.twig' with blockContent %}
 	{% elseif block.type == "featuredCompanies" %}
 		{% set blockContent = {
 			heading : block.heading,
 			text : block.text,
-			images : block.images
+			images : block.images,
+			backgroundColor : block.backgroundColor
 		} %}
 	{% include 'includes/sections/featured-companies.twig' with blockContent %}
 	{% elseif block.type == "explanationLeft" %}
@@ -50,7 +54,8 @@
 			text : block.text,
 			link : block.href,
 			linkText : block.linkText,
-			image : block.image.one()
+			image : block.image.one(),
+			backgroundColor : block.backgroundColor
 		} %}
 	{% include 'includes/sections/explanation-left.twig' with blockContent %}
 	{% elseif block.type == "explanationRight" %}
@@ -59,7 +64,8 @@
 			text : block.text,
 			link : block.href,
 			linkText : block.linkText,
-			image : block.image.one()
+			image : block.image.one(),
+			backgroundColor : block.backgroundColor
 		} %}
 	{% include 'includes/sections/explanation-right.twig' with blockContent %}
 	{% elseif block.type == "jumboCta" %}
@@ -67,7 +73,8 @@
 			heading : block.heading,
 			text : block.text,
 			link : block.href,
-			linkText : block.linkText
+			linkText : block.linkText,
+			backgroundColor : block.backgroundColor
 		} %}
 	{% include 'includes/sections/jumbo-cta.twig' with blockContent %}
 	{% elseif block.type == "threeUpPeople" %}
@@ -86,7 +93,8 @@
 			title3 : block.title3,
 			subtitle3 : block.subtitle3,
 			text3 : block.text3,
-			link3 : block.linkedinLink3
+			link3 : block.linkedinLink3,
+			backgroundColor : block.backgroundColor
 		} %}
 	{% include 'includes/sections/3-up-people.twig' with blockContent %}
 	{% elseif block.type == "accordionFaq" %}
@@ -105,7 +113,8 @@
 			text : block.text,
 			pricings : block.pricings,
 			baseFeatures : block.baseFeatures,
-			premiumFeatures : block.premiumFeatures
+			premiumFeatures : block.premiumFeatures,
+			backgroundColor : block.backgroundColor
 		} %}
 		{% include 'includes/sections/list-pricing.twig' with blockContent %}
 	{% endif %}
