@@ -116,7 +116,12 @@
 			premiumFeatures : block.premiumFeatures,
 			backgroundColor : block.backgroundColor
 		} %}
-		{% include 'includes/sections/list-pricing.twig' with blockContent %}
+	{% include 'includes/sections/list-pricing.twig' with blockContent %}
+	{% elseif block.type == "video" %}
+		{% set blockContent = {
+			embedCode : block.embedCode
+		} %}
+		{% include 'includes/sections/video.twig' with blockContent %}
 	{% endif %}
 {% endfor %}
 {% include 'includes/partials/footer.twig' %}
