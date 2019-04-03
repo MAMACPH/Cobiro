@@ -1,4 +1,4 @@
-dateModified: 1554290625
+dateModified: 1554291324
 email:
   fromEmail: mrn@mamacph.dk
   fromName: 'Craft test'
@@ -393,6 +393,18 @@ matrixBlockTypes:
           localizeRelations: false
         contentColumnType: string
         fieldGroup: null
+      8cf5622c-df77-4d6d-a351-cf42b41a94d0:
+        name: 'Background Color'
+        handle: backgroundColor
+        instructions: ''
+        searchable: true
+        translationMethod: none
+        translationKeyFormat: null
+        type: craft\fields\Color
+        settings:
+          defaultColor: ''
+        contentColumnType: string(7)
+        fieldGroup: null
     fieldLayouts:
       b5bf9062-600b-45c0-9432-ffbafdd4bc63:
         tabs:
@@ -415,6 +427,9 @@ matrixBlockTypes:
               6ea8acc4-6a79-4804-9c6b-df6083aef9ad:
                 required: true
                 sortOrder: 5
+              8cf5622c-df77-4d6d-a351-cf42b41a94d0:
+                required: false
+                sortOrder: 6
   cca13897-692f-4402-bc59-5db33346fb5d:
     field: 00c0812c-1bc5-4e9d-b707-b341f15b40ea
     name: 'Featured Testimonal Single'
@@ -481,6 +496,18 @@ matrixBlockTypes:
           columnType: text
         contentColumnType: text
         fieldGroup: null
+      cab5bb59-cc31-4c38-956c-91e1896ddc1d:
+        name: 'Background Color'
+        handle: backgroundColor
+        instructions: ''
+        searchable: true
+        translationMethod: none
+        translationKeyFormat: null
+        type: craft\fields\Color
+        settings:
+          defaultColor: ''
+        contentColumnType: string(7)
+        fieldGroup: null
     fieldLayouts:
       cd37dc21-e166-40b0-9540-2f45ab0afa77:
         tabs:
@@ -497,6 +524,9 @@ matrixBlockTypes:
               0450603d-525b-4a2b-8a99-6ab061c51323:
                 required: true
                 sortOrder: 3
+              cab5bb59-cc31-4c38-956c-91e1896ddc1d:
+                required: false
+                sortOrder: 4
   30ad81d0-1e4d-4d3a-8e3e-fdd60fc44030:
     field: 00c0812c-1bc5-4e9d-b707-b341f15b40ea
     name: '3 Up'
@@ -810,6 +840,18 @@ matrixBlockTypes:
           maxLength: '255'
         contentColumnType: string(255)
         fieldGroup: null
+      c9f6085c-4cfb-4a95-9b73-19c12a2d838c:
+        name: 'Background Color'
+        handle: backgroundColor
+        instructions: ''
+        searchable: true
+        translationMethod: none
+        translationKeyFormat: null
+        type: craft\fields\Color
+        settings:
+          defaultColor: ''
+        contentColumnType: string(7)
+        fieldGroup: null
     fieldLayouts:
       1c80d5ea-105a-4e64-ab9e-b2272daa5667:
         tabs:
@@ -868,6 +910,9 @@ matrixBlockTypes:
               430665ec-b544-4c03-8030-eed227d89d55:
                 required: true
                 sortOrder: 17
+              c9f6085c-4cfb-4a95-9b73-19c12a2d838c:
+                required: false
+                sortOrder: 18
   b7c0b134-a4c8-48a8-8a88-e1195538bb53:
     field: 00c0812c-1bc5-4e9d-b707-b341f15b40ea
     name: 'Featured Companies'
@@ -936,6 +981,18 @@ matrixBlockTypes:
           localizeRelations: false
         contentColumnType: string
         fieldGroup: null
+      dfa31d14-c65c-41ec-8192-365592408f1f:
+        name: 'Background Color'
+        handle: backgroundColor
+        instructions: ''
+        searchable: true
+        translationMethod: none
+        translationKeyFormat: null
+        type: craft\fields\Color
+        settings:
+          defaultColor: ''
+        contentColumnType: string(7)
+        fieldGroup: null
     fieldLayouts:
       b01b58c2-4d8a-4b76-90af-a80ab172b6aa:
         tabs:
@@ -952,6 +1009,9 @@ matrixBlockTypes:
               2e5fbcec-0493-49c6-9111-ffec902c24b6:
                 required: true
                 sortOrder: 3
+              dfa31d14-c65c-41ec-8192-365592408f1f:
+                required: false
+                sortOrder: 4
   15308cf1-608f-45ae-b5fb-5b84a7603257:
     field: 00c0812c-1bc5-4e9d-b707-b341f15b40ea
     name: 'Explanation Left'
@@ -1049,6 +1109,18 @@ matrixBlockTypes:
           localizeRelations: false
         contentColumnType: string
         fieldGroup: null
+      acbe0ba3-c309-4ffb-b915-15ab331a7ed9:
+        name: 'Background Color'
+        handle: backgroundColor
+        instructions: ''
+        searchable: true
+        translationMethod: none
+        translationKeyFormat: null
+        type: craft\fields\Color
+        settings:
+          defaultColor: ''
+        contentColumnType: string(7)
+        fieldGroup: null
     fieldLayouts:
       56c5282d-c4e2-4a84-af8b-2fa30c1036d1:
         tabs:
@@ -1071,6 +1143,9 @@ matrixBlockTypes:
               f802907d-d20b-4ffd-b980-1a56ccf18a49:
                 required: true
                 sortOrder: 5
+              acbe0ba3-c309-4ffb-b915-15ab331a7ed9:
+                required: false
+                sortOrder: 6
   c148d008-868a-4e8d-93eb-1c2154a0c8cf:
     field: 00c0812c-1bc5-4e9d-b707-b341f15b40ea
     name: 'Explanation Right'
@@ -1168,6 +1243,18 @@ matrixBlockTypes:
           maxLength: '255'
         contentColumnType: string(255)
         fieldGroup: null
+      353c4840-c905-4688-bb17-0d722fcec622:
+        name: 'Background Color'
+        handle: backgroundColor
+        instructions: ''
+        searchable: true
+        translationMethod: none
+        translationKeyFormat: null
+        type: craft\fields\Color
+        settings:
+          defaultColor: ''
+        contentColumnType: string(7)
+        fieldGroup: null
     fieldLayouts:
       b5e6ae4d-c63a-4947-a0a7-ce9dfd44a562:
         tabs:
@@ -1190,6 +1277,9 @@ matrixBlockTypes:
               0b03d36d-f5e4-4772-a0a2-23444a338a85:
                 required: true
                 sortOrder: 5
+              353c4840-c905-4688-bb17-0d722fcec622:
+                required: false
+                sortOrder: 6
   9ef5aa81-a85a-4034-ab1e-483d220e625f:
     field: 00c0812c-1bc5-4e9d-b707-b341f15b40ea
     name: 'Jumbo CTA'
@@ -1261,6 +1351,18 @@ matrixBlockTypes:
           maxLength: '255'
         contentColumnType: string(255)
         fieldGroup: null
+      e261de69-f02c-45eb-9650-40d8baef3565:
+        name: 'Background Color'
+        handle: backgroundColor
+        instructions: ''
+        searchable: true
+        translationMethod: none
+        translationKeyFormat: null
+        type: craft\fields\Color
+        settings:
+          defaultColor: ''
+        contentColumnType: string(7)
+        fieldGroup: null
     fieldLayouts:
       a365ff10-527c-4931-b626-c90d8f2f5b1a:
         tabs:
@@ -1280,6 +1382,9 @@ matrixBlockTypes:
               51f9c08c-7d52-45aa-890f-b14eed04ab7d:
                 required: true
                 sortOrder: 4
+              e261de69-f02c-45eb-9650-40d8baef3565:
+                required: false
+                sortOrder: 5
   c8e55de0-0e7c-4c89-853f-d74f0594cb49:
     field: 00c0812c-1bc5-4e9d-b707-b341f15b40ea
     name: '3 Up People'
@@ -1591,6 +1696,18 @@ matrixBlockTypes:
           maxLength: '255'
         contentColumnType: string(255)
         fieldGroup: null
+      66a1a497-253f-4d32-a334-ab29191e084d:
+        name: 'Background Color'
+        handle: backgroundColor
+        instructions: ''
+        searchable: true
+        translationMethod: none
+        translationKeyFormat: null
+        type: craft\fields\Color
+        settings:
+          defaultColor: ''
+        contentColumnType: string(7)
+        fieldGroup: null
     fieldLayouts:
       03389db4-617e-4548-977e-6d574da33c61:
         tabs:
@@ -1649,6 +1766,9 @@ matrixBlockTypes:
               0ff79530-187f-4012-bfe8-d71ec9e52cc5:
                 required: true
                 sortOrder: 17
+              66a1a497-253f-4d32-a334-ab29191e084d:
+                required: false
+                sortOrder: 18
   989ca4d1-de8f-46c5-8e66-f4e2fd1bbfc2:
     field: 00c0812c-1bc5-4e9d-b707-b341f15b40ea
     name: 'Accordion Faq'
@@ -1720,6 +1840,18 @@ matrixBlockTypes:
           columnType: text
         contentColumnType: text
         fieldGroup: null
+      05851832-e2ee-4a02-bc04-8105b58469c1:
+        name: 'Background Color'
+        handle: backgroundColor
+        instructions: ''
+        searchable: true
+        translationMethod: none
+        translationKeyFormat: null
+        type: craft\fields\Color
+        settings:
+          defaultColor: ''
+        contentColumnType: string(7)
+        fieldGroup: null
     fieldLayouts:
       0cb90c5c-6725-411e-823e-51de953a5be6:
         tabs:
@@ -1736,6 +1868,9 @@ matrixBlockTypes:
               d175ac94-d7ad-4251-bf97-2c375d686fdc:
                 required: true
                 sortOrder: 3
+              05851832-e2ee-4a02-bc04-8105b58469c1:
+                required: false
+                sortOrder: 4
   8d3cba86-1516-46a2-bf93-86e09b24b26e:
     field: 00c0812c-1bc5-4e9d-b707-b341f15b40ea
     name: 'Text Editor'
@@ -1760,6 +1895,18 @@ matrixBlockTypes:
           availableTransforms: '*'
         contentColumnType: text
         fieldGroup: null
+      59c4d084-0618-4a64-a040-4b31b41dfc3c:
+        name: 'Background Color'
+        handle: backgroundColor
+        instructions: ''
+        searchable: true
+        translationMethod: none
+        translationKeyFormat: null
+        type: craft\fields\Color
+        settings:
+          defaultColor: ''
+        contentColumnType: string(7)
+        fieldGroup: null
     fieldLayouts:
       530b7ea0-515d-4a4b-82e1-f3e675ad54a2:
         tabs:
@@ -1770,6 +1917,9 @@ matrixBlockTypes:
               80e47da4-19fd-4a7c-aaaa-54dcee293446:
                 required: true
                 sortOrder: 1
+              59c4d084-0618-4a64-a040-4b31b41dfc3c:
+                required: false
+                sortOrder: 2
   c57e1a63-85e5-4803-b81c-95a2e15c3a8c:
     field: 00c0812c-1bc5-4e9d-b707-b341f15b40ea
     name: 'List Pricing'
@@ -1906,6 +2056,18 @@ matrixBlockTypes:
           columnType: text
         contentColumnType: text
         fieldGroup: null
+      d8f39635-e5d8-4934-969b-dfb8ef38fe25:
+        name: 'Background Color'
+        handle: backgroundColor
+        instructions: ''
+        searchable: true
+        translationMethod: none
+        translationKeyFormat: null
+        type: craft\fields\Color
+        settings:
+          defaultColor: ''
+        contentColumnType: string(7)
+        fieldGroup: null
     fieldLayouts:
       2804b3fb-e832-4132-86b0-a2f62ce3d054:
         tabs:
@@ -1928,6 +2090,9 @@ matrixBlockTypes:
               9273248b-353f-40d0-85dc-1141a1b1341f:
                 required: true
                 sortOrder: 5
+              d8f39635-e5d8-4934-969b-dfb8ef38fe25:
+                required: false
+                sortOrder: 6
   e1001b0a-8398-4ad5-8fd8-e124d2af8eb2:
     field: e5c446c9-5f70-481b-8542-f6a0f535f3a1
     name: 'Internal Link'
