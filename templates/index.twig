@@ -122,6 +122,14 @@
 			embedCode : block.embedCode
 		} %}
 		{% include 'includes/sections/video.twig' with blockContent %}
+	{% elseif block.type == "quotes" %}
+		{% set blockContent = {
+			heading : block.heading,
+			text : block.text,
+			quotes : block.quotes,
+			backgroundColor : block.backgroundColor
+		} %}
+		{% include 'includes/sections/quotes.twig' with blockContent %}
 	{% endif %}
 {% endfor %}
 {% include 'includes/partials/footer.twig' %}

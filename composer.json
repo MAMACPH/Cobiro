@@ -3,6 +3,7 @@
     "craftcms/cms": "3.1.20.1",
     "craftcms/redactor": "2.3.2",
     "monachilada/craft-matrixtoolbar": "1.0.6",
+    "verbb/super-table": "2.1.16",
     "vlucas/phpdotenv": "^2.4.0"
   },
   "autoload": {
