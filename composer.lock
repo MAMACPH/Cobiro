@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "9e52a2c4448cb3ed308ad983c3ac97dd",
+    "content-hash": "14ef07fab103a6b04f7fee5f99aaea96",
     "packages": [
         {
             "name": "cebe/markdown",
@@ -2325,6 +2325,58 @@
                 "templating"
             ],
             "time": "2019-03-23T14:28:58+00:00"
+        },
+        {
+            "name": "verbb/super-table",
+            "version": "2.1.16",
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/verbb/super-table/zipball/60947a5f4f2ef9f2972dee95ff460897e743deaf",
+                "reference": "60947a5f4f2ef9f2972dee95ff460897e743deaf",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^3.1.13"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "name": "Super Table",
+                "handle": "super-table",
+                "description": "Super-charge your Craft workflow with Super Table. Use it to group fields together or build complex Matrix-in-Matrix solutions.",
+                "documentationUrl": "https://github.com/verbb/super-table",
+                "changelogUrl": "https://raw.githubusercontent.com/verbb/super-table/craft-3/CHANGELOG.md",
+                "class": "verbb\\supertable\\SuperTable"
+            },
+            "autoload": {
+                "psr-4": {
+                    "verbb\\supertable\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Verbb",
+                    "homepage": "https://verbb.io"
+                }
+            ],
+            "description": "Super-charge your Craft workflow with Super Table. Use it to group fields together or build complex Matrix-in-Matrix solutions.",
+            "keywords": [
+                "cms",
+                "craft",
+                "craft-plugin",
+                "craftcms",
+                "super table"
+            ],
+            "support": {
+                "email": "support@verbb.io",
+                "issues": "https://github.com/verbb/super-table/issues?state=open",
+                "source": "https://github.com/verbb/super-table",
+                "docs": "https://github.com/verbb/super-table",
+                "rss": "https://github.com/verbb/super-table/commits/v2.atom"
+            },
+            "time": "2019-03-09T04:08:51+00:00"
         },
         {
             "name": "vlucas/phpdotenv",
