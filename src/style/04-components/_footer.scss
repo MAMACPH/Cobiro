@@ -16,6 +16,12 @@ footer {
 			text-decoration: none;
 		}
 	}
+	@include mq($until: md) {
+		.menu li a{
+			padding: 0.5rem 0;
+			display: block;
+		}
+	}
 }
 
 .footer-logo {
