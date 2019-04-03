@@ -38,40 +38,45 @@
 
 			mainMenu.classList.toggle('closed');
 
-		} else {
-		// Else loop over menu items within subMenu with submenus and check if the clicked element is equal to it
+		} else if ( event.target.classList.contains('has-submenu') ) {
+		// Else Check if the clicked element is equal to it
+			event.preventDefault();
+			// Add a class to the parent element of the clicked subMenu[i] item in the subMenu array
+			expandSubMenu(event.target);
 
-			for ( var i = 0; i <= subMenu.length; i++ ) {
-
-				if ( subMenu[i] === event.target ) {
-					event.preventDefault();
-
-					// Add a class to the parent element of the clicked subMenu[i] item in the subMenu array
-					expandSubMenu(i);
-				}
+		} else if ( event.target.parentNode.classList.contains('has-subsubmenu') ) {
+			event.preventDefault();
+			event.target.parentNode.classList.toggle('expanded');
+			if( event.target.parentNode.classList.contains('expanded') ) {
+				event.target.nextElementSibling.style.maxHeight = event.target.nextElementSibling.children[0].offsetHeight + 'px';
+			} else {
+				event.target.nextElementSibling.style.maxHeight = null;
 			}
 		}
 	}
+
 	function overlayClickHander() {
-		console.log(subMenu);
 		for ( var i = 0; i < subMenu.length; i++ ) {
 			if ( subMenu[i].parentNode.classList.contains('expand') ) {
-				expandSubMenu(i);
+				expandSubMenu(subMenu[i]);
 			}
 		}
 	}
 
-	function expandSubMenu(i) {
-		subMenu[i].parentNode.classList.toggle('expand');
+	function expandSubMenu(el) {
+		el.parentNode.classList.toggle('expand');
+
 		body.classList.toggle('submenu-expanded');
 
-		subMenu[i].nextElementSibling.style.top = mainMenuHeight - 1 + 'px';
+		el.nextElementSibling.style.top = mainMenuHeight - 1 + 'px';
 
-		if ( subMenu[i].parentNode.classList.contains('expand') ) {
-			subMenu[i].nextElementSibling.style.maxHeight = subMenu[i].nextElementSibling.children[0].offsetHeight + 'px';
+		if ( el.parentNode.classList.contains('expand') ) {
+			el.nextElementSibling.style.maxHeight = el.nextElementSibling.children[0].offsetHeight + 'px';
+			setTimeout(() => el.nextElementSibling.style.maxHeight = 'none', 400);
 			navbarOverlay.addEventListener( 'click', overlayClickHander, false );
 		} else {
-			subMenu[i].nextElementSibling.style.maxHeight = null;
+			el.nextElementSibling.style.maxHeight = el.nextElementSibling.offsetHeight + 'px';
+			setTimeout(() => el.nextElementSibling.style.maxHeight = null, 0);
 			navbarOverlay.removeEventListener( 'click', overlayClickHander);
 		}
 	}

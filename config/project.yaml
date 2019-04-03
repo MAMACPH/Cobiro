@@ -1,4 +1,4 @@
-dateModified: 1554111418
+dateModified: 1554281771
 email:
   fromEmail: mrn@mamacph.dk
   fromName: 'Craft test'
@@ -12,6 +12,8 @@ fieldGroups:
     name: 'Menu Item'
   3e1b343d-299e-4249-b25c-f253b389dd33:
     name: 'Footer Menu Item'
+  63fd1053-231d-4d81-bcbe-176d517d047d:
+    name: 'Main Menu CTA'
 fields:
   00c0812c-1bc5-4e9d-b707-b341f15b40ea:
     name: Sections
@@ -175,6 +177,90 @@ fields:
       localizeBlocks: false
     contentColumnType: string
     fieldGroup: 3e1b343d-299e-4249-b25c-f253b389dd33
+  1ec29c7a-6d93-42d7-a1a8-9e99f293a7c4:
+    name: Button
+    handle: button
+    instructions: 'If enabled, this link will appear as a button in the menubar.'
+    searchable: false
+    translationMethod: none
+    translationKeyFormat: null
+    type: craft\fields\Lightswitch
+    settings:
+      default: ''
+    contentColumnType: boolean
+    fieldGroup: ac81f6ee-7c74-417c-8be9-5aa992dcc2f3
+  3995a802-f34d-420e-98cd-068edb47de19:
+    name: 'Button Title'
+    handle: buttonTitle
+    instructions: ''
+    searchable: true
+    translationMethod: none
+    translationKeyFormat: null
+    type: craft\fields\PlainText
+    settings:
+      placeholder: ''
+      code: ''
+      multiline: ''
+      initialRows: '4'
+      charLimit: ''
+      columnType: text
+    contentColumnType: text
+    fieldGroup: 63fd1053-231d-4d81-bcbe-176d517d047d
+  ad87e5b1-48c3-4aab-8e5f-74e3052ee7ba:
+    name: 'External Link'
+    handle: externalLink
+    instructions: ''
+    searchable: true
+    translationMethod: none
+    translationKeyFormat: null
+    type: craft\fields\Url
+    settings:
+      placeholder: ''
+      maxLength: '255'
+    contentColumnType: string(255)
+    fieldGroup: 63fd1053-231d-4d81-bcbe-176d517d047d
+  d59bc01f-d86e-470a-aeea-6a12b18e7bea:
+    name: 'Internal Link'
+    handle: internalLink
+    instructions: ''
+    searchable: true
+    translationMethod: site
+    translationKeyFormat: null
+    type: craft\fields\Entries
+    settings:
+      sources: '*'
+      source: null
+      targetSiteId: null
+      viewMode: null
+      limit: '1'
+      selectionLabel: ''
+      localizeRelations: false
+    contentColumnType: string
+    fieldGroup: 63fd1053-231d-4d81-bcbe-176d517d047d
+  eb23f2e2-9502-426c-85e4-7ef2f38cf9c5:
+    name: 'Primary Button'
+    handle: primaryButton
+    instructions: 'Enabling this will give the button a background color.'
+    searchable: true
+    translationMethod: none
+    translationKeyFormat: null
+    type: craft\fields\Lightswitch
+    settings:
+      default: ''
+    contentColumnType: boolean
+    fieldGroup: 63fd1053-231d-4d81-bcbe-176d517d047d
+  59bbeddc-e3c0-48e8-99d4-5651e1df3cb2:
+    name: 'Open in new window?'
+    handle: newWindow
+    instructions: 'Should this link open in a new window?'
+    searchable: true
+    translationMethod: none
+    translationKeyFormat: null
+    type: craft\fields\Lightswitch
+    settings:
+      default: '1'
+    contentColumnType: boolean
+    fieldGroup: 63fd1053-231d-4d81-bcbe-176d517d047d
 matrixBlockTypes:
   4e9d94c9-7f15-4f43-987c-8d7734164059:
     field: 00c0812c-1bc5-4e9d-b707-b341f15b40ea
@@ -2089,18 +2175,21 @@ sections:
                 name: 'Menu Item'
                 sortOrder: 1
                 fields:
-                  7f4512a5-166e-4688-b83d-87fc21f2a118:
+                  1ec29c7a-6d93-42d7-a1a8-9e99f293a7c4:
                     required: false
                     sortOrder: 1
-                  dd662521-26c5-47ea-acce-8144738d1348:
+                  7f4512a5-166e-4688-b83d-87fc21f2a118:
                     required: false
                     sortOrder: 2
-                  d6af72ee-cda0-4a29-ba02-636df4752359:
+                  dd662521-26c5-47ea-acce-8144738d1348:
                     required: false
                     sortOrder: 3
-                  275b91b4-ed59-4536-a974-7000f0e28107:
+                  d6af72ee-cda0-4a29-ba02-636df4752359:
                     required: false
                     sortOrder: 4
+                  275b91b4-ed59-4536-a974-7000f0e28107:
+                    required: false
+                    sortOrder: 5
   0c1aaf65-ccb1-4121-92d4-bd4bf85b6007:
     name: 'Footer Menu'
     handle: footerMenu
@@ -2131,6 +2220,48 @@ sections:
                   e5c446c9-5f70-481b-8542-f6a0f535f3a1:
                     required: false
                     sortOrder: 1
+  6770966a-c99a-4f80-a105-3f1d45727dfe:
+    name: 'Main Menu CTA'
+    handle: mainMenuCta
+    type: structure
+    enableVersioning: true
+    propagateEntries: true
+    siteSettings:
+      16e863b7-d327-40e4-bf32-c2e9f6965a86:
+        enabledByDefault: true
+        hasUrls: false
+        uriFormat: null
+        template: null
+    structure:
+      uid: 6cce4a0a-249d-491f-9045-3ba51c9c13d1
+      maxLevels: ''
+    entryTypes:
+      4a6b5ecf-c4e7-400f-aeb2-f46b95bfa2b9:
+        name: 'Main Menu CTA'
+        handle: mainMenuCta
+        hasTitleField: true
+        titleLabel: Title
+        titleFormat: ''
+        sortOrder: 1
+        fieldLayouts:
+          55ab2818-a659-402e-95e5-e8c9750f6906:
+            tabs:
+              -
+                name: 'Main Menu CTA'
+                sortOrder: 1
+                fields:
+                  ad87e5b1-48c3-4aab-8e5f-74e3052ee7ba:
+                    required: false
+                    sortOrder: 1
+                  d59bc01f-d86e-470a-aeea-6a12b18e7bea:
+                    required: false
+                    sortOrder: 2
+                  eb23f2e2-9502-426c-85e4-7ef2f38cf9c5:
+                    required: false
+                    sortOrder: 3
+                  59bbeddc-e3c0-48e8-99d4-5651e1df3cb2:
+                    required: false
+                    sortOrder: 4
 siteGroups:
   927d84e1-054c-4029-9418-6bcb17c367a2:
     name: 'Craft test'

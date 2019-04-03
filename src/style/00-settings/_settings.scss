@@ -3,7 +3,7 @@ $white: #fff;
 $blue: #304FFE;
 $yellow: #FCF22B;
 $lightgrey: #F9FBFC;
-$mediumgrey: #DDDDDD;
+$mediumgrey: #E6E6E6;
 $grey: #D6D6D6;
 $darkgrey: #4F525F;
 
@@ -17,5 +17,7 @@ $colors: (
 	grey: $grey,
 	darkgrey: $darkgrey,
 );
+
+$link-color: $blue;
 
 @import '~baseguide/scss/baseguide/00-settings/settings';
