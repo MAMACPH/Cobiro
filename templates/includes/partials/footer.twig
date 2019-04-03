@@ -1,47 +1,38 @@
+{% set footerMenu = craft.entries.section('footerMenu').all() %}
 		<footer>
 			<div class="container">
-				<div class="row section">
-					<div class="col col-xs-12 col-lg-4 text-center-xs text-left-lg center-xs start-lg space-xs space-sm space-md">
-						<img class="footer-logo" src="includes/img/cobiro-logo.svg" alt="Cobiro logo" />
+				<div class="row section end-sm">
+					<div class="col col-xs-12 col-sm-4 col-lg-4 text-left-lg center-xs start-lg space-xs space-sm space-md">
+						<img class="footer-logo space-xs space-sm space-md" src="includes/img/cobiro-logo.svg" alt="Cobiro logo" />
 					</div>
-					<div class="col col-xs-12 col-lg-2 text-center-xs text-left-lg center-xs start-lg space-xs space-sm space-md">
-							<h4 class="space-xs-up">Product</h4>
+					{% for menuItem in footerMenu %}
+					<div class="col col-xs-6 col-sm-4 col-md-4 col-lg-2 text-left-lg center-xs start-lg space-xs space-sm space-md">
+							<h4 class="space-xs-up">{{ menuItem.title }}</h4>
 							<ul class="list-unstyled">
-								<li><a class="small text-darkgrey" href="#">Pricing</a></li>
-								<li><a class="small text-darkgrey" href="#">Features</a></li>
-								<li><a class="small text-darkgrey" href="#">Google CSS</a></li>
-								<li><a class="small text-darkgrey" href="#">Agencies</a></li>
+
+								{% for block in menuItem.menuItem.all() %}
+
+
+									{% if block.type == "internalLink" or block.type == "externalLink" %}
+										<li>
+											<a class="small text-darkgrey" href="{{ block.type == "internalLink" ? block.href.one().url : block.href }}">{{ block.linkTitle }}</a>
+										</li>
+									{% elseif block.type == "text" %}
+										<li>{{ block.text }}</li>
+									{% elseif block.type == "image" %}
+
+
+										<li>
+											{% if block.href %}<a href="{{ block.href }}">{% endif %}
+												<img class="footer-image" src="{{ block.image.one().url }}" alt="{{ block.image.one().title }}"/></li>
+											{% if block.href %}</a>{% endif %}
+									{% endif %}
+
+								{% endfor %}
 							</ul>
 					</div>
-					<div class="col col-xs-12 col-lg-2 text-center-xs text-left-lg center-xs start-lg space-xs space-sm space-md">
-							<h4 class="space-xs-up">Support</h4>
-							<ul class="list-unstyled">
-								<li><a class="small text-darkgrey" href="#">Getting started</a></li>
-								<li><a class="small text-darkgrey" href="#">Submit a request</a></li>
-								<li><a class="small text-darkgrey" href="#">Installation</a></li>
-								<li><a class="small text-darkgrey" href="#">Troubleshooting</a></li>
-								<li><a class="small text-darkgrey" href="#">Budget &amp; billing</a></li>
-								<li><a class="small text-darkgrey" href="#">Faq</a></li>
-							</ul>
-					</div>
-					<div class="col col-xs-12 col-lg-2 text-center-xs text-left-lg center-xs start-lg space-xs space-sm space-md">
-							<h4 class="space-xs-up">About us</h4>
-							<ul class="list-unstyled">
-								<li><a class="small text-darkgrey" href="#">About us</a></li>
-								<li><a class="small text-darkgrey" href="#">Careers</a></li>
-							</ul>
-					</div>
-					<div class="col col-xs-12 col-lg-2 text-center-xs text-left-lg center-xs start-lg space-xs space-sm space-md">
-							<h4 class="space-xs-up">Partnership</h4>
-							<ul class="list-unstyled">
-								<li><p class="small text-darkgrey">Cobiro is Official Google Premier PartnerCareers</p></li>
-								<li><img class="footer-image" src="includes/img/google-partner.jpg" alt="Google Partner"/></li>
-								<li><img class="footer-image" src="includes/img/google-css-partner.jpg" alt="Google CSS Partner"/></li>
-							</ul>
-					</div>
+					{% endfor %}
 				</div>
-
-
 			</div>
 			<div class="footer-bottom">
 				<div class="container">

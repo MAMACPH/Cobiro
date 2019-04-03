@@ -1,4 +1,4 @@
-dateModified: 1554281771
+dateModified: 1554284476
 email:
   fromEmail: mrn@mamacph.dk
   fromName: 'Craft test'
@@ -1938,7 +1938,7 @@ matrixBlockTypes:
                 required: true
                 sortOrder: 1
               a6ea4984-9d99-4a81-a926-9edb074b66c0:
-                required: false
+                required: true
                 sortOrder: 2
   aa9ba992-8226-4588-a9dd-c44f1f281ba1:
     field: e5c446c9-5f70-481b-8542-f6a0f535f3a1
@@ -1973,7 +1973,8 @@ matrixBlockTypes:
         type: craft\fields\Url
         settings:
           placeholder: ''
-        contentColumnType: string
+          maxLength: '255'
+        contentColumnType: string(255)
         fieldGroup: null
     fieldLayouts:
       c7b6d0f2-f9a9-493d-bc6f-ef58ea645c82:
@@ -1983,7 +1984,7 @@ matrixBlockTypes:
             sortOrder: 1
             fields:
               5838764d-6e42-4993-8779-7594cca62230:
-                required: false
+                required: true
                 sortOrder: 1
               e79d0156-6d2d-4c4a-ad07-4a0079dbbc12:
                 required: true
@@ -2031,7 +2032,8 @@ matrixBlockTypes:
         type: craft\fields\Url
         settings:
           placeholder: ''
-        contentColumnType: string
+          maxLength: '255'
+        contentColumnType: string(255)
         fieldGroup: null
     fieldLayouts:
       4e3872db-ccca-453a-892f-1b6e0d3370a5:
@@ -2046,6 +2048,39 @@ matrixBlockTypes:
               d21a9379-77c7-48fc-817c-e8845ce40217:
                 required: false
                 sortOrder: 2
+  642b0b55-f0ee-439b-9aa7-faceebd36bd7:
+    field: e5c446c9-5f70-481b-8542-f6a0f535f3a1
+    name: Text
+    handle: text
+    sortOrder: 4
+    fields:
+      5f0c32f2-2100-46ab-83f6-a10185acfdd1:
+        name: Text
+        handle: text
+        instructions: ''
+        searchable: true
+        translationMethod: none
+        translationKeyFormat: null
+        type: craft\fields\PlainText
+        settings:
+          placeholder: ''
+          code: ''
+          multiline: ''
+          initialRows: '4'
+          charLimit: ''
+          columnType: text
+        contentColumnType: text
+        fieldGroup: null
+    fieldLayouts:
+      c4418826-bd99-480f-8535-4d5d9d6480d4:
+        tabs:
+          -
+            name: Content
+            sortOrder: 1
+            fields:
+              5f0c32f2-2100-46ab-83f6-a10185acfdd1:
+                required: true
+                sortOrder: 1
 plugins:
   redactor:
     edition: standard
@@ -2193,7 +2228,7 @@ sections:
   0c1aaf65-ccb1-4121-92d4-bd4bf85b6007:
     name: 'Footer Menu'
     handle: footerMenu
-    type: channel
+    type: structure
     enableVersioning: true
     propagateEntries: true
     siteSettings:
@@ -2202,6 +2237,9 @@ sections:
         hasUrls: false
         uriFormat: null
         template: null
+    structure:
+      uid: 0ef481df-46c2-4d6b-bab4-90b93bbe319b
+      maxLevels: '1'
     entryTypes:
       9b16676e-d453-4e7f-b40f-704796bf42b5:
         name: 'Footer Menu'
