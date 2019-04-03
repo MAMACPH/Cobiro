@@ -33,18 +33,22 @@
 													<div class="row">
 														{% set subMenuItemsFetchedLevelTwo = menuItem.descendants.level(2).all()%}
 														{% for subMenuItems in subMenuItemsFetchedLevelTwo %}
-															<div class="col col-xs-12 col-lg-3">
-																{% if subMenuItems.icon %}
-																	<img class="submenu-icon" src="{{ subMenuItems.icon.one().url }}" alt="{{ subMenuItems.icon.one().title }}"/>
-																{% endif %}
-																<a class="submenu-title" href="#">{{ subMenuItems.title }}</a>
+															<div class="col col-xs-12 col-lg-3 {{ subMenuItems.hasDescendants() ? 'has-subsubmenu'}}">
+
+																<a class="submenu-title" href="#">
+																		{% if subMenuItems.icon %}
+																		<img class="submenu-icon" src="{{ subMenuItems.icon.one().url }}" alt="{{ subMenuItems.icon.one().title }}"/>
+																	{% endif %}
+																	{{ subMenuItems.title }}</a>
 																{% if subMenuItems.hasDescendants() %}
-																	<ul class="list-unstyled">
+																	<div  class="subsubmenu">
+																		<ul class="list-unstyled">
 																	{% set subMenuItemsFetchedLevelThree = subMenuItems.descendants.level(3).all()%}
 																	{% for subSubMenuItems in subMenuItemsFetchedLevelThree %}
 																		<li><a href="#">{{ subSubMenuItems.title }}</a></li>
 																	{% endfor %}
 																</ul>
+																</div>
 																{% endif %}
 															</div>
 														{% endfor %}
