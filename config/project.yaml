@@ -1,4 +1,4 @@
-dateModified: 1554281771
+dateModified: 1554290625
 email:
   fromEmail: mrn@mamacph.dk
   fromName: 'Craft test'
@@ -14,6 +14,8 @@ fieldGroups:
     name: 'Footer Menu Item'
   63fd1053-231d-4d81-bcbe-176d517d047d:
     name: 'Main Menu CTA'
+  0adcce74-79f9-4230-8870-4e021b7b96d4:
+    name: 'Footer Menu Meta'
 fields:
   00c0812c-1bc5-4e9d-b707-b341f15b40ea:
     name: Sections
@@ -261,6 +263,37 @@ fields:
       default: '1'
     contentColumnType: boolean
     fieldGroup: 63fd1053-231d-4d81-bcbe-176d517d047d
+  6e2ee1f9-0e6f-4bd8-bbcf-9b07fb9a9336:
+    name: 'Internal Link'
+    handle: footerMetaInternalLink
+    instructions: ''
+    searchable: true
+    translationMethod: site
+    translationKeyFormat: null
+    type: craft\fields\Entries
+    settings:
+      sources: '*'
+      source: null
+      targetSiteId: null
+      viewMode: null
+      limit: '1'
+      selectionLabel: ''
+      localizeRelations: false
+    contentColumnType: string
+    fieldGroup: 0adcce74-79f9-4230-8870-4e021b7b96d4
+  cd74f58d-7765-4a51-9235-6c63d152dc94:
+    name: 'External Link'
+    handle: footerMetaExternalLink
+    instructions: ''
+    searchable: true
+    translationMethod: none
+    translationKeyFormat: null
+    type: craft\fields\Url
+    settings:
+      placeholder: ''
+      maxLength: '255'
+    contentColumnType: string(255)
+    fieldGroup: 0adcce74-79f9-4230-8870-4e021b7b96d4
 matrixBlockTypes:
   4e9d94c9-7f15-4f43-987c-8d7734164059:
     field: 00c0812c-1bc5-4e9d-b707-b341f15b40ea
@@ -313,7 +346,8 @@ matrixBlockTypes:
         type: craft\fields\Url
         settings:
           placeholder: ''
-        contentColumnType: string
+          maxLength: '255'
+        contentColumnType: string(255)
         fieldGroup: null
       09246b26-782d-421a-bd90-f268b339dc76:
         name: 'Link text'
@@ -592,7 +626,8 @@ matrixBlockTypes:
         type: craft\fields\Url
         settings:
           placeholder: ''
-        contentColumnType: string
+          maxLength: '255'
+        contentColumnType: string(255)
         fieldGroup: null
       267ced3f-52ae-41f7-adb4-04376767ccf3:
         name: 'Image 2'
@@ -682,7 +717,8 @@ matrixBlockTypes:
         type: craft\fields\Url
         settings:
           placeholder: ''
-        contentColumnType: string
+          maxLength: '255'
+        contentColumnType: string(255)
         fieldGroup: null
       108a09fd-f7e9-46bc-bc75-97169d1cea9c:
         name: 'Image 3'
@@ -771,7 +807,8 @@ matrixBlockTypes:
         type: craft\fields\Url
         settings:
           placeholder: ''
-        contentColumnType: string
+          maxLength: '255'
+        contentColumnType: string(255)
         fieldGroup: null
     fieldLayouts:
       1c80d5ea-105a-4e64-ab9e-b2272daa5667:
@@ -983,7 +1020,8 @@ matrixBlockTypes:
         type: craft\fields\Url
         settings:
           placeholder: ''
-        contentColumnType: string
+          maxLength: '255'
+        contentColumnType: string(255)
         fieldGroup: null
       f802907d-d20b-4ffd-b980-1a56ccf18a49:
         name: Image
@@ -1127,7 +1165,8 @@ matrixBlockTypes:
         type: craft\fields\Url
         settings:
           placeholder: ''
-        contentColumnType: string
+          maxLength: '255'
+        contentColumnType: string(255)
         fieldGroup: null
     fieldLayouts:
       b5e6ae4d-c63a-4947-a0a7-ce9dfd44a562:
@@ -1219,7 +1258,8 @@ matrixBlockTypes:
         type: craft\fields\Url
         settings:
           placeholder: ''
-        contentColumnType: string
+          maxLength: '255'
+        contentColumnType: string(255)
         fieldGroup: null
     fieldLayouts:
       a365ff10-527c-4931-b626-c90d8f2f5b1a:
@@ -1368,7 +1408,8 @@ matrixBlockTypes:
         type: craft\fields\Url
         settings:
           placeholder: ''
-        contentColumnType: string
+          maxLength: '255'
+        contentColumnType: string(255)
         fieldGroup: null
       d2259b9a-03fd-434f-90b3-3659894fa4a8:
         name: 'Image 2'
@@ -1457,7 +1498,8 @@ matrixBlockTypes:
         type: craft\fields\Url
         settings:
           placeholder: ''
-        contentColumnType: string
+          maxLength: '255'
+        contentColumnType: string(255)
         fieldGroup: null
       254583d3-3b29-4bf1-9986-621c1b0c3eec:
         name: 'Image 3'
@@ -1546,7 +1588,8 @@ matrixBlockTypes:
         type: craft\fields\Url
         settings:
           placeholder: ''
-        contentColumnType: string
+          maxLength: '255'
+        contentColumnType: string(255)
         fieldGroup: null
     fieldLayouts:
       03389db4-617e-4548-977e-6d574da33c61:
@@ -1922,7 +1965,7 @@ matrixBlockTypes:
           source: null
           targetSiteId: null
           viewMode: null
-          limit: ''
+          limit: '1'
           selectionLabel: ''
           localizeRelations: false
         contentColumnType: string
@@ -1938,7 +1981,7 @@ matrixBlockTypes:
                 required: true
                 sortOrder: 1
               a6ea4984-9d99-4a81-a926-9edb074b66c0:
-                required: false
+                required: true
                 sortOrder: 2
   aa9ba992-8226-4588-a9dd-c44f1f281ba1:
     field: e5c446c9-5f70-481b-8542-f6a0f535f3a1
@@ -1973,7 +2016,8 @@ matrixBlockTypes:
         type: craft\fields\Url
         settings:
           placeholder: ''
-        contentColumnType: string
+          maxLength: '255'
+        contentColumnType: string(255)
         fieldGroup: null
     fieldLayouts:
       c7b6d0f2-f9a9-493d-bc6f-ef58ea645c82:
@@ -1983,7 +2027,7 @@ matrixBlockTypes:
             sortOrder: 1
             fields:
               5838764d-6e42-4993-8779-7594cca62230:
-                required: false
+                required: true
                 sortOrder: 1
               e79d0156-6d2d-4c4a-ad07-4a0079dbbc12:
                 required: true
@@ -2031,7 +2075,8 @@ matrixBlockTypes:
         type: craft\fields\Url
         settings:
           placeholder: ''
-        contentColumnType: string
+          maxLength: '255'
+        contentColumnType: string(255)
         fieldGroup: null
     fieldLayouts:
       4e3872db-ccca-453a-892f-1b6e0d3370a5:
@@ -2046,6 +2091,39 @@ matrixBlockTypes:
               d21a9379-77c7-48fc-817c-e8845ce40217:
                 required: false
                 sortOrder: 2
+  642b0b55-f0ee-439b-9aa7-faceebd36bd7:
+    field: e5c446c9-5f70-481b-8542-f6a0f535f3a1
+    name: Text
+    handle: text
+    sortOrder: 4
+    fields:
+      5f0c32f2-2100-46ab-83f6-a10185acfdd1:
+        name: Text
+        handle: text
+        instructions: ''
+        searchable: true
+        translationMethod: none
+        translationKeyFormat: null
+        type: craft\fields\PlainText
+        settings:
+          placeholder: ''
+          code: ''
+          multiline: ''
+          initialRows: '4'
+          charLimit: ''
+          columnType: text
+        contentColumnType: text
+        fieldGroup: null
+    fieldLayouts:
+      c4418826-bd99-480f-8535-4d5d9d6480d4:
+        tabs:
+          -
+            name: Content
+            sortOrder: 1
+            fields:
+              5f0c32f2-2100-46ab-83f6-a10185acfdd1:
+                required: true
+                sortOrder: 1
 plugins:
   redactor:
     edition: standard
@@ -2193,7 +2271,7 @@ sections:
   0c1aaf65-ccb1-4121-92d4-bd4bf85b6007:
     name: 'Footer Menu'
     handle: footerMenu
-    type: channel
+    type: structure
     enableVersioning: true
     propagateEntries: true
     siteSettings:
@@ -2202,6 +2280,9 @@ sections:
         hasUrls: false
         uriFormat: null
         template: null
+    structure:
+      uid: 0ef481df-46c2-4d6b-bab4-90b93bbe319b
+      maxLevels: '1'
     entryTypes:
       9b16676e-d453-4e7f-b40f-704796bf42b5:
         name: 'Footer Menu'
@@ -2262,6 +2343,42 @@ sections:
                   59bbeddc-e3c0-48e8-99d4-5651e1df3cb2:
                     required: false
                     sortOrder: 4
+  451b0628-6982-46f1-9c06-7096a20921c5:
+    name: 'Footer Menu Meta'
+    handle: footerMenuMeta
+    type: structure
+    enableVersioning: true
+    propagateEntries: true
+    siteSettings:
+      16e863b7-d327-40e4-bf32-c2e9f6965a86:
+        enabledByDefault: true
+        hasUrls: false
+        uriFormat: null
+        template: null
+    structure:
+      uid: 696ad4e3-55bb-4af4-801d-5899d77466f7
+      maxLevels: '1'
+    entryTypes:
+      8891ca96-1e01-45c8-b7a2-71d2b2af8239:
+        name: 'Footer Menu Meta'
+        handle: footerMenuMeta
+        hasTitleField: true
+        titleLabel: Title
+        titleFormat: ''
+        sortOrder: 1
+        fieldLayouts:
+          7e84a13c-32c6-48b3-9398-2661f31bd68b:
+            tabs:
+              -
+                name: 'Footer Menu Meta'
+                sortOrder: 1
+                fields:
+                  6e2ee1f9-0e6f-4bd8-bbcf-9b07fb9a9336:
+                    required: false
+                    sortOrder: 1
+                  cd74f58d-7765-4a51-9235-6c63d152dc94:
+                    required: false
+                    sortOrder: 2
 siteGroups:
   927d84e1-054c-4029-9418-6bcb17c367a2:
     name: 'Craft test'

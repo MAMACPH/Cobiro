@@ -1,12 +1,8 @@
 {% set entry = entry %}
 {% set pageContent = { title : entry.title } %}
-
 {% include 'includes/partials/header.twig' with pageContent %}
-
 {% for block in entry.sections.all() %}
-
 	{% if block.type == "jumboHeader" %}
-
 		{% set blockContent = {
 			heading : block.heading,
 			text : block.text,
@@ -14,21 +10,15 @@
 			linkText : block.linkText,
 			image : block.image.one()
 		} %}
-
-		{% include 'includes/sections/jumbo-header.twig' with blockContent %}
-
+	{% include 'includes/sections/jumbo-header.twig' with blockContent %}
 	{% elseif block.type == "featuredTestimonalSingle" %}
-
 		{% set blockContent = {
 			image : block.image.one(),
 			quote : block.quote,
 			person : block.person
 		} %}
-
-		{% include 'includes/sections/featured-testimonal-single.twig' with blockContent %}
-
+	{% include 'includes/sections/featured-testimonal-single.twig' with blockContent %}
 	{% elseif block.type == "threeUp" %}
-
 		{% set blockContent = {
 			heading : block.heading,
 			text : block.text,
@@ -46,21 +36,15 @@
 			linkText3 : block.linkText3,
 			link3 : block.link3
 		} %}
-
-		{% include 'includes/sections/3-up.twig' with blockContent %}
-
+	{% include 'includes/sections/3-up.twig' with blockContent %}
 	{% elseif block.type == "featuredCompanies" %}
-
 		{% set blockContent = {
 			heading : block.heading,
 			text : block.text,
 			images : block.images
 		} %}
-
-		{% include 'includes/sections/featured-companies.twig' with blockContent %}
-
+	{% include 'includes/sections/featured-companies.twig' with blockContent %}
 	{% elseif block.type == "explanationLeft" %}
-
 		{% set blockContent = {
 			heading : block.heading,
 			text : block.text,
@@ -68,11 +52,8 @@
 			linkText : block.linkText,
 			image : block.image.one()
 		} %}
-
-		{% include 'includes/sections/explanation-left.twig' with blockContent %}
-
+	{% include 'includes/sections/explanation-left.twig' with blockContent %}
 	{% elseif block.type == "explanationRight" %}
-
 		{% set blockContent = {
 			heading : block.heading,
 			text : block.text,
@@ -80,22 +61,16 @@
 			linkText : block.linkText,
 			image : block.image.one()
 		} %}
-
-		{% include 'includes/sections/explanation-right.twig' with blockContent %}
-
+	{% include 'includes/sections/explanation-right.twig' with blockContent %}
 	{% elseif block.type == "jumboCta" %}
-
 		{% set blockContent = {
 			heading : block.heading,
 			text : block.text,
 			link : block.href,
 			linkText : block.linkText
 		} %}
-
-		{% include 'includes/sections/jumbo-cta.twig' with blockContent %}
-
+	{% include 'includes/sections/jumbo-cta.twig' with blockContent %}
 	{% elseif block.type == "threeUpPeople" %}
-
 		{% set blockContent = {
 			heading : block.heading,
 			text : block.text,
@@ -113,27 +88,18 @@
 			text3 : block.text3,
 			link3 : block.linkedinLink3
 		} %}
-
-		{% include 'includes/sections/3-up-people.twig' with blockContent %}
-
+	{% include 'includes/sections/3-up-people.twig' with blockContent %}
 	{% elseif block.type == "accordionFaq" %}
-
 		{% set blockContent = {
 			heading : block.heading,
 			text : block.text,
 			faqs : block.faqs
 		} %}
-
-		{% include 'includes/sections/accordion-faq.twig' with blockContent %}
-
+	{% include 'includes/sections/accordion-faq.twig' with blockContent %}
 	{% elseif block.type == "textEditor" %}
-
 		{% set blockContent = { text : block.text } %}
-
-		{% include 'includes/sections/text-editor.twig' with blockContent %}
-
+	{% include 'includes/sections/text-editor.twig' with blockContent %}
 	{% elseif block.type == "listPricing" %}
-
 		{% set blockContent = {
 			heading : block.heading,
 			text : block.text,
@@ -141,10 +107,7 @@
 			baseFeatures : block.baseFeatures,
 			premiumFeatures : block.premiumFeatures
 		} %}
-
 		{% include 'includes/sections/list-pricing.twig' with blockContent %}
-
 	{% endif %}
 {% endfor %}
-
 {% include 'includes/partials/footer.twig' %}
