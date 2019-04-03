@@ -7,9 +7,9 @@
 						<a href="/"><img class="footer-logo space-xs space-sm space-md" src="includes/img/cobiro-logo.svg" alt="Cobiro logo" /></a>
 					</div>
 					{% for menuItem in footerMenu %}
-					<div class="col col-xs-6 col-sm-6 col-md-4 col-lg-2 text-left-lg center-xs start-lg space-xs space-sm space-md">
+					<div class="col col-xs-12 col-sm-6 col-md-4 col-lg-2 text-left-lg center-xs start-lg space-xs space-sm space-md">
 						<h4 class="space-xs-up">{{ menuItem.title }}</h4>
-						<ul class="list-unstyled">
+						<ul class="list-unstyled menu">
 						{% for block in menuItem.menuItem.all() %}
 						{% if block.type == "internalLink" or block.type == "externalLink" %}
 							<li>
@@ -20,8 +20,9 @@
 						{% elseif block.type == "image" %}
 							<li>
 							{% if block.href %}<a href="{{ block.href }}">{% endif %}
-								<img class="footer-image" src="{{ block.image.one().url }}" alt="{{ block.image.one().title }}"/></li>
+								<img class="footer-image" src="{{ block.image.one().url }}" alt="{{ block.image.one().title }}"/>
 							{% if block.href %}</a>{% endif %}
+							</li>
 						{% endif %}
 						{% endfor %}
 						</ul>
@@ -33,7 +34,7 @@
 				<div class="container">
 					<div class="row space-between center-xs middle-xs">
 						<div class="col col-xs-12 col-md-6 text-center-xs text-left-md space-xs space-sm">
-							<ul class="list-inline block-xs flex-md">
+							<ul class="list-inline block-xs flex-md menu">
 							{% for menuMetaItem in footerMenuMeta %}
 							<li>
 								<a class="small text-darkgrey" href="{{ menuMetaItem.footerMetaExternalLink ? menuMetaItem.footerMetaExternalLink : menuMetaItem.footerMetaInternalLink.one().url }}">{{ menuMetaItem.title }}</a>
