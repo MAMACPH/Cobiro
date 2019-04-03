@@ -1,4 +1,4 @@
-dateModified: 1554291324
+dateModified: 1554295062
 email:
   fromEmail: mrn@mamacph.dk
   fromName: 'Craft test'
@@ -2289,6 +2289,50 @@ matrixBlockTypes:
               5f0c32f2-2100-46ab-83f6-a10185acfdd1:
                 required: true
                 sortOrder: 1
+  e941b4e7-9945-4c2a-b8ac-cac99c6ce9ed:
+    field: 00c0812c-1bc5-4e9d-b707-b341f15b40ea
+    name: Video
+    handle: video
+    sortOrder: 12
+    fields:
+      00a60680-2de7-49d4-a37b-9f315d51260a:
+        name: 'Embed Code'
+        handle: embedCode
+        instructions: 'Insert embed code (inside the src="[embed code]") from video service. '
+        searchable: true
+        translationMethod: none
+        translationKeyFormat: null
+        type: craft\fields\Url
+        settings:
+          placeholder: ''
+          maxLength: '255'
+        contentColumnType: string(255)
+        fieldGroup: null
+      98d0d646-cc2e-4bfa-afc0-62a2195ca2ae:
+        name: 'Background Color'
+        handle: backgroundColor
+        instructions: ''
+        searchable: true
+        translationMethod: none
+        translationKeyFormat: null
+        type: craft\fields\Color
+        settings:
+          defaultColor: ''
+        contentColumnType: string(7)
+        fieldGroup: null
+    fieldLayouts:
+      fa15e86f-6837-4113-8662-021ba9677056:
+        tabs:
+          -
+            name: Content
+            sortOrder: 1
+            fields:
+              00a60680-2de7-49d4-a37b-9f315d51260a:
+                required: true
+                sortOrder: 1
+              98d0d646-cc2e-4bfa-afc0-62a2195ca2ae:
+                required: false
+                sortOrder: 2
 plugins:
   redactor:
     edition: standard
