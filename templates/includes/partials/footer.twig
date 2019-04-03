@@ -1,35 +1,30 @@
 {% set footerMenu = craft.entries.section('footerMenu').all() %}
+{% set footerMenuMeta = craft.entries.section('footerMenuMeta').all() %}
 		<footer>
 			<div class="container">
 				<div class="row section end-sm">
 					<div class="col col-xs-12 col-sm-4 col-lg-4 text-left-lg center-xs start-lg space-xs space-sm space-md">
-						<img class="footer-logo space-xs space-sm space-md" src="includes/img/cobiro-logo.svg" alt="Cobiro logo" />
+						<a href="/"><img class="footer-logo space-xs space-sm space-md" src="includes/img/cobiro-logo.svg" alt="Cobiro logo" /></a>
 					</div>
 					{% for menuItem in footerMenu %}
 					<div class="col col-xs-6 col-sm-4 col-md-4 col-lg-2 text-left-lg center-xs start-lg space-xs space-sm space-md">
-							<h4 class="space-xs-up">{{ menuItem.title }}</h4>
-							<ul class="list-unstyled">
-
-								{% for block in menuItem.menuItem.all() %}
-
-
-									{% if block.type == "internalLink" or block.type == "externalLink" %}
-										<li>
-											<a class="small text-darkgrey" href="{{ block.type == "internalLink" ? block.href.one().url : block.href }}">{{ block.linkTitle }}</a>
-										</li>
-									{% elseif block.type == "text" %}
-										<li>{{ block.text }}</li>
-									{% elseif block.type == "image" %}
-
-
-										<li>
-											{% if block.href %}<a href="{{ block.href }}">{% endif %}
-												<img class="footer-image" src="{{ block.image.one().url }}" alt="{{ block.image.one().title }}"/></li>
-											{% if block.href %}</a>{% endif %}
-									{% endif %}
-
-								{% endfor %}
-							</ul>
+						<h4 class="space-xs-up">{{ menuItem.title }}</h4>
+						<ul class="list-unstyled">
+						{% for block in menuItem.menuItem.all() %}
+						{% if block.type == "internalLink" or block.type == "externalLink" %}
+							<li>
+								<a class="small text-darkgrey" href="{{ block.type == "internalLink" ? block.href.one().url : block.href }}">{{ block.linkTitle }}</a>
+							</li>
+						{% elseif block.type == "text" %}
+							<li>{{ block.text }}</li>
+						{% elseif block.type == "image" %}
+							<li>
+							{% if block.href %}<a href="{{ block.href }}">{% endif %}
+								<img class="footer-image" src="{{ block.image.one().url }}" alt="{{ block.image.one().title }}"/></li>
+							{% if block.href %}</a>{% endif %}
+						{% endif %}
+						{% endfor %}
+						</ul>
 					</div>
 					{% endfor %}
 				</div>
@@ -39,12 +34,11 @@
 					<div class="row space-between center-xs middle-xs">
 						<div class="col col-xs-12 col-md-6 text-center-xs text-left-md space-xs space-sm">
 							<ul class="list-inline block-xs flex-md">
-								<li>
-									<a class="small text-darkgrey" href="#">Terms of Service</a>
-								</li>
-								<li>
-									<a class="small text-darkgrey" href="#">Privacy Policy</a>
-								</li>
+							{% for menuMetaItem in footerMenuMeta %}
+							<li>
+								<a class="small text-darkgrey" href="{{ menuMetaItem.footerMetaExternalLink ? menuMetaItem.footerMetaExternalLink : menuMetaItem.footerMetaInternalLink.one().url }}">{{ menuMetaItem.title }}</a>
+							</li>
+							{% endfor %}
 							</ul>
 						</div>
 						<div class="col col-xs-12 col-md-6 text-right text-center-xs text-center-sm text-right-md">
