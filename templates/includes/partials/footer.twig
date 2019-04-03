@@ -3,11 +3,11 @@
 		<footer>
 			<div class="container">
 				<div class="row section end-sm">
-					<div class="col col-xs-12 col-sm-4 col-lg-4 text-left-lg center-xs start-lg space-xs space-sm space-md">
+					<div class="col col-xs-12 col-sm-12 col-md-4 col-lg-4 text-left-lg center-xs start-lg space-xs space-sm space-md">
 						<a href="/"><img class="footer-logo space-xs space-sm space-md" src="includes/img/cobiro-logo.svg" alt="Cobiro logo" /></a>
 					</div>
 					{% for menuItem in footerMenu %}
-					<div class="col col-xs-6 col-sm-4 col-md-4 col-lg-2 text-left-lg center-xs start-lg space-xs space-sm space-md">
+					<div class="col col-xs-6 col-sm-6 col-md-4 col-lg-2 text-left-lg center-xs start-lg space-xs space-sm space-md">
 						<h4 class="space-xs-up">{{ menuItem.title }}</h4>
 						<ul class="list-unstyled">
 						{% for block in menuItem.menuItem.all() %}
