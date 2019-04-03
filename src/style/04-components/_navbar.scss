@@ -86,7 +86,6 @@ nav {
 			transition: all 0.4s ease;
 
 			@include mq($from: lg) {
-			border-bottom: 1px solid $mediumgrey;
 
 				.container {
 					transition: all 0.4s ease;
@@ -190,10 +189,11 @@ nav {
 		}
 		.expand {
 			.submenu {
+				border-bottom: 1px solid $mediumgrey;
 
 				@include mq($until: lg) {
 					border-top: 1px solid $mediumgrey;
-					border-bottom: 1px solid $mediumgrey;
+
 					margin-top: 1rem;
 				}
 				.container {

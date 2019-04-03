@@ -64,9 +64,11 @@
 					</div>
 				</div>
 			</div>
+			{% set mainMenuCTA = craft.entries.section('mainMenuCta').all() %}
 			<div class="col col-auto-lg main-menu-cta">
-				<button class="btn btn-secondary" aria-label="Log in">Log in</button>
-				<button class="btn" aria-label="Sign up free">Sign up free</button>
+				{% for CTA in mainMenuCTA %}
+				<a href="{{ CTA.externalLink ? CTA.externalLink : CTA.internalLink}}" class="btn {{ CTA.primaryButton ? '' : 'btn-secondary' }}" target="{{ CTA.newWindow ? '_blank' : '_self'}}">{{ CTA.title }}</a>
+				{% endfor %}
 			</div>
 		</div>
 	</div>
