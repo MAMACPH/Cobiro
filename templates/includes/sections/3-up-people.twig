@@ -1,66 +1,35 @@
-{% if backgroundColor is defined %}
+{% if backgroundColor %}
 	{% set style = 'style=background-color:' ~ backgroundColor %}
 {% else %}
 	{% set style = null %}
 {% endif %}
-<section class="section" {{ style ? style : null }}>
+<section class="section" {{ style }}>
 	<div class="container">
 		<div class="row center-xs">
 			<div class="col col-xs-12 text-center section-header">
 				<h2>{{ heading }}</h2>
 				{{ text }}
 			</div>
+			{% for person in persons %}
 			<div class="col col-xs-12 col-md-6 col-lg-4">
 				<div class="card people">
 					<div class="card-header-wrapper">
 						<img class="card-img-large" src="includes/img/imgplaceholder.jpg" alt="person name"/>
 						<div class="flex middle-xs between-xs space-md-up text-left">
 							<div>
-								<h4>{{ title1 }}</h4>
-								<h5 >{{ subtitle2 }}</h5>
+								<h4>{{ person.personTitle }}</h4>
+								<h5 >{{ person.subtitle }}</h5>
 							</div>
-							<img class="social-icon" src="includes/img/linkedin.svg" alt="linkedin"/>
+							{% if person.linkedin %}
+							<a href="{{ person.linkedin }}"><img class="social-icon" src="includes/img/linkedin.svg" alt="linkedin"/></a>
+							{% endif %}
 						</div>
-
 					</div>
-					<p class="small text-left-xs people-description">{{ text1 }}</p>
+					<p class="small text-left-xs people-description">{{ person.text }}</p>
 					<button class="btn hidden-md-up" onclick="peopleClickHandler(event)" aria-label="View full profile">View full profile</button>
 				</div>
 			</div>
-			<div class="col col-xs-12 col-md-6 col-lg-4">
-				<div class="card people">
-					<div class="card-header-wrapper">
-						<img class="card-img-large" src="includes/img/imgplaceholder.jpg" alt="person name"/>
-						<div class="flex middle-xs between-xs space-md-up text-left">
-							<div>
-								<h4>{{ title2 }}</h4>
-								<h5 >{{ subtitle2 }}</h5>
-							</div>
-							<img class="social-icon" src="includes/img/linkedin.svg" alt="linkedin"/>
-						</div>
-
-					</div>
-					<p class="small text-left-xs people-description">{{ text2 }}</p>
-					<button class="btn hidden-md-up btn-people" onclick="peopleClickHandler(event)" aria-label="View full profile">View full profile</button>
-				</div>
-			</div>
-			<div class="col col-xs-12 col-md-6 col-lg-4">
-				<div class="card people">
-					<div class="card-header-wrapper">
-						<img class="card-img-large" src="includes/img/imgplaceholder.jpg" alt="person name"/>
-						<div class="flex middle-xs between-xs space-md-up text-left">
-							<div>
-								<h4>{{ title3 }}</h4>
-								<h5 >{{ subtitle3 }}</h5>
-							</div>
-							<img class="social-icon" src="includes/img/linkedin.svg" alt="linkedin"/>
-						</div>
-
-					</div>
-					<p class="small text-left-xs people-description">{{ text2 }}</p>
-					<button class="btn hidden-md-up btn-people" onclick="peopleClickHandler(event)" aria-label="View full profile">View full profile</button>
-				</div>
-			</div>
+			{% endfor %}
 		</div>
 	</div>
 </section>

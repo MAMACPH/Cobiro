@@ -6,8 +6,7 @@
 		{% set blockContent = {
 			heading : block.heading,
 			text : block.text,
-			link : block.href,
-			linkText : block.linkText,
+			jumboHeaderLink : block.jumboHeaderLink.one(),
 			image : block.image.one(),
 			backgroundColor : block.backgroundColor
 		} %}
@@ -24,19 +23,7 @@
 		{% set blockContent = {
 			heading : block.heading,
 			text : block.text,
-			image1 : block.image1.one(),
-			title1 : block.title1,
-			text1 : block.text1,
-			linkText1 : block.linkText1,
-			link1 : block.link1,
-			title2 : block.title2,
-			text2 : block.text2,
-			linkText2 : block.linkText2,
-			link2 : block.link2,
-			title3 : block.title3,
-			text3 : block.text3,
-			linkText3 : block.linkText3,
-			link3 : block.link3,
+			cards : block.cards.all(),
 			backgroundColor : block.backgroundColor
 		} %}
 	{% include 'includes/sections/3-up.twig' with blockContent %}
@@ -52,8 +39,7 @@
 		{% set blockContent = {
 			heading : block.heading,
 			text : block.text,
-			link : block.href,
-			linkText : block.linkText,
+			explanationLeftLink : block.explanationLeftLink.one(),
 			image : block.image.one(),
 			backgroundColor : block.backgroundColor
 		} %}
@@ -62,8 +48,7 @@
 		{% set blockContent = {
 			heading : block.heading,
 			text : block.text,
-			link : block.href,
-			linkText : block.linkText,
+			explanationRightLink : block.explanationRightLink.one(),
 			image : block.image.one(),
 			backgroundColor : block.backgroundColor
 		} %}
@@ -72,8 +57,7 @@
 		{% set blockContent = {
 			heading : block.heading,
 			text : block.text,
-			link : block.href,
-			linkText : block.linkText,
+			jumboCtaLink : block.jumboCtaLink,
 			backgroundColor : block.backgroundColor
 		} %}
 	{% include 'includes/sections/jumbo-cta.twig' with blockContent %}
@@ -81,19 +65,7 @@
 		{% set blockContent = {
 			heading : block.heading,
 			text : block.text,
-			image1 : block.image1.one(),
-			title1 : block.title1,
-			subtitle1 : block.subtitle1,
-			text1 : block.text1,
-			link1 : block.linkedinLink1,
-			title2 : block.title2,
-			subtitle2 : block.subtitle2,
-			text2 : block.text2,
-			link2 : block.linkedinLink2,
-			title3 : block.title3,
-			subtitle3 : block.subtitle3,
-			text3 : block.text3,
-			link3 : block.linkedinLink3,
+			persons : block.persons.all(),
 			backgroundColor : block.backgroundColor
 		} %}
 	{% include 'includes/sections/3-up-people.twig' with blockContent %}
@@ -101,11 +73,12 @@
 		{% set blockContent = {
 			heading : block.heading,
 			text : block.text,
-			faqs : block.faqs
+			faqs : block.faqs,
+			backgroundColor : block.backgroundColor
 		} %}
 	{% include 'includes/sections/accordion-faq.twig' with blockContent %}
 	{% elseif block.type == "textEditor" %}
-		{% set blockContent = { text : block.text } %}
+		{% set blockContent = { text : block.text, backgroundColor : block.backgroundColor } %}
 	{% include 'includes/sections/text-editor.twig' with blockContent %}
 	{% elseif block.type == "listPricing" %}
 		{% set blockContent = {
@@ -119,7 +92,8 @@
 	{% include 'includes/sections/list-pricing.twig' with blockContent %}
 	{% elseif block.type == "video" %}
 		{% set blockContent = {
-			embedCode : block.embedCode
+			embedCode : block.embedCode,
+			backgroundColor : block.backgroundColor
 		} %}
 		{% include 'includes/sections/video.twig' with blockContent %}
 	{% elseif block.type == "quotes" %}

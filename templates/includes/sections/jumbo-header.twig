@@ -1,16 +1,22 @@
-{% if backgroundColor is defined %}
+{% if backgroundColor %}
 	{% set style = 'style=background-color:' ~ backgroundColor %}
 {% else %}
 	{% set style = null %}
 {% endif %}
-<section class="section" {{ style ? style : null }}>
+<section class="section" {{ style }}>
 	<div class="container">
 		<div class="row middle-xs center-xs text-center-xs">
 			<div class="col col-xs-12 col-md-6 text-left-md">
 				<div class="text-padding">
 					<h1>{{ heading }}</h1>
 					{{ text }}
-					<a class="btn btn-large space-xs space-sm" aria-label="Sign up free" href="{{ link }}">{{ linkText }}</a>
+					{% if jumboHeaderLink %}
+						{% if jumboHeaderLink.href.one.internalHref.one.url() is defined %}
+						<a class="btn btn-large space-xs space-sm" aria-label="{{ jumboHeaderLink.href.one.linkTitle }}" href="{{ jumboHeaderLink.href.one.internalHref.one.url() }}">{{ jumboHeaderLink.href.one.linkTitle }}</a>
+						{% elseif jumboHeaderLink.href.one.externalHref is defined %}
+						<a class="btn btn-large space-xs space-sm" aria-label="{{ jumboHeaderLink.href.one.linkTitle }}" href="{{ jumboHeaderLink.href.one.externalHref }}" target="_blank">{{ jumboHeaderLink.href.one.linkTitle }}</a>
+						{% endif %}
+					{% endif %}
 				</div>
 			</div>
 			{% if image %}
