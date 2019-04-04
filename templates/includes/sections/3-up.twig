@@ -1,45 +1,35 @@
-{% if backgroundColor is defined %}
+{% if backgroundColor %}
 	{% set style = 'style=background-color:' ~ backgroundColor %}
 {% else %}
 	{% set style = null %}
 {% endif %}
-<section class="section" {{ style ? style : null }}>
+<section class="section" {{ style }}>
 	<div class="container">
 		<div class="row">
 			<div class="col col-xs-12 text-center section-header">
 				<h2>{{ heading }}</h2>
 				<p>{{ text }}</p>
 			</div>
+			{% for card in cards %}
 			<div class="col col-xs-12 col-md-4">
 				<div class="card">
 					<img src="includes/img/pencil.svg" alt="pencil icon"/>
 					<div class="text-left text-center-md">
-						<h4>{{ title1 }}</h4>
-						<p class="small">{{ text1 }}</p>
-						<a class="small" href="{{ link1 }}">{{ linkText1 }}</a>
+						<h4>{{ card.titleCard }}</h4>
+						<p class="small">{{ card.text }}</p>
+						{% if card.cardLink %}
+						{% if card.cardLink.one.href.one.url is defined %}
+							{% set link = card.cardLink.one.href.one.url %}
+						{% elseif card.cardLink.one.href is defined %}
+							{% set link = card.cardLink.one.href %}
+						{% endif %}
+						<a class="small" href="{{ link }}">{{ card.cardLink.one.linkTitle }}</a>
+						{% endif %}
+
 					</div>
 				</div>
 			</div>
-			<div class="col col-xs-12 col-md-4">
-				<div class="card">
-					<img src="includes/img/pencil.svg" alt="pencil icon"/>
-					<div class="text-left text-center-md">
-						<h4>{{ title2 }}</h4>
-						<p class="small">{{ text2 }}</p>
-						<a class="small" href="{{ link2 }}">{{ linkText2 }}</a>
-					</div>
-				</div>
-			</div>
-			<div class="col col-xs-12 col-md-4">
-				<div class="card">
-					<img src="includes/img/pencil.svg" alt="pencil icon"/>
-					<div class="text-left text-center-md">
-						<h4>{{ title3 }}</h4>
-						<p class="small">{{ text3 }}</p>
-						<a class="small" href="{{ link3 }}">{{ linkText3 }}</a>
-					</div>
-				</div>
-			</div>
+			{% endfor %}
 		</div>
 	</div>
 </section>

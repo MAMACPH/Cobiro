@@ -6,6 +6,7 @@
 	position: relative;
 	background-color: white;
 	width: 100%;
+	margin-bottom: 2rem;
 
 	img {
 		width: 5rem;
@@ -25,7 +26,6 @@
 		}
 	}
 	&.quote {
-		margin: 0;
 
 		img {
 			margin: 0;
@@ -94,7 +94,7 @@
 		display: flex;
 		align-items: flex-start;
 		padding: 1.25rem;
-		margin-top: 1.25rem;
+		margin-bottom: 1.25rem;
 
 		img {
 			width: 3rem;

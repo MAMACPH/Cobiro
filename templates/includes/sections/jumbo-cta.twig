@@ -1,16 +1,24 @@
-{% if backgroundColor is defined %}
+{% if backgroundColor %}
 	{% set style = 'style=background-color:' ~ backgroundColor %}
 {% else %}
 	{% set style = null %}
 {% endif %}
 <section class="section">
-	<div class="section-inner"  {{ style ? style : null }}>
+	<div class="section-inner"  {{ style }}>
 		<div class="container">
 			<div class="row center-xs text-center">
 				<div class="col col-xs-12">
 					<h2>{{ heading }}</h2>
 					{{ text }}
-						<a href="{{ link }}" class="btn btn-large">{{ linkText }}</a>
+
+					{% if jumboCtaLink %}
+						{% if jumboCtaLink.href.one.internalHref.one.url() is defined %}
+						<a class="btn btn-large space-xs space-sm" aria-label="{{ jumboCtaLink.href.one.linkTitle }}" href="{{ jumboCtaLink.href.one.internalHref.one.url() }}">{{ jumboCtaLink.href.one.linkTitle }}</a>
+						{% elseif jumboCtaLink.href.one.externalHref is defined %}
+						<a class="btn btn-large space-xs space-sm" aria-label="{{ jumboCtaLink.href.one.linkTitle }}" href="{{ jumboCtaLink.href.one.externalHref }}" target="_blank">{{ jumboCtaLink.href.one.linkTitle }}</a>
+						{% endif %}
+					{% endif %}
+
 				</div>
 			</div>
 		</div>

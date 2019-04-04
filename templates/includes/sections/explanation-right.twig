@@ -1,9 +1,9 @@
-{% if backgroundColor is defined %}
+{% if backgroundColor %}
 	{% set style = 'style=background-color:' ~ backgroundColor %}
 {% else %}
 	{% set style = null %}
 {% endif %}
-<section class="section" {{ style ? style : null }}>
+<section class="section" {{ style }}>
 	<div class="container">
 		<div class="row middle-xs">
 			<div class="col col-sm-12 col-md-6">
@@ -15,7 +15,13 @@
 				<div class="text-padding">
 					<h2 class="">{{ heading }}</h2>
 					{{ text }}
-					<a href="{{ link }}">{{ linkText }}</a>
+					{% if explanationRightLink %}
+						{% if explanationRightLink.href.one.internalHref.one.url() is defined %}
+						<a href="{{ explanationRightLink.href.one.internalHref.one.url() }}">{{ explanationRightLink.href.one.linkTitle }}</a>
+						{% elseif explanationRightLink.href.one.externalHref is defined %}
+						<a href="{{ explanationRightLink.href.one.externalHref }}" target="_blank">{{ explanationRightLink.href.one.linkTitle }}</a>
+						{% endif %}
+					{% endif %}
 				</div>
 			</div>
 		</div>
