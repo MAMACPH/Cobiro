@@ -12,8 +12,10 @@
 }
 .btn-accordion {
 	position: absolute;
-	top: 1.7rem;
-	right: 2rem;
+	top: 1rem;
+	right: 1.5rem;
+	// top: 1.7rem;
+	// right: 2rem;
 
 	@include mq($until: md) {
 		top: 0.75rem;
