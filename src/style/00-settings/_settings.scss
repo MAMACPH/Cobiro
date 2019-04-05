@@ -21,5 +21,11 @@ $colors: (
 $link-color: $blue;
 $font-family-base: 'Soleil';
 $font-weight-base: 300;
+$headings-font-weight: 600;
+
+$grid-gutter: (
+  xs: 2.2rem,
+  lg: 30px
+);
 
 @import '~baseguide/scss/baseguide/00-settings/settings';
