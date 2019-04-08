@@ -13,19 +13,19 @@
 			{% for card in cards %}
 			<div class="col col-xs-12 col-md-4">
 				<div class="card">
-					<img src="includes/img/pencil.svg" alt="pencil icon"/>
+					<img src="{{ card.image.one.url }}" alt="pencil icon"/>
 					<div class="text-left text-center-md">
 						<h4>{{ card.titleCard }}</h4>
 						<p class="small">{{ card.text }}</p>
 						{% if card.cardLink %}
-						{% if card.cardLink.one.href.one.url is defined %}
-							{% set link = card.cardLink.one.href.one.url %}
-						{% elseif card.cardLink.one.href is defined %}
-							{% set link = card.cardLink.one.href %}
+							{% if card.cardLink.one.href.one.url is defined %}
+								{% set link = card.cardLink.one.href.one.url %}
+								<a class="small" href="{{ link }}">{{ card.cardLink.one.linkTitle }}</a>
+							{% elseif card.cardLink.one.href is defined %}
+								{% set link = card.cardLink.one.href %}
+								<a class="small" href="{{ link }}">{{ card.cardLink.one.linkTitle }}</a>
+							{% endif %}
 						{% endif %}
-						<a class="small" href="{{ link }}">{{ card.cardLink.one.linkTitle }}</a>
-						{% endif %}
-
 					</div>
 				</div>
 			</div>

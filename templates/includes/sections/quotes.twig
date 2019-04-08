@@ -12,22 +12,15 @@
 			</div>
 		</div>
 		<div class="row center-xs cards">
-			{% set mySuperTableBlockQuery = craft.superTable.blocks()
-				.fieldId(quotes.fieldId) %}
-
-			{# Fetch the Super Table blocks #}
-			{% set superTableBlocks = mySuperTableBlockQuery.all() %}
-
-			{# Display their contents #}
-			{% for block in superTableBlocks %}
+			{% for row in quotes %}
 			<div class="col col-xs-12 col-md-6 col-lg-4 flex between-xs">
 					<div class="card quote text-left-xs between-xs flex flex-column">
-						<h5 class="space-xs-up">{{block.quote}}</h5>
+						<h5 class="space-xs-up">{{row.quote}}</h5>
 						<div class="flex start-xs middle-xs">
-							<img class="img-fluid" src="{{ block.image.one().url }}" alt="{{ block.image.one().title }}"/>
+							<img class="img-fluid" src="{{ row.image.one().url }}" alt="{{ row.image.one().title }}"/>
 							<div>
-								<p class="small">{{ block.personName }}</p>
-								<p class="small">{{ block.organisation }}.rs</p>
+								<p class="small">{{ row.personName }}</p>
+								<p class="small">{{ row.organisation }}.rs</p>
 							</div>
 						</div>
 					</div>

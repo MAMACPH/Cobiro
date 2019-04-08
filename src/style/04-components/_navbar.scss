@@ -11,9 +11,67 @@ nav {
 	z-index: 200;
 
 	@include mq($until: lg) {
-		overflow: scroll;
-	}
+		overflow-y: scroll;
+		overflow-x: hidden;
 
+		&::before {
+			content: '';
+			z-index: 30;
+			background-color: $white;
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+		}
+
+		.navbar-mobile {
+			z-index: 30;
+
+			.brand {
+				z-index: 10;
+				position: relative;
+			}
+		}
+
+		&.closed {
+			height: auto;
+
+			.main-menu-inner {
+				transform: translateX(100%);
+			}
+		}
+	}
+	.main-menu-inner {
+		position: static;
+		display: flex;
+		flex: auto;
+		justify-content: space-between;
+		align-items: center;
+		overflow-y: scroll;
+
+		@include mq($from: lg) {
+			& .list-inline>li {
+				margin-left: 2rem;
+			}
+		}
+
+		&>ul {
+			margin-bottom: 0;
+		}
+
+		@include mq($until: lg) {
+			height: 100%;
+			position: fixed;
+			top: 0;
+			bottom: 0;
+			background-color: $white;
+			padding-top: 5rem;
+			padding-bottom: 2rem;
+			display: block;
+			transform: translateX(0);
+		}
+	}
 	.brand img {
 		width: 8rem;
 	}
@@ -56,6 +114,15 @@ nav {
 				}
 			}
 		}
+		@include mq($from: lg) {
+			&:hover {
+				.has-submenu {
+					&::after {
+						transform: rotate(-135deg) translate(10%, 10%);
+					}
+				}
+			}
+		}
 		&.expand {
 			.has-submenu {
 				&::after {
@@ -63,9 +130,14 @@ nav {
 				}
 			}
 		}
+
 	}
-	.main-menu-cta .btn {
-		padding: 0.4em 1.2em;
+	.main-menu-cta {
+		z-index: 30;
+
+		.btn {
+			padding: 0.4em 1.2em;
+		}
 	}
 	.menu-toggle {
 		display: none;
@@ -73,34 +145,44 @@ nav {
 
 	/******* Submenu *******/
 
+	.submenu-parent {
 		.submenu {
-			position: fixed;
+			position: absolute;
 			width: 100%;
-			top: 70px;
 			left: 0;
 			right: 0;
-			background-color: $white;
 			padding: 0;
-			max-height: 0;
-			overflow: hidden;
-			transition: all 0.4s ease;
+			visibility: hidden;
 
-			@include mq($from: lg) {
+			&::before {
+				content: '';
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				transform-origin: top;
+				transform: scaleY(0);
+				background-color: $white;
+				border-bottom: 1px solid $mediumgrey;
+				transition: all 0.4s ease;
 
-				.container {
-					transition: all 0.4s ease;
-					padding-top: 2rem;
-					padding-bottom: 2rem;
-					transform: translateY(-2rem);
+			}
+
+			&>.container {
+				padding-top: 3.125rem;
+				padding-bottom: 2rem;
+				transform: translateY(-2rem);
+				opacity: 0;
+				transition: all 0.2s ease;
+				transition-delay: 0s;
+
+				@include mq($until: lg) {
+					padding-top: 0;
+					padding-bottom: 0;
+					transform: none;
+					transition: none;
+					opacity: 1;
 				}
 			}
-
-			a, li, img {
-				opacity: 0;
-				transition: all 0.4s ease;
-			}
-
-
 
 			.submenu-icon {
 				width: 3.125rem;
@@ -119,13 +201,19 @@ nav {
 			}
 
 			@include mq($until: lg) {
+				overflow:hidden;
 				position: relative;
-				top: auto !important;
+				top: 1rem;
 				background-color: $lightgrey;
-				margin-left: -0.9375rem;
-				margin-right: -0.9375rem;
+				margin-left: -1.1rem;
+				margin-right: -1.1rem;
 				width: 100vw;
-				padding: 0 0.9375rem;
+				padding: 0 1.1rem;
+				max-height: 0;
+				visibility: visible;
+				// transform: scaleY(0);
+				// transform-origin: top;
+				transition: max-height 0.4s ease;
 
 				.col {
 
@@ -133,7 +221,7 @@ nav {
 
 					&.expanded {
 						padding-bottom: 0;
-						transition: all 0.4s ease;
+						// transition: all 0.4s ease;
 					}
 
 					&:last-child {
@@ -181,36 +269,47 @@ nav {
 					overflow: hidden;
 					transition: max-height 0.4s ease;
 					background-color: $mediumgrey;
-					padding: 0 0.975rem;
-					padding-left: 5.125rem;
-					margin: 0 -1.95rem;
+					padding: 0 1.1rem;
+					padding-left: 6.325rem;
+					margin: 0 -2.2rem;
 				}
 			}
 		}
-		.expand {
-			.submenu {
-				border-bottom: 1px solid $mediumgrey;
+		@include mq($from: lg) {
+			&:hover {
+				.submenu {
+					visibility: visible;
 
-				@include mq($until: lg) {
-					border-top: 1px solid $mediumgrey;
+					&::before {
+						transform: scaleY(1);
+					}
 
-					margin-top: 1rem;
+					&>.container {
+						opacity: 1;
+						transform: translateY(0);
+						transition-delay: 0.1s;
+					}
 				}
+			}
+		}
+	}
+	.expand {
+		.submenu {
+			@include mq($until: lg) {
+				border-top: 1px solid $mediumgrey;
+				visibility: visible;
+				// margin-top: 1rem;
+
 				.container {
+					opacity: 1;
 					transform: translateY(0);
 				}
-
-				a, li, img {
-					opacity: 1;
-				}
 			}
 		}
+	}
 
 
 	@include mq($until: lg) {
-		.main-menu-inner {
-			padding-top: 2rem;
-		}
 
 /******* Toggle *******/
 		.menu-toggle {
@@ -262,6 +361,7 @@ nav {
 		}
 		.main-menu-cta {
 			text-align: center;
+			z-index: 30;
 
 			.btn {
 				width: 100%;
@@ -269,22 +369,23 @@ nav {
 			}
 		}
 		.main-menu-inner, .main-menu-cta{
-			max-height: 2000px;
+			// max-height: 2000px;
 			transition: all 0.4s ease;
 			opacity: 1;
+			z-index: 20;
 		}
 
 /******* Toggle *******/
 		&.closed {
-			.main-menu-inner, .main-menu-cta {
-				padding-top: 0;
-				padding-bottom: 0;
-				box-sizing: border-box;
-				max-height: 0;
-				height: 0;
-				overflow: hidden;
-				opacity: 0;
-			}
+			// .main-menu-inner, .main-menu-cta {
+			// 	padding-top: 0;
+			// 	padding-bottom: 0;
+			// 	box-sizing: border-box;
+			// 	max-height: 0;
+			// 	height: 0;
+			// 	overflow: hidden;
+			// 	opacity: 0;
+			// }
 			.menu-toggle {
 				.top-bar {
 					transform: rotate(0);
@@ -304,14 +405,14 @@ nav {
 }
 
 /******* Clickable overlay *******/
-.navbar-overlay {
-	display: none;
-}
-.submenu-expanded .navbar-overlay {
-	content: '';
-	display: block;
-	position: fixed;
-	width: 100%;
-	height: 100%;
-	z-index: 100;
-}
+// .navbar-overlay {
+// 	display: none;
+// }
+// .submenu-expanded .navbar-overlay {
+// 	content: '';
+// 	display: block;
+// 	position: fixed;
+// 	width: 100%;
+// 	height: 100%;
+// 	z-index: 100;
+// }
