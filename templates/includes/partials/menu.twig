@@ -1,31 +1,28 @@
 
 {# Create an entry query with the 'section' and 'limit' parameters #}
 {% set mainMenu = craft.entries.section('mainMenu').level(1).all() %}
-<div class="navbar-overlay"></div>
+<!-- <div class="navbar-overlay"></div> -->
 <nav class="main-menu closed" id="navbar">
 	<div class="container">
 		<div class="row between-xs middle-xs">
-			<div class="col col-auto-lg">
-				<div class="container-fluid">
-					<div class="row start-xs middle-xs">
-						<div class="col col-auto-lg">
-							<div class="brand">
-								<a href="/" ><img src="includes/img/logo.svg" alt="Cobiro logo"/></a>
-							</div>
-							<button class="menu-toggle btn" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
-								<span class="icon-bar top-bar"></span>
-								<span class="icon-bar middle-bar"></span>
-								<span class="icon-bar bottom-bar"></span>
-							</button>
-						</div>
+			<div class="col col-auto-lg navbar-mobile">
+				<div class="brand">
+					<a href="/" ><img src="includes/img/logo.svg" alt="Cobiro logo"/></a>
+				</div>
+				<button class="menu-toggle btn" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="icon-bar top-bar"></span>
+					<span class="icon-bar middle-bar"></span>
+					<span class="icon-bar bottom-bar"></span>
+				</button>
+			</div>
 						<div class="col col-auto-lg main-menu-inner">
 							<ul class="list-inline">
 								{% for menuItem in mainMenu %}
 									{% if menuItem.level == 1 %}
 									{% set url = menuItem.linkedEntry.one() ? menuItem.linkedEntry.one().url : menuItem.externalUrl %}
-										<li class="">
+										<li {{ menuItem.hasDescendants() ? 'class="submenu-parent"' }}>
 											<a class="{{ url == entry.url ? 'active' }} {{ menuItem.hasDescendants() ? 'has-submenu' }}"
-											href="{{ menuItem.linkedEntry.one() ? menuItem.linkedEntry.one().url : menuItem.externalUrl ? '#' : '#'}}"
+											href="{{ menuItem.linkedEntry.one() ? menuItem.linkedEntry.one().url : menuItem.externalUrl }}"
 											{{ menuItem.openInNewWindow ? 'target="_blank"' : '' }}>{{ menuItem.title }}</a>
 											{% if menuItem.hasDescendants() %}
 											<div class="submenu">
@@ -35,7 +32,14 @@
 														{% for subMenuItems in subMenuItemsFetchedLevelTwo %}
 															<div class="col col-xs-12 col-lg-3 {{ subMenuItems.hasDescendants() ? 'has-subsubmenu'}}">
 
-																<a class="submenu-title" href="#">
+																{% if subMenuItems.linkedEntry.one.url is defined %}
+																	{% set subLink = subMenuItems.linkedEntry.one.url %}
+																{% elseif  subMenuItems.externalUrl is defined %}
+																	{% set subLink = subMenuItems.externalUrl %}
+																{% else %}
+																	{% set subLink = subMenuItems.externalLink %}
+																{% endif %}
+																<a class="submenu-title" href="{{ subLink }}" {{ subMenuItems.openInNewWindow ? 'target="_blank"' }}>
 																		{% if subMenuItems.icon %}
 																		<img class="submenu-icon" src="{{ subMenuItems.icon.one().url }}" alt="{{ subMenuItems.icon.one().title }}"/>
 																	{% endif %}
@@ -43,9 +47,18 @@
 																{% if subMenuItems.hasDescendants() %}
 																	<div  class="subsubmenu">
 																		<ul class="list-unstyled">
+																			<li><a class="hidden-lg" href="{{ subLink }}" {{ subMenuItems.openInNewWindow ? 'target="_blank"' }}>{{ subMenuItems.title }}</a></li>
 																	{% set subMenuItemsFetchedLevelThree = subMenuItems.descendants.level(3).all()%}
 																	{% for subSubMenuItems in subMenuItemsFetchedLevelThree %}
-																		<li><a href="#">{{ subSubMenuItems.title }}</a></li>
+
+																	{% if subSubMenuItems.linkedEntry.one.url is defined %}
+																		{% set subSubLink = subMenuItems.linkedEntry.one.url %}
+																	{% elseif  subMenuItems.externalUrl is defined %}
+																		{% set subSubLink = subMenuItems.externalUrl %}
+																	{% else %}
+																		{% set subSubLink = subMenuItems.externalLink %}
+																	{% endif %}
+																		<li><a href="{{ subSubLink }}" {{ subSubMenuItems.openInNewWindow ? 'target="_blank"' }}>{{ subSubMenuItems.title }}</a></li>
 																	{% endfor %}
 																</ul>
 																</div>
@@ -60,16 +73,15 @@
 									{% endif %}
 								{% endfor %}
 							</ul>
+
+							{% set mainMenuCTA = craft.entries.section('mainMenuCta').all() %}
+							<div class="main-menu-cta">
+								{% for CTA in mainMenuCTA %}
+								<a href="{{ CTA.externalLink ? CTA.externalLink : CTA.internalLink}}" class="btn {{ CTA.primaryButton ? '' : 'btn-secondary' }}" target="{{ CTA.newWindow ? '_blank' : '_self'}}">{{ CTA.title }}</a>
+								{% endfor %}
+							</div>
 						</div>
-					</div>
-				</div>
-			</div>
-			{% set mainMenuCTA = craft.entries.section('mainMenuCta').all() %}
-			<div class="col col-auto-lg main-menu-cta">
-				{% for CTA in mainMenuCTA %}
-				<a href="{{ CTA.externalLink ? CTA.externalLink : CTA.internalLink}}" class="btn {{ CTA.primaryButton ? '' : 'btn-secondary' }}" target="{{ CTA.newWindow ? '_blank' : '_self'}}">{{ CTA.title }}</a>
-				{% endfor %}
-			</div>
+
 		</div>
 	</div>
 </nav>
