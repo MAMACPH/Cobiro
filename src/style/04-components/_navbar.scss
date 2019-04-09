@@ -1,6 +1,5 @@
 nav {
 	border-bottom: 1px solid $mediumgrey;
-	padding: 1rem 0;
 	position: fixed;
 	width: 100%;
 	top: 0;
@@ -11,6 +10,7 @@ nav {
 	z-index: 200;
 
 	@include mq($until: lg) {
+		padding: 1rem 0;
 		// overflow-y: scroll;
 		// overflow-x: hidden;
 
@@ -56,6 +56,7 @@ nav {
 		@include mq($from: lg) {
 			& .list-inline>li {
 				margin-left: 2rem;
+				padding: 1rem 0;
 			}
 		}
 
@@ -83,6 +84,7 @@ nav {
 	}
 
 	li {
+
 		a {
 			font-size: 1rem;
 			color: $darkgrey;
@@ -151,11 +153,16 @@ nav {
 	.submenu-parent {
 		.submenu {
 			position: absolute;
+			overflow: hidden;
 			width: 100%;
 			left: 0;
 			right: 0;
 			padding: 0;
 			visibility: hidden;
+
+			@include mq($from: lg) {
+				top: 3.5rem;
+			}
 
 			&::before {
 				content: '';
