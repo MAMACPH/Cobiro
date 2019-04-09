@@ -48,7 +48,10 @@ nav {
 		flex: auto;
 		justify-content: space-between;
 		align-items: center;
-		overflow-y: scroll;
+
+		@include mq($until: lg) {
+			overflow-y: scroll;
+		}
 
 		@include mq($from: lg) {
 			& .list-inline>li {
