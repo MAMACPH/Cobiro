@@ -65,8 +65,6 @@
 	// }
 
 	function expandSubMenu(el) {
-
-
 		// el.nextElementSibling.style.top = mainMenuHeight - 1 + 'px';
 
 		if ( el.parentNode.classList.contains('expand') ) {
