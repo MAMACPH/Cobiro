@@ -1,3 +1,4 @@
+{% cache %}
 {% set entry = entry %}
 {% set pageContent = { title : entry.title } %}
 {% include 'includes/partials/header.twig' with pageContent %}
@@ -107,3 +108,4 @@
 	{% endif %}
 {% endfor %}
 {% include 'includes/partials/footer.twig' %}
+{% endcache %}
