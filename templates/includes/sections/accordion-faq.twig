@@ -12,22 +12,11 @@
 			</div>
 			{% if faqs|length %}
 				{% for faq in faqs %}
-					{% if loop.first %}
-						{% set classes = {
-							activeClass : 'active',
-							expandedClass : 'expanded-accordion'
-						} %}
-					{% else %}
-						{% set classes = {
-							activeClass : '',
-							expandedClass : ''
-						} %}
-					{% endif %}
 					<div class="col col-xs-12 accordion">
 						<div class="card text-left">
 							<h5>{{faq.faqTitle}}</h5>
-							<button class="btn btn-accordion btn-toggle btn-secondary {{  classes.activeClass }}" onclick="accordionClickHandler(event)" aria-label="Expand accordion panel"><span>+</span></button>
-							<div class="small accordion-text {{  classes.expandedClass }}">{{faq.text}}</div>
+							<button class="btn btn-accordion btn-toggle btn-secondary " onclick="accordionClickHandler(event)" aria-label="Expand accordion panel"><span>+</span></button>
+							<div class="small accordion-text ">{{faq.text}}</div>
 						</div>
 					</div>
 				{% endfor %}
