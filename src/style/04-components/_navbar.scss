@@ -11,8 +11,8 @@ nav {
 	z-index: 200;
 
 	@include mq($until: lg) {
-		overflow-y: scroll;
-		overflow-x: hidden;
+		// overflow-y: scroll;
+		// overflow-x: hidden;
 
 		&::before {
 			content: '';
@@ -204,7 +204,6 @@ nav {
 				overflow:hidden;
 				position: relative;
 				top: 1rem;
-				background-color: $lightgrey;
 				margin-left: -1.1rem;
 				margin-right: -1.1rem;
 				width: 100vw;
@@ -268,7 +267,7 @@ nav {
 					max-height: 0;
 					overflow: hidden;
 					transition: max-height 0.4s ease;
-					background-color: $mediumgrey;
+					background-color: $lightgrey;
 					padding: 0 1.1rem;
 					padding-left: 6.325rem;
 					margin: 0 -2.2rem;
