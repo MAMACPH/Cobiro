@@ -1,4 +1,4 @@
-dateModified: 1554376656
+dateModified: 1554835390
 email:
   fromEmail: mrn@mamacph.dk
   fromName: 'Craft test'
@@ -1207,7 +1207,7 @@ matrixBlockTypes:
           columns:
             col1:
               heading: Title
-              handle: title
+              handle: faqTitle
               width: ''
               type: singleline
             col2:

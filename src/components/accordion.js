@@ -2,7 +2,7 @@ window.accordionClickHandler = function(event) {
 
 	// Setup variables
 	const el = event.target;
-	const sibling = el.nextElementSibling;
+	const sibling = el.parentNode.nextElementSibling;
 	const activeBtn = document.getElementsByClassName("btn-accordion");
 	const expandedAcc = document.getElementsByClassName("accordion-text");
 	let expanded;
