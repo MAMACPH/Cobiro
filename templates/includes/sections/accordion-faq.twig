@@ -25,9 +25,9 @@
 					{% endif %}
 					<div class="col col-xs-12 accordion">
 						<div class="card text-left">
-							<h5>{{faq.title}}</h5>
+							<h5>{{faq.faqTitle}}</h5>
 							<button class="btn btn-accordion btn-toggle btn-secondary {{  classes.activeClass }}" onclick="accordionClickHandler(event)" aria-label="Expand accordion panel"><span>+</span></button>
-							<p class="small accordion-text {{  classes.expandedClass }}">{{faq.text}}</p>
+							<div class="small accordion-text {{  classes.expandedClass }}">{{faq.text}}</div>
 						</div>
 					</div>
 				{% endfor %}
