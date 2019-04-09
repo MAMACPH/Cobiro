@@ -47,7 +47,7 @@
 																{% if subMenuItems.hasDescendants() %}
 																	<div  class="subsubmenu">
 																		<ul class="list-unstyled">
-																			<li><a class="hidden-lg" href="{{ subLink }}" {{ subMenuItems.openInNewWindow ? 'target="_blank"' }}>{{ subMenuItems.title }}</a></li>
+																			<li><a class="hidden-lg hidden-xl" href="{{ subLink }}" {{ subMenuItems.openInNewWindow ? 'target="_blank"' }}>{{ subMenuItems.title }}</a></li>
 																	{% set subMenuItemsFetchedLevelThree = subMenuItems.descendants.level(3).all()%}
 																	{% for subSubMenuItems in subMenuItemsFetchedLevelThree %}
 
