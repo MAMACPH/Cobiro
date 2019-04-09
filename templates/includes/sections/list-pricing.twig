@@ -16,7 +16,7 @@
 						<h4>{{ pricings[0].titel }}</h4>
 						<p class="price h1">${{ pricings[0].price }}</p>
 						<p class="small price-caption">{{ pricings[0].text }}</p>
-						<button class="btn btn-secondary space-xs-up" aria-label="Sign up free">{{ pricings[0].linkTitle }}</button>
+						<a href="{{ pricings[0].href }}" class="btn btn-secondary space-xs-up">{{ pricings[0].linkTitle }}</a>
 						<ul class="text-left-xs price-list list-unstyled">
 							{% for baseFeature in baseFeatures %}
 								<li>{{ baseFeature.feature }}</li>
@@ -25,14 +25,13 @@
 					</div>
 				</div>
 			</div>
-
 			<div class="col col-xs-12 col-md-6 col-lg-4">
 				<div class="card flex center list-pricing">
 					<div>
 						<h4>{{ pricings[1].titel }}</h4>
 						<p class="price h1">${{ pricings[1].price }}</p>
 						<p class="small price-caption">{{ pricings[1].text }}</p>
-						<button class="btn space-xs-up" aria-label="Sign up now">{{ pricings[1].linkTitle }}</button>
+						<a href="{{ pricings[1].href }}" class="btn space-xs-up">{{ pricings[1].linkTitle }}</a>
 						<ul class="text-left-xs price-list list-unstyled">
 							{% for baseFeature in baseFeatures %}
 								<li>{{ baseFeature.feature }}</li>
