@@ -12,15 +12,16 @@
 			</div>
 		</div>
 		<div class="row center-xs cards">
-			{% for row in quotes %}
+			{% set allQuotes = quotes.all() %}
+			{% for row in allQuotes %}
 			<div class="col col-xs-12 col-md-6 col-lg-4 flex between-xs">
 					<div class="card quote text-left-xs between-xs flex flex-column">
-						<h5 class="space-xs-up">{{row.quote}}</h5>
+						<h5 class="space-xs-up">{{ row.quote }}</h5>
 						<div class="flex start-xs middle-xs">
 							<img class="img-fluid" src="{{ row.image.one().url }}" alt="{{ row.image.one().title }}"/>
 							<div>
 								<p class="small">{{ row.personName }}</p>
-								<p class="small">{{ row.organisation }}.rs</p>
+								<p class="small">{{ row.organisation }}</p>
 							</div>
 						</div>
 					</div>
