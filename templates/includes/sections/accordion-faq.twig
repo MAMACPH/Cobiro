@@ -14,9 +14,11 @@
 				{% for faq in faqs %}
 					<div class="col col-xs-12 accordion">
 						<div class="card text-left">
-							<h5>{{faq.faqTitle}}</h5>
-							<button class="btn btn-accordion btn-toggle btn-secondary " onclick="accordionClickHandler(event)" aria-label="Expand accordion panel"><span>+</span></button>
-							<div class="small accordion-text ">{{faq.text}}</div>
+							<div class="flex between-xs middle-xs">
+								<h5>{{ faq.faqTitle }}</h5>
+								<button class="btn btn-accordion btn-toggle btn-secondary" onclick="accordionClickHandler(event)" aria-label="Expand accordion panel"><span>+</span></button>
+							</div>
+							<div class="small accordion-text ">{{ faq.text }}</div>
 						</div>
 					</div>
 				{% endfor %}

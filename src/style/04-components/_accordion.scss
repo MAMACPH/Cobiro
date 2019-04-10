@@ -10,18 +10,18 @@
 		max-height: none;
 	}
 }
-.btn-accordion {
-	position: absolute;
-	top: 1rem;
-	right: 1.5rem;
-	// top: 1.7rem;
-	// right: 2rem;
+// .btn-accordion {
+// 	position: absolute;
+// 	top: 1rem;
+// 	right: 1.5rem;
+// 	// top: 1.7rem;
+// 	// right: 2rem;
 
-	@include mq($until: md) {
-		top: 0.75rem;
-		right: 0.75rem;
-	}
-}
+// 	@include mq($until: md) {
+// 		top: 0.75rem;
+// 		right: 0.75rem;
+// 	}
+// }
 .accordion {
 
 	.card {
@@ -31,5 +31,6 @@
 
 	h5 {
 		margin: 0;
+		padding-right: 5%;
 	}
 }
