@@ -7,6 +7,7 @@
 	background-color: white;
 	width: 100%;
 	margin-bottom: 2rem;
+	flex-wrap: wrap;
 
 	img {
 		width: 5rem;
@@ -18,6 +19,11 @@
 			max-width: 100%;
 			height: 3rem;
 			max-height: 3rem;
+
+			@include mq($until: md) {
+				max-width: 8rem;
+			}
+
 		}
 
 		&.card-img-large {
