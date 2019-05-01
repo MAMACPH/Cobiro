@@ -105,6 +105,12 @@
 			backgroundColor : block.backgroundColor
 		} %}
 		{% include 'includes/sections/quotes.twig' with blockContent %}
+	{% elseif block.type == "featureList" %}
+		{% set blockContent = {
+			featureList : block.features.all(),
+			backgroundColor : block.backgroundColor
+		} %}
+		{% include 'includes/sections/feature-list.twig' with blockContent %}
 	{% endif %}
 {% endfor %}
 {% include 'includes/partials/footer.twig' %}

@@ -1,4 +1,4 @@
-dateModified: 1554835390
+dateModified: 1556712369
 email:
   fromEmail: mrn@mamacph.dk
   fromName: 'Craft test'
@@ -2334,6 +2334,168 @@ matrixBlockTypes:
               6146a996-dd60-4d22-b660-1e21695d6336:
                 required: true
                 sortOrder: 2
+  cd8a902f-5091-4871-b685-d1a3479d524e:
+    field: 00c0812c-1bc5-4e9d-b707-b341f15b40ea
+    name: 'Feature List'
+    handle: featureList
+    sortOrder: 14
+    fields:
+      b939577b-9e01-46f1-b14e-6e152e0ce26e:
+        name: Features
+        handle: features
+        instructions: ''
+        searchable: true
+        translationMethod: site
+        translationKeyFormat: null
+        type: verbb\supertable\fields\SuperTableField
+        settings:
+          minRows: '1'
+          maxRows: ''
+          contentTable: '{{%stc_35_features}}'
+          localizeBlocks: false
+          staticField: ''
+          columns:
+            170:
+              width: ''
+            171:
+              width: ''
+            172:
+              width: ''
+            173:
+              width: ''
+          fieldLayout: table
+          selectionLabel: 'Add feature'
+        contentColumnType: string
+        fieldGroup: null
+      051c9049-6092-4e67-9e55-9bab2132c136:
+        name: 'Background Color'
+        handle: backgroundColor
+        instructions: ''
+        searchable: true
+        translationMethod: none
+        translationKeyFormat: null
+        type: craft\fields\Color
+        settings:
+          defaultColor: ''
+        contentColumnType: string(7)
+        fieldGroup: null
+    fieldLayouts:
+      99332cde-7ad4-4fdc-8cda-3739aed7f3a0:
+        tabs:
+          -
+            name: Content
+            sortOrder: 1
+            fields:
+              b939577b-9e01-46f1-b14e-6e152e0ce26e:
+                required: false
+                sortOrder: 1
+              051c9049-6092-4e67-9e55-9bab2132c136:
+                required: false
+                sortOrder: 2
+  1cb7afbc-3119-42de-afa5-5337aef21f18:
+    field: 4b42adf3-73c6-4ba3-8b1f-02a317a887c0
+    name: 'Internal Link'
+    handle: internalLink
+    sortOrder: 1
+    fields:
+      122def5c-0b69-41b6-9113-b0801e7ea426:
+        name: 'Link Title'
+        handle: linkTitle
+        instructions: ''
+        searchable: true
+        translationMethod: none
+        translationKeyFormat: null
+        type: craft\fields\PlainText
+        settings:
+          placeholder: ''
+          code: ''
+          multiline: ''
+          initialRows: '4'
+          charLimit: ''
+          columnType: text
+        contentColumnType: text
+        fieldGroup: null
+      e4b3f1f6-0f40-4691-ba90-f84fe1e954e4:
+        name: Link
+        handle: href
+        instructions: ''
+        searchable: true
+        translationMethod: site
+        translationKeyFormat: null
+        type: craft\fields\Entries
+        settings:
+          sources:
+            - 'section:aebcc222-f778-4b0b-8456-c203042d4448'
+          source: null
+          targetSiteId: null
+          viewMode: null
+          limit: ''
+          selectionLabel: ''
+          localizeRelations: false
+        contentColumnType: string
+        fieldGroup: null
+    fieldLayouts:
+      a866e98f-6409-4cd7-afdc-6a9428d6ecba:
+        tabs:
+          -
+            name: Content
+            sortOrder: 1
+            fields:
+              122def5c-0b69-41b6-9113-b0801e7ea426:
+                required: true
+                sortOrder: 1
+              e4b3f1f6-0f40-4691-ba90-f84fe1e954e4:
+                required: true
+                sortOrder: 2
+  665b0f57-c57e-487f-aae6-c08cdf90e73b:
+    field: 4b42adf3-73c6-4ba3-8b1f-02a317a887c0
+    name: 'External Link'
+    handle: externalLink
+    sortOrder: 2
+    fields:
+      dbec8d6e-a2cd-4d81-a18b-c954e8275c76:
+        name: 'Link Title'
+        handle: linkTitle
+        instructions: ''
+        searchable: true
+        translationMethod: none
+        translationKeyFormat: null
+        type: craft\fields\PlainText
+        settings:
+          placeholder: ''
+          code: ''
+          multiline: ''
+          initialRows: '4'
+          charLimit: ''
+          columnType: text
+        contentColumnType: text
+        fieldGroup: null
+      18296ccf-91c9-464a-acbd-0b765e88ed00:
+        name: Link
+        handle: href
+        instructions: ''
+        searchable: true
+        translationMethod: none
+        translationKeyFormat: null
+        type: craft\fields\Url
+        settings:
+          placeholder: ''
+          maxLength: '255'
+        contentColumnType: string(255)
+        fieldGroup: null
+    fieldLayouts:
+      be462a96-a8e6-4350-bae8-e885cc486c36:
+        tabs:
+          -
+            name: Content
+            sortOrder: 1
+            fields:
+              dbec8d6e-a2cd-4d81-a18b-c954e8275c76:
+                required: true
+                sortOrder: 1
+              18296ccf-91c9-464a-acbd-0b765e88ed00:
+                required: true
+                sortOrder: 2
 plugins:
   redactor:
     edition: standard
@@ -2347,6 +2509,10 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 2.0.10
+  sitemap:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.2
 sections:
   4013a702-e7ee-4b83-80dc-b9d9c30daaa9:
     name: Forside
@@ -2595,11 +2761,11 @@ sections:
                     sortOrder: 2
 siteGroups:
   927d84e1-054c-4029-9418-6bcb17c367a2:
-    name: 'Craft test'
+    name: Cobiro
 sites:
   16e863b7-d327-40e4-bf32-c2e9f6965a86:
     siteGroup: 927d84e1-054c-4029-9418-6bcb17c367a2
-    name: 'Craft test'
+    name: Cobiro
     handle: default
     language: en
     hasUrls: true
@@ -3030,11 +3196,108 @@ superTableBlockTypes:
               434f3608-aaf4-42c6-a97e-3a4bd104072d:
                 required: false
                 sortOrder: 1
+  5863b09d-dc27-4f33-9182-530a7cc98fad:
+    field: b939577b-9e01-46f1-b14e-6e152e0ce26e
+    fields:
+      cd629f93-6759-4b22-bd0f-2e64af50c35b:
+        name: Image
+        handle: image
+        instructions: ''
+        searchable: true
+        translationMethod: site
+        translationKeyFormat: null
+        type: craft\fields\Assets
+        settings:
+          useSingleFolder: '1'
+          defaultUploadLocationSource: 'volume:ae062ac1-010f-452c-b80a-2e93f2b870e1'
+          defaultUploadLocationSubpath: ''
+          singleUploadLocationSource: 'volume:ae062ac1-010f-452c-b80a-2e93f2b870e1'
+          singleUploadLocationSubpath: ''
+          restrictFiles: '1'
+          allowedKinds:
+            - image
+          sources: '*'
+          source: null
+          targetSiteId: null
+          viewMode: large
+          limit: '1'
+          selectionLabel: ''
+          localizeRelations: false
+        contentColumnType: string
+        fieldGroup: null
+      80982dea-6b9e-4cf9-99e8-4b9a1fc2262b:
+        name: Heading
+        handle: heading
+        instructions: ''
+        searchable: true
+        translationMethod: none
+        translationKeyFormat: null
+        type: craft\fields\PlainText
+        settings:
+          placeholder: ''
+          code: ''
+          multiline: ''
+          initialRows: '4'
+          charLimit: ''
+          columnType: text
+        contentColumnType: text
+        fieldGroup: null
+      a1d4ebb0-5e98-4db7-9fbe-14b353f7bfb2:
+        name: Text
+        handle: text
+        instructions: ''
+        searchable: true
+        translationMethod: none
+        translationKeyFormat: null
+        type: craft\fields\PlainText
+        settings:
+          placeholder: ''
+          code: ''
+          multiline: ''
+          initialRows: '4'
+          charLimit: ''
+          columnType: text
+        contentColumnType: text
+        fieldGroup: null
+      4b42adf3-73c6-4ba3-8b1f-02a317a887c0:
+        name: Link
+        handle: href
+        instructions: ''
+        searchable: true
+        translationMethod: site
+        translationKeyFormat: null
+        type: craft\fields\Matrix
+        settings:
+          minBlocks: '1'
+          maxBlocks: '1'
+          contentTable: '{{%matrixcontent_href_4}}'
+          localizeBlocks: false
+        contentColumnType: string
+        fieldGroup: null
+    fieldLayouts:
+      12361f14-dcdc-446a-b490-4367bfe68057:
+        tabs:
+          -
+            name: Content
+            sortOrder: 1
+            fields:
+              cd629f93-6759-4b22-bd0f-2e64af50c35b:
+                required: true
+                sortOrder: 1
+              80982dea-6b9e-4cf9-99e8-4b9a1fc2262b:
+                required: true
+                sortOrder: 2
+              a1d4ebb0-5e98-4db7-9fbe-14b353f7bfb2:
+                required: true
+                sortOrder: 3
+              4b42adf3-73c6-4ba3-8b1f-02a317a887c0:
+                required: true
+                sortOrder: 4
 system:
   edition: solo
   live: true
-  name: 'Craft test'
-  schemaVersion: 3.1.25
+  name: Cobiro
+  schemaVersion: 3.1.26
   timeZone: America/Los_Angeles
 users:
   allowPublicRegistration: false

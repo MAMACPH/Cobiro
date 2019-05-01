@@ -1,0 +1,41 @@
+{% if backgroundColor %}
+	{% set style = 'style=background-color:' ~ backgroundColor %}
+{% else %}
+	{% set style = null %}
+{% endif %}
+<section class="section" {{ style }}>
+	<div class="container">
+
+
+		{% set allFeatures = featureList %}
+		{% for row in allFeatures %}
+
+		{% if not loop.first %}
+			{% set borderClass = 'feature-list-border' %}
+		{% elseif loop.first %}
+			{% set borderClass = '' %}
+		{% endif %}
+
+		<div class="row middle-xs section-inner {{ borderClass }}">
+			<div class="col col-sm-12 col-md-4">
+				<div class="img-responsive space-sm space-xs">
+					<img src="{{ row.image.one.url }}" alt="{{ row.image.one.title }}" />
+				</div>
+			</div>
+			<div class="col col-sm-12 col-md-8">
+				<div class="text-padding">
+					<h3 class="">{{ row.heading }}</h3>
+					<p>{{ row.text }}</p>
+					{% if row.href %}
+						{% if row.href.one.type == 'externalLink' %}
+							<a href="{{ row.href.one.href }}" target="_blank">{{ row.href.one.linkTitle }}</a>
+						{% elseif row.href.one.type == 'internalLink' %}
+							<a href="{{ row.href.one.href.one.url }}">{{ row.href.one.linkTitle }}</a>
+						{% endif %}
+					{% endif %}
+				</div>
+			</div>
+		</div>
+		{% endfor %}
+	</div>
+</section>
