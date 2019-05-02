@@ -1,4 +1,4 @@
-dateModified: 1556712369
+dateModified: 1556781612
 email:
   fromEmail: mrn@mamacph.dk
   fromName: 'Craft test'
@@ -3268,7 +3268,7 @@ superTableBlockTypes:
         translationKeyFormat: null
         type: craft\fields\Matrix
         settings:
-          minBlocks: '1'
+          minBlocks: '0'
           maxBlocks: '1'
           contentTable: '{{%matrixcontent_href_4}}'
           localizeBlocks: false
@@ -3291,7 +3291,7 @@ superTableBlockTypes:
                 required: true
                 sortOrder: 3
               4b42adf3-73c6-4ba3-8b1f-02a317a887c0:
-                required: true
+                required: false
                 sortOrder: 4
 system:
   edition: solo

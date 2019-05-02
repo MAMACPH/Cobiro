@@ -26,7 +26,7 @@
 				<div class="text-padding">
 					<h3 class="">{{ row.heading }}</h3>
 					<p>{{ row.text }}</p>
-					{% if row.href %}
+					{% if row.href.one %}
 						{% if row.href.one.type == 'externalLink' %}
 							<a href="{{ row.href.one.href }}" target="_blank">{{ row.href.one.linkTitle }}</a>
 						{% elseif row.href.one.type == 'internalLink' %}
