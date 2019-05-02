@@ -1,4 +1,4 @@
-dateModified: 1556781612
+dateModified: 1556782755
 email:
   fromEmail: mrn@mamacph.dk
   fromName: 'Craft test'
@@ -329,11 +329,13 @@ matrixBlockTypes:
         settings:
           redactorConfig: ''
           purifierConfig: ''
-          cleanupHtml: '1'
           purifyHtml: '1'
           columnType: text
           availableVolumes: ''
           availableTransforms: '*'
+          removeInlineStyles: '1'
+          removeEmptyTags: '1'
+          removeNbsp: '1'
         contentColumnType: text
         fieldGroup: null
       87802272-8f73-4593-9ebe-464a057e93e5:
@@ -549,11 +551,13 @@ matrixBlockTypes:
         settings:
           redactorConfig: ''
           purifierConfig: ''
-          cleanupHtml: '1'
           purifyHtml: '1'
           columnType: text
           availableVolumes: ''
           availableTransforms: '*'
+          removeInlineStyles: '1'
+          removeEmptyTags: '1'
+          removeNbsp: '1'
         contentColumnType: text
         fieldGroup: null
       203bb0c0-fe5f-4c37-b910-1fc8f9ebedad:
@@ -648,11 +652,13 @@ matrixBlockTypes:
         settings:
           redactorConfig: ''
           purifierConfig: ''
-          cleanupHtml: '1'
           purifyHtml: '1'
           columnType: text
           availableVolumes: ''
           availableTransforms: '*'
+          removeInlineStyles: '1'
+          removeEmptyTags: '1'
+          removeNbsp: '1'
         contentColumnType: text
         fieldGroup: null
       2e5fbcec-0493-49c6-9111-ffec902c24b6:
@@ -747,11 +753,13 @@ matrixBlockTypes:
         settings:
           redactorConfig: ''
           purifierConfig: ''
-          cleanupHtml: '1'
           purifyHtml: '1'
           columnType: text
           availableVolumes: ''
           availableTransforms: '*'
+          removeInlineStyles: '1'
+          removeEmptyTags: '1'
+          removeNbsp: '1'
         contentColumnType: text
         fieldGroup: null
       dcf77aa1-2ade-4686-9cfb-43bc9c344104:
@@ -895,11 +903,13 @@ matrixBlockTypes:
         settings:
           redactorConfig: ''
           purifierConfig: ''
-          cleanupHtml: '1'
           purifyHtml: '1'
           columnType: text
           availableVolumes: ''
           availableTransforms: '*'
+          removeInlineStyles: '1'
+          removeEmptyTags: '1'
+          removeNbsp: '1'
         contentColumnType: text
         fieldGroup: null
       2ceba97f-c7a9-4430-8cea-a7606405bd6e:
@@ -991,11 +1001,13 @@ matrixBlockTypes:
         settings:
           redactorConfig: ''
           purifierConfig: ''
-          cleanupHtml: '1'
           purifyHtml: '1'
           columnType: text
           availableVolumes: '*'
           availableTransforms: '*'
+          removeInlineStyles: '1'
+          removeEmptyTags: '1'
+          removeNbsp: '1'
         contentColumnType: text
         fieldGroup: null
       0d30f701-3cb8-4d2f-a773-e0221cd85e0a:
@@ -1084,11 +1096,13 @@ matrixBlockTypes:
         settings:
           redactorConfig: ''
           purifierConfig: ''
-          cleanupHtml: '1'
           purifyHtml: '1'
           columnType: text
           availableVolumes: ''
           availableTransforms: '*'
+          removeInlineStyles: '1'
+          removeEmptyTags: '1'
+          removeNbsp: '1'
         contentColumnType: text
         fieldGroup: null
       24d51a78-a4ea-4855-acbc-4883ab2e6ce6:
@@ -1185,11 +1199,13 @@ matrixBlockTypes:
         settings:
           redactorConfig: ''
           purifierConfig: ''
-          cleanupHtml: '1'
           purifyHtml: '1'
           columnType: text
           availableVolumes: ''
           availableTransforms: '*'
+          removeInlineStyles: '1'
+          removeEmptyTags: '1'
+          removeNbsp: '1'
         contentColumnType: text
         fieldGroup: null
       d175ac94-d7ad-4251-bf97-2c375d686fdc:
@@ -1270,11 +1286,13 @@ matrixBlockTypes:
         settings:
           redactorConfig: ''
           purifierConfig: ''
-          cleanupHtml: '1'
           purifyHtml: '1'
           columnType: text
           availableVolumes: ''
           availableTransforms: '*'
+          removeInlineStyles: '1'
+          removeEmptyTags: '1'
+          removeNbsp: '1'
         contentColumnType: text
         fieldGroup: null
       092dea53-998a-4776-8d21-3d8a16083f3c:
@@ -1749,11 +1767,13 @@ matrixBlockTypes:
         settings:
           redactorConfig: ''
           purifierConfig: ''
-          cleanupHtml: '1'
           purifyHtml: '1'
           columnType: text
           availableVolumes: ''
           availableTransforms: '*'
+          removeInlineStyles: '1'
+          removeEmptyTags: '1'
+          removeNbsp: '1'
         contentColumnType: text
         fieldGroup: null
       a11b08b1-b476-43c0-a67c-94d8fda0e2ad:
@@ -2500,7 +2520,7 @@ plugins:
   redactor:
     edition: standard
     enabled: true
-    schemaVersion: 2.2.2
+    schemaVersion: 2.3.0
   matrixtoolbar:
     edition: standard
     enabled: false
@@ -3297,7 +3317,7 @@ system:
   edition: solo
   live: true
   name: Cobiro
-  schemaVersion: 3.1.26
+  schemaVersion: 3.1.27
   timeZone: America/Los_Angeles
 users:
   allowPublicRegistration: false
