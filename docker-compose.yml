@@ -1,0 +1,21 @@
+
+version: '3'
+
+services:
+  web:
+    image: bshelling/craftphpenv:latest
+    container_name: craft_web
+    volumes:
+      - ./:/var/www/site
+    ports:
+      - 8081:80
+    depends_on:
+      - mysql
+  mysql:
+    image: mysql:5.7
+    container_name: craft_db
+    environment:
+      MYSQL_ROOT_PASSWORD: adminpwd
+      MYSQL_USER: admin
+      MYSQL_PASSWORD: adminpwd
+      MYSQL_DATABASE: craftdb
