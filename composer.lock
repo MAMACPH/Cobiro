@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "674eb10df79f245a085a9d21a8b3fe1a",
+    "content-hash": "61ff95de58c673298b9abf3b17065282",
     "packages": [
         {
             "name": "cebe/markdown",
@@ -1285,6 +1285,57 @@
                 "single sign on"
             ],
             "time": "2018-11-22T18:33:57+00:00"
+        },
+        {
+            "name": "lukeyouell/craft-fetch",
+            "version": "1.2.0",
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/lukeyouell/craft-fetch/zipball/12f6f567906c3cb052d3332a4fafcd48f9f10da2",
+                "reference": "12f6f567906c3cb052d3332a4fafcd48f9f10da2",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^3.0.0"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "name": "Fetch",
+                "handle": "fetch",
+                "schemaVersion": "1.0.0",
+                "hasCpSettings": false,
+                "hasCpSection": false,
+                "changelogUrl": "https://raw.githubusercontent.com/lukeyouell/craft-fetch/v1/CHANGELOG.md",
+                "class": "lukeyouell\\fetch\\Fetch"
+            },
+            "autoload": {
+                "psr-4": {
+                    "lukeyouell\\fetch\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Luke Youell",
+                    "homepage": "https://github.com/lukeyouell"
+                }
+            ],
+            "description": "Utilise the Guzzle HTTP client from within your Craft templates.",
+            "keywords": [
+                "cms",
+                "craft",
+                "craft-plugin",
+                "craftcms",
+                "fetch",
+                "guzzle"
+            ],
+            "support": {
+                "docs": "https://github.com/lukeyouell/craft-fetch/blob/v1/README.md",
+                "issues": "https://github.com/lukeyouell/craft-fetch/issues"
+            },
+            "time": "2018-08-02T08:17:08+00:00"
         },
         {
             "name": "mikehaertl/php-shellcommand",
