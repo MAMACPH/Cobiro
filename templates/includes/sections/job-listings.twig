@@ -1,0 +1,10 @@
+
+{% set client = {
+    base_uri : 'https://jsonplaceholder.typicode.com',
+    timeout : 10
+} %}
+
+{% set requests = fetch(client, 'GET', '/posts') %}
+{% for result in requests.body %}
+	<p>{{result.title}}</p>
+{% endfor %}

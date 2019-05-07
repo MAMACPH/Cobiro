@@ -3,6 +3,7 @@
     "craftcms/cms": "3.1.25",
     "craftcms/redactor": "2.3.3.2",
     "dolphiq/sitemap": "1.0.9",
+    "lukeyouell/craft-fetch": "1.2.0",
     "monachilada/craft-matrixtoolbar": "1.0.6",
     "verbb/super-table": "2.1.18",
     "vlucas/phpdotenv": "^2.4.0"
