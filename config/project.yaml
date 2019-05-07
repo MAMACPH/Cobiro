@@ -1,7 +1,7 @@
-dateModified: 1556782755
+dateModified: 1557141828
 email:
-  fromEmail: mrn@mamacph.dk
-  fromName: 'Craft test'
+  fromEmail: bo@cobiro.com
+  fromName: Cobiro
   transportType: craft\mail\transportadapters\Sendmail
 fieldGroups:
   fb1642b6-744f-46ee-b5ff-f8832d2e9150:
@@ -2534,49 +2534,6 @@ plugins:
     enabled: true
     schemaVersion: 1.0.2
 sections:
-  4013a702-e7ee-4b83-80dc-b9d9c30daaa9:
-    name: Forside
-    handle: forside
-    type: single
-    enableVersioning: true
-    propagateEntries: true
-    siteSettings:
-      16e863b7-d327-40e4-bf32-c2e9f6965a86:
-        enabledByDefault: true
-        hasUrls: true
-        uriFormat: test
-        template: index
-    entryTypes:
-      7a687599-b3b9-462e-b934-609439377df6:
-        name: Forside
-        handle: forside
-        hasTitleField: true
-        titleLabel: Title
-        titleFormat: '{section.name|raw}'
-        sortOrder: 1
-        fieldLayouts:
-          7cd76277-1ffd-4cfe-a7d1-f9bf14975cc2:
-            tabs:
-              -
-                name: Sektioner
-                sortOrder: 1
-                fields:
-                  00c0812c-1bc5-4e9d-b707-b341f15b40ea:
-                    required: false
-                    sortOrder: 1
-              -
-                name: SEO
-                sortOrder: 2
-                fields:
-                  ab0dda18-c134-4469-8f84-e0a39629f2b9:
-                    required: false
-                    sortOrder: 1
-                  d44ae6fc-d018-48f7-b50e-e54367f88f51:
-                    required: false
-                    sortOrder: 2
-                  97271e18-146f-4490-8201-abb72553b6c4:
-                    required: false
-                    sortOrder: 3
   aebcc222-f778-4b0b-8456-c203042d4448:
     name: Pages
     handle: pages
