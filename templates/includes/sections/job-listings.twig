@@ -1,3 +1,5 @@
+<section>
+	<h2>Test</h2>
 {% set client = {
     base_uri : 'https://jsonplaceholder.typicode.com',
     timeout : 10
@@ -7,3 +9,4 @@
 {% for result in requests.body %}
 	<p>{{result.title}}</p>
 {% endfor %}
+</section>
