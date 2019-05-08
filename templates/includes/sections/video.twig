@@ -3,7 +3,12 @@
 {% else %}
 	{% set style = null %}
 {% endif %}
-<section class="section" {{ style }}>
+{% if idValue %}
+	{% set id = 'id=' ~ idValue %}
+{% else %}
+	{% set id = null %}
+{% endif %}
+<section class="section" {{ style }} {{ id }}>
 	<div class="container">
 		<div class="row center-xs">
 			<div class="col col-xs-12 col-md-8 text-editor-wrapper">

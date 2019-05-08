@@ -9,7 +9,8 @@
 			text : block.text,
 			jumboHeaderLink : block.jumboHeaderLink.one(),
 			image : block.image.one(),
-			backgroundColor : block.backgroundColor
+			backgroundColor : block.backgroundColor,
+			idValue : block.idLink
 		} %}
 	{% include 'includes/sections/jumbo-header.twig' with blockContent %}
 	{% elseif block.type == "featuredTestimonalSingle" %}
@@ -17,7 +18,8 @@
 			image : block.image.one(),
 			quote : block.quote,
 			person : block.person,
-			backgroundColor : block.backgroundColor
+			backgroundColor : block.backgroundColor,
+			idValue : block.idLink
 		} %}
 	{% include 'includes/sections/featured-testimonal-single.twig' with blockContent %}
 	{% elseif block.type == "threeUp" %}
@@ -25,7 +27,8 @@
 			heading : block.heading,
 			text : block.text,
 			cards : block.cards.all(),
-			backgroundColor : block.backgroundColor
+			backgroundColor : block.backgroundColor,
+			idValue : block.idLink
 		} %}
 	{% include 'includes/sections/3-up.twig' with blockContent %}
 	{% elseif block.type == "featuredCompanies" %}
@@ -33,7 +36,8 @@
 			heading : block.heading,
 			text : block.text,
 			images : block.images,
-			backgroundColor : block.backgroundColor
+			backgroundColor : block.backgroundColor,
+			idValue : block.idLink
 		} %}
 	{% include 'includes/sections/featured-companies.twig' with blockContent %}
 	{% elseif block.type == "explanationLeft" %}
@@ -42,7 +46,8 @@
 			text : block.text,
 			explanationLeftLink : block.explanationLeftLink.one(),
 			image : block.image.one(),
-			backgroundColor : block.backgroundColor
+			backgroundColor : block.backgroundColor,
+			idValue : block.idLink
 		} %}
 	{% include 'includes/sections/explanation-left.twig' with blockContent %}
 	{% elseif block.type == "explanationRight" %}
@@ -51,7 +56,8 @@
 			text : block.text,
 			explanationRightLink : block.explanationRightLink.one(),
 			image : block.image.one(),
-			backgroundColor : block.backgroundColor
+			backgroundColor : block.backgroundColor,
+			idValue : block.idLink
 		} %}
 	{% include 'includes/sections/explanation-right.twig' with blockContent %}
 	{% elseif block.type == "jumboCta" %}
@@ -59,7 +65,8 @@
 			heading : block.heading,
 			text : block.text,
 			jumboCtaLink : block.jumboCtaLink,
-			backgroundColor : block.backgroundColor
+			backgroundColor : block.backgroundColor,
+			idValue : block.idLink
 		} %}
 	{% include 'includes/sections/jumbo-cta.twig' with blockContent %}
 	{% elseif block.type == "threeUpPeople" %}
@@ -67,7 +74,8 @@
 			heading : block.heading,
 			text : block.text,
 			persons : block.persons.all(),
-			backgroundColor : block.backgroundColor
+			backgroundColor : block.backgroundColor,
+			idValue : block.idLink
 		} %}
 	{% include 'includes/sections/3-up-people.twig' with blockContent %}
 	{% elseif block.type == "accordionFaq" %}
@@ -75,7 +83,8 @@
 			heading : block.heading,
 			text : block.text,
 			faqs : block.faqs,
-			backgroundColor : block.backgroundColor
+			backgroundColor : block.backgroundColor,
+			idValue : block.idLink
 		} %}
 	{% include 'includes/sections/accordion-faq.twig' with blockContent %}
 	{% elseif block.type == "textEditor" %}
@@ -88,13 +97,15 @@
 			pricings : block.pricings,
 			baseFeatures : block.baseFeatures,
 			premiumFeatures : block.premiumFeatures,
-			backgroundColor : block.backgroundColor
+			backgroundColor : block.backgroundColor,
+			idValue : block.idLink
 		} %}
 	{% include 'includes/sections/list-pricing.twig' with blockContent %}
 	{% elseif block.type == "video" %}
 		{% set blockContent = {
 			embedCode : block.embedCode,
-			backgroundColor : block.backgroundColor
+			backgroundColor : block.backgroundColor,
+			idValue : block.idLink
 		} %}
 		{% include 'includes/sections/video.twig' with blockContent %}
 	{% elseif block.type == "quotes" %}
@@ -102,13 +113,15 @@
 			heading : block.heading,
 			text : block.text,
 			quotes : block.quotes,
-			backgroundColor : block.backgroundColor
+			backgroundColor : block.backgroundColor,
+			idValue : block.idLink
 		} %}
 		{% include 'includes/sections/quotes.twig' with blockContent %}
 	{% elseif block.type == "featureList" %}
 		{% set blockContent = {
 			featureList : block.features.all(),
-			backgroundColor : block.backgroundColor
+			backgroundColor : block.backgroundColor,
+			idValue : block.idLink
 		} %}
 		{% include 'includes/sections/feature-list.twig' with blockContent %}
 	{% endif %}
