@@ -43,16 +43,19 @@ jobs:
       - checkout
 
       - run:
+          name: Run build
+          command: npm run build
+      - run:
           name: Install expect command
           command: sudo apt-get install expect
       - run:
           name: Deploy templates
           command: |
-            expect -c 'spawn scp -r /templates $::env(SSH_USER)@$::env(SSH_HOST):.; expect "assword:"; send "$::env(PASSWORD)\r"; interact'
+            expect -c 'spawn scp -r templates $::env(SSH_USER)@$::env(SSH_HOST):.; expect "assword:"; send "$::env(PASSWORD)\r"; interact'
       - run:
           name: Deploy assets
           command: |
-            expect -c 'spawn scp -r /web/includes $::env(SSH_USER)@$::env(SSH_HOST):.; expect "assword:"; send "$::env(PASSWORD)\r"; interact'
+            expect -c 'spawn scp -r web/includes $::env(SSH_USER)@$::env(SSH_HOST):.; expect "assword:"; send "$::env(PASSWORD)\r"; interact'
 
 workflows:
   version: 2
