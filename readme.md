@@ -1,4 +1,5 @@
 # CraftCMS Boilerplate - MAMA CPH
+[![CircleCI](https://circleci.com/gh/MAMACPH/Cobiro.svg?style=svg)](https://circleci.com/gh/MAMACPH/Cobiro)
 
 A boilerplate for Craft CMS using webpack, babel and postcss.
 Uses scss-framework from [baseguide](https://basegui.de)
