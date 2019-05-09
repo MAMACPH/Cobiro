@@ -41,9 +41,12 @@ jobs:
       enabled: true
     steps:
       - run:
+          name: Install expect command
+          command: apt-get install expect
+      - run:
           name: Deploy Over SSH
           command: |
-            scp readme.md $SSH_USER@$SSH_HOST:. | $PASSWORD
+            expect -c 'spawn scp readme.md $SSH_USER@$SSH_HOST:.; expect "assword:"; send "$PASSWORD\r"; interact'
 
 workflows:
   version: 2
