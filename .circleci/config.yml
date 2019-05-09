@@ -43,7 +43,7 @@ jobs:
       - run:
           name: Deploy Over SSH
           command: |
-            scp readme.md labcademy.dk@linux239.unoeuro.com:.
+            expect -c 'spawn scp readme.md $SSH_USER@$SSH_HOST:.; expect "assword:"; send "$PASSWORD\r"; interact'
 
 workflows:
   version: 2
