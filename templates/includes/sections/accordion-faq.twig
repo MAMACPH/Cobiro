@@ -8,7 +8,7 @@
 {% else %}
 	{% set id = null %}
 {% endif %}
-<section class="section" {{ style }} {{ id }}>
+<section class="section accordion" {{ style }} {{ id }}>
 	<div class="container">
 		<div class="row">
 			<div class="col col-xs-12 text-center section-header">
@@ -19,11 +19,11 @@
 				{% for faq in faqs %}
 					<div class="col col-xs-12 accordion">
 						<div class="card text-left">
-							<div class="flex between-xs middle-xs">
+							<div class="flex between-xs middle-xs accordion-header">
 								<h5>{{ faq.faqTitle }}</h5>
-								<button class="btn btn-accordion btn-toggle btn-secondary" onclick="accordionClickHandler(event)" aria-label="Expand accordion panel"><span>+</span></button>
+								<button class="btn btn-accordion btn-toggle btn-secondary" aria-label="Expand accordion panel"><span>+</span></button>
 							</div>
-							<div class="small accordion-text ">{{ faq.text }}</div>
+							<div class="small accordion-text">{{ faq.text }}</div>
 						</div>
 					</div>
 				{% endfor %}

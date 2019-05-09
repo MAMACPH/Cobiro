@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "61ff95de58c673298b9abf3b17065282",
+    "content-hash": "3d1defe156902ff421e98ea52aca4170",
     "packages": [
         {
             "name": "cebe/markdown",
@@ -1149,6 +1149,56 @@
                 "schema"
             ],
             "time": "2019-01-14T23:55:14+00:00"
+        },
+        {
+            "name": "la-haute-societe/craft-google-tag-manager",
+            "version": "1.0.2",
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/la-haute-societe/craft-google-tag-manager/zipball/d32737f26f84e2365b11efaa709b3b28591ea768",
+                "reference": "d32737f26f84e2365b11efaa709b3b28591ea768",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^3.0.0-RC1"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "name": "Google Tag Manager",
+                "handle": "google-tag-manager",
+                "schemaVersion": "1.0.2",
+                "hasCpSettings": true,
+                "hasCpSection": false,
+                "changelogUrl": "https://github.com/la-haute-societe/craft-google-tag-manager/blob/master/CHANGELOG.md",
+                "class": "lhs\\googletagmanager\\GoogleTagManager"
+            },
+            "autoload": {
+                "psr-4": {
+                    "lhs\\googletagmanager\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "La Haute Société",
+                    "homepage": "https://www.lahautesociete.com"
+                }
+            ],
+            "description": "This Craft 3 plugin allows you to configure the Google Tag Manager \"ContainerID\" from the control panel and inject the GTM tags into the template.",
+            "keywords": [
+                "cms",
+                "craft",
+                "craft-plugin",
+                "craftcms",
+                "google tag manager"
+            ],
+            "support": {
+                "docs": "https://github.com/la-haute-societe/craft-google-tag-manager",
+                "issues": "https://github.com/la-haute-societe/craft-google-tag-manager/issues"
+            },
+            "time": "2019-03-13T17:07:13+00:00"
         },
         {
             "name": "league/flysystem",
