@@ -43,7 +43,11 @@ jobs:
       - run:
           name: Deploy Over SSH
           command: |
-            scp readme.md $SSH_USER@$SSH_HOST:. && $PASSWORD
+            scp readme.md $SSH_USER@$SSH_HOST:.
+      - run:
+          name: Login
+          command: |
+            $PASSWORD
 
 workflows:
   version: 2
