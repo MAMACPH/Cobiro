@@ -40,6 +40,8 @@ jobs:
     machine:
       enabled: true
     steps:
+      - checkout
+
       - run:
           name: Install expect command
           command: sudo apt-get install expect
