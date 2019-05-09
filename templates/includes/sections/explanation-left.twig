@@ -22,7 +22,7 @@
 					{{ text }}
 					{% if explanationLeftLink %}
 						{% if explanationLeftLink.href.one.internalHref.one.url() is defined %}
-						<a href="{{ explanationLeftLink.href.one.internalHref.one.url() }}">{{ explanationLeftLink.href.one.linkTitle }}</a>
+						<a href="{{ explanationLeftLink.href.one.internalHref.one.url() }}{{ explanationLeftLink.href.one.idLink ?  '#' ~ explanationLeftLink.href.one.idLink : ''}}">{{ explanationLeftLink.href.one.linkTitle }}</a>
 						{% elseif explanationLeftLink.href.one.externalHref is defined %}
 						<a href="{{ explanationLeftLink.href.one.externalHref }}" target="_blank">{{ explanationLeftLink.href.one.linkTitle }}</a>
 						{% endif %}

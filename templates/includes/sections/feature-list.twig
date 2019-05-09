@@ -33,7 +33,7 @@
 						{% if row.href.one.type == 'externalLink' %}
 							<a href="{{ row.href.one.href }}" target="_blank">{{ row.href.one.linkTitle }}</a>
 						{% elseif row.href.one.type == 'internalLink' %}
-							<a href="{{ row.href.one.href.one.url }}">{{ row.href.one.linkTitle }}</a>
+							<a href="{{ row.href.one.href.one.url }}{{ row.href.one.idLink ?  '#' ~ row.href.one.idLink : ''}}">{{ row.href.one.linkTitle }}</a>
 						{% endif %}
 					{% endif %}
 				</div>
