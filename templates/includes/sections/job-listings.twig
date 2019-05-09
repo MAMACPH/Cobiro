@@ -1,4 +1,14 @@
-<section>
+{% if backgroundColor %}
+	{% set style = 'style=background-color:' ~ backgroundColor %}
+{% else %}
+	{% set style = null %}
+{% endif %}
+{% if idValue %}
+	{% set id = 'id=' ~ idValue %}
+{% else %}
+	{% set id = null %}
+{% endif %}
+<section class="section" {{ style }} {{ id }}>
 	<h2>Test</h2>
 {% set client = {
     base_uri : 'https://jsonplaceholder.typicode.com',

@@ -3,10 +3,13 @@
 {% else %}
 	{% set style = null %}
 {% endif %}
-<section class="section" {{ style }}>
+{% if idValue %}
+	{% set id = 'id=' ~ idValue %}
+{% else %}
+	{% set id = null %}
+{% endif %}
+<section class="section" {{ style }} {{ id }}>
 	<div class="container">
-
-
 		{% set allFeatures = featureList %}
 		{% for row in allFeatures %}
 
@@ -30,7 +33,7 @@
 						{% if row.href.one.type == 'externalLink' %}
 							<a href="{{ row.href.one.href }}" target="_blank">{{ row.href.one.linkTitle }}</a>
 						{% elseif row.href.one.type == 'internalLink' %}
-							<a href="{{ row.href.one.href.one.url }}">{{ row.href.one.linkTitle }}</a>
+							<a href="{{ row.href.one.href.one.url }}{{ row.href.one.idLink ?  '#' ~ row.href.one.idLink : ''}}">{{ row.href.one.linkTitle }}</a>
 						{% endif %}
 					{% endif %}
 				</div>

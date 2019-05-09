@@ -3,7 +3,12 @@
 {% else %}
 	{% set style = null %}
 {% endif %}
-<section class="section" {{ style }}>
+{% if idValue %}
+	{% set id = 'id=' ~ idValue %}
+{% else %}
+	{% set id = null %}
+{% endif %}
+<section class="section" {{ style }} {{ id }}>
 	<div class="container">
 		<div class="row middle-xs reverse">
 			<div class="col col-sm-12 col-md-6">
@@ -17,7 +22,7 @@
 					{{ text }}
 					{% if explanationLeftLink %}
 						{% if explanationLeftLink.href.one.internalHref.one.url() is defined %}
-						<a href="{{ explanationLeftLink.href.one.internalHref.one.url() }}">{{ explanationLeftLink.href.one.linkTitle }}</a>
+						<a href="{{ explanationLeftLink.href.one.internalHref.one.url() }}{{ explanationLeftLink.href.one.idLink ?  '#' ~ explanationLeftLink.href.one.idLink : ''}}">{{ explanationLeftLink.href.one.linkTitle }}</a>
 						{% elseif explanationLeftLink.href.one.externalHref is defined %}
 						<a href="{{ explanationLeftLink.href.one.externalHref }}" target="_blank">{{ explanationLeftLink.href.one.linkTitle }}</a>
 						{% endif %}

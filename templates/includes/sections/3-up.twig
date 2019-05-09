@@ -3,7 +3,12 @@
 {% else %}
 	{% set style = null %}
 {% endif %}
-<section class="section" {{ style }}>
+{% if idValue %}
+	{% set id = 'id=' ~ idValue %}
+{% else %}
+	{% set id = null %}
+{% endif %}
+<section class="section" {{ style }} {{ id }}>
 	<div class="container">
 		<div class="row">
 			<div class="col col-xs-12 text-center section-header">
@@ -20,7 +25,7 @@
 						{% if card.cardLink %}
 							{% if card.cardLink.one.href.one.url is defined %}
 								{% set link = card.cardLink.one.href.one.url %}
-								<a class="small" href="{{ link }}">{{ card.cardLink.one.linkTitle }}</a>
+								<a class="small" href="{{ link }}{{ card.cardLink.one.idLink ?  '#' ~ card.cardLink.one.idLink : ''}}">{{ card.cardLink.one.linkTitle }}</a>
 							{% elseif card.cardLink.one.href is defined %}
 								{% set link = card.cardLink.one.href %}
 								<a class="small" href="{{ link }}">{{ card.cardLink.one.linkTitle }}</a>

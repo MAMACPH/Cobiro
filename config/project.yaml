@@ -1,4 +1,4 @@
-dateModified: 1557223531
+dateModified: 1557394140
 email:
   fromEmail: bo@cobiro.com
   fromName: Cobiro
@@ -329,13 +329,14 @@ matrixBlockTypes:
         settings:
           redactorConfig: ''
           purifierConfig: ''
+          cleanupHtml: true
+          removeInlineStyles: '1'
+          removeEmptyTags: '1'
+          removeNbsp: '1'
           purifyHtml: '1'
           columnType: text
           availableVolumes: ''
           availableTransforms: '*'
-          removeInlineStyles: '1'
-          removeEmptyTags: '1'
-          removeNbsp: '1'
         contentColumnType: text
         fieldGroup: null
       87802272-8f73-4593-9ebe-464a057e93e5:
@@ -349,11 +350,11 @@ matrixBlockTypes:
         settings:
           minRows: ''
           maxRows: '1'
-          contentTable: '{{%stc_2_jumboheaderlink}}'
+          contentTable: '{{%stc_17_jumboheaderlink}}'
           localizeBlocks: false
           staticField: ''
           columns:
-            146:
+            91:
               width: ''
           fieldLayout: matrix
           selectionLabel: 'Add link'
@@ -551,13 +552,14 @@ matrixBlockTypes:
         settings:
           redactorConfig: ''
           purifierConfig: ''
+          cleanupHtml: true
+          removeInlineStyles: '1'
+          removeEmptyTags: '1'
+          removeNbsp: '1'
           purifyHtml: '1'
           columnType: text
           availableVolumes: ''
           availableTransforms: '*'
-          removeInlineStyles: '1'
-          removeEmptyTags: '1'
-          removeNbsp: '1'
         contentColumnType: text
         fieldGroup: null
       203bb0c0-fe5f-4c37-b910-1fc8f9ebedad:
@@ -571,17 +573,17 @@ matrixBlockTypes:
         settings:
           minRows: '1'
           maxRows: ''
-          contentTable: '{{%stc_5_cards}}'
+          contentTable: '{{%stc_18_cards}}'
           localizeBlocks: false
           staticField: ''
           columns:
-            124:
+            93:
               width: ''
-            125:
+            94:
               width: ''
-            126:
+            95:
               width: ''
-            133:
+            96:
               width: ''
           fieldLayout: table
           selectionLabel: 'Add card'
@@ -652,13 +654,14 @@ matrixBlockTypes:
         settings:
           redactorConfig: ''
           purifierConfig: ''
+          cleanupHtml: true
+          removeInlineStyles: '1'
+          removeEmptyTags: '1'
+          removeNbsp: '1'
           purifyHtml: '1'
           columnType: text
           availableVolumes: ''
           availableTransforms: '*'
-          removeInlineStyles: '1'
-          removeEmptyTags: '1'
-          removeNbsp: '1'
         contentColumnType: text
         fieldGroup: null
       2e5fbcec-0493-49c6-9111-ffec902c24b6:
@@ -753,13 +756,14 @@ matrixBlockTypes:
         settings:
           redactorConfig: ''
           purifierConfig: ''
+          cleanupHtml: true
+          removeInlineStyles: '1'
+          removeEmptyTags: '1'
+          removeNbsp: '1'
           purifyHtml: '1'
           columnType: text
           availableVolumes: ''
           availableTransforms: '*'
-          removeInlineStyles: '1'
-          removeEmptyTags: '1'
-          removeNbsp: '1'
         contentColumnType: text
         fieldGroup: null
       dcf77aa1-2ade-4686-9cfb-43bc9c344104:
@@ -773,11 +777,11 @@ matrixBlockTypes:
         settings:
           minRows: ''
           maxRows: '1'
-          contentTable: '{{%stc_7_explanationleftlink}}'
+          contentTable: '{{%stc_10_explanationleftlink}}'
           localizeBlocks: false
           staticField: ''
           columns:
-            158:
+            77:
               width: ''
           fieldLayout: matrix
           selectionLabel: 'Add link'
@@ -903,13 +907,14 @@ matrixBlockTypes:
         settings:
           redactorConfig: ''
           purifierConfig: ''
+          cleanupHtml: true
+          removeInlineStyles: '1'
+          removeEmptyTags: '1'
+          removeNbsp: '1'
           purifyHtml: '1'
           columnType: text
           availableVolumes: ''
           availableTransforms: '*'
-          removeInlineStyles: '1'
-          removeEmptyTags: '1'
-          removeNbsp: '1'
         contentColumnType: text
         fieldGroup: null
       2ceba97f-c7a9-4430-8cea-a7606405bd6e:
@@ -927,7 +932,7 @@ matrixBlockTypes:
           localizeBlocks: false
           staticField: ''
           columns:
-            164:
+            67:
               width: ''
           fieldLayout: matrix
           selectionLabel: 'Add link'
@@ -1001,13 +1006,14 @@ matrixBlockTypes:
         settings:
           redactorConfig: ''
           purifierConfig: ''
+          cleanupHtml: true
+          removeInlineStyles: '1'
+          removeEmptyTags: '1'
+          removeNbsp: '1'
           purifyHtml: '1'
           columnType: text
           availableVolumes: '*'
           availableTransforms: '*'
-          removeInlineStyles: '1'
-          removeEmptyTags: '1'
-          removeNbsp: '1'
         contentColumnType: text
         fieldGroup: null
       0d30f701-3cb8-4d2f-a773-e0221cd85e0a:
@@ -1021,11 +1027,11 @@ matrixBlockTypes:
         settings:
           minRows: ''
           maxRows: '1'
-          contentTable: '{{%stc_9_jumboctalink}}'
+          contentTable: '{{%stc_6_jumboctalink}}'
           localizeBlocks: false
           staticField: ''
           columns:
-            152:
+            92:
               width: ''
           fieldLayout: matrix
           selectionLabel: 'Add link'
@@ -1096,13 +1102,14 @@ matrixBlockTypes:
         settings:
           redactorConfig: ''
           purifierConfig: ''
+          cleanupHtml: true
+          removeInlineStyles: '1'
+          removeEmptyTags: '1'
+          removeNbsp: '1'
           purifyHtml: '1'
           columnType: text
           availableVolumes: ''
           availableTransforms: '*'
-          removeInlineStyles: '1'
-          removeEmptyTags: '1'
-          removeNbsp: '1'
         contentColumnType: text
         fieldGroup: null
       24d51a78-a4ea-4855-acbc-4883ab2e6ce6:
@@ -1116,19 +1123,19 @@ matrixBlockTypes:
         settings:
           minRows: ''
           maxRows: ''
-          contentTable: '{{%stc_10_persons}}'
+          contentTable: '{{%stc_7_persons}}'
           localizeBlocks: false
           staticField: ''
           columns:
-            139:
+            68:
               width: ''
-            140:
+            69:
               width: ''
-            141:
+            70:
               width: ''
-            142:
-              width: 30%
-            143:
+            71:
+              width: ''
+            72:
               width: ''
           fieldLayout: table
           selectionLabel: 'Add person'
@@ -1199,13 +1206,14 @@ matrixBlockTypes:
         settings:
           redactorConfig: ''
           purifierConfig: ''
+          cleanupHtml: true
+          removeInlineStyles: '1'
+          removeEmptyTags: '1'
+          removeNbsp: '1'
           purifyHtml: '1'
           columnType: text
           availableVolumes: ''
           availableTransforms: '*'
-          removeInlineStyles: '1'
-          removeEmptyTags: '1'
-          removeNbsp: '1'
         contentColumnType: text
         fieldGroup: null
       d175ac94-d7ad-4251-bf97-2c375d686fdc:
@@ -1250,6 +1258,23 @@ matrixBlockTypes:
           defaultColor: ''
         contentColumnType: string(7)
         fieldGroup: null
+      cbc1070d-acfb-4700-b830-4b1d65b21ad3:
+        name: Id
+        handle: idLink
+        instructions: 'Add an id to be able to link to this section width "#id". No spaces or special characters can be used.'
+        searchable: true
+        translationMethod: none
+        translationKeyFormat: null
+        type: craft\fields\PlainText
+        settings:
+          placeholder: ''
+          code: ''
+          multiline: ''
+          initialRows: '4'
+          charLimit: '20'
+          columnType: text
+        contentColumnType: text
+        fieldGroup: null
     fieldLayouts:
       0cb90c5c-6725-411e-823e-51de953a5be6:
         tabs:
@@ -1269,6 +1294,9 @@ matrixBlockTypes:
               05851832-e2ee-4a02-bc04-8105b58469c1:
                 required: false
                 sortOrder: 4
+              cbc1070d-acfb-4700-b830-4b1d65b21ad3:
+                required: false
+                sortOrder: 5
   8d3cba86-1516-46a2-bf93-86e09b24b26e:
     field: 00c0812c-1bc5-4e9d-b707-b341f15b40ea
     name: 'Text Editor'
@@ -1286,13 +1314,14 @@ matrixBlockTypes:
         settings:
           redactorConfig: ''
           purifierConfig: ''
+          cleanupHtml: true
+          removeInlineStyles: '1'
+          removeEmptyTags: '1'
+          removeNbsp: '1'
           purifyHtml: '1'
           columnType: text
           availableVolumes: ''
           availableTransforms: '*'
-          removeInlineStyles: '1'
-          removeEmptyTags: '1'
-          removeNbsp: '1'
         contentColumnType: text
         fieldGroup: null
       092dea53-998a-4776-8d21-3d8a16083f3c:
@@ -1767,13 +1796,14 @@ matrixBlockTypes:
         settings:
           redactorConfig: ''
           purifierConfig: ''
+          cleanupHtml: true
+          removeInlineStyles: '1'
+          removeEmptyTags: '1'
+          removeNbsp: '1'
           purifyHtml: '1'
           columnType: text
           availableVolumes: ''
           availableTransforms: '*'
-          removeInlineStyles: '1'
-          removeEmptyTags: '1'
-          removeNbsp: '1'
         contentColumnType: text
         fieldGroup: null
       a11b08b1-b476-43c0-a67c-94d8fda0e2ad:
@@ -1787,17 +1817,17 @@ matrixBlockTypes:
         settings:
           minRows: ''
           maxRows: ''
-          contentTable: '{{%stc_20_quotes}}'
+          contentTable: '{{%stc_14_quotes}}'
           localizeBlocks: false
           staticField: ''
           columns:
-            116:
+            111:
               width: ''
-            117:
+            112:
               width: ''
-            118:
+            113:
               width: ''
-            119:
+            114:
               width: ''
           fieldLayout: table
           selectionLabel: ''
@@ -1876,6 +1906,23 @@ matrixBlockTypes:
           localizeRelations: false
         contentColumnType: string
         fieldGroup: null
+      cd9372a8-d84d-4808-9dfb-1a65375dbeb3:
+        name: 'Id Link'
+        handle: idLink
+        instructions: ''
+        searchable: true
+        translationMethod: none
+        translationKeyFormat: null
+        type: craft\fields\PlainText
+        settings:
+          placeholder: ''
+          code: ''
+          multiline: ''
+          initialRows: '4'
+          charLimit: ''
+          columnType: text
+        contentColumnType: text
+        fieldGroup: null
     fieldLayouts:
       eac9acee-b024-41d1-b576-40eb7219f7da:
         tabs:
@@ -1889,6 +1936,9 @@ matrixBlockTypes:
               0eaab096-dc8f-4949-bb98-c87e3efbf468:
                 required: true
                 sortOrder: 2
+              cd9372a8-d84d-4808-9dfb-1a65375dbeb3:
+                required: false
+                sortOrder: 3
   d601db3b-5a2f-4c27-a8f2-632b8d79a825:
     field: 56e51fdd-a52c-434d-9e1a-6e6768d935f3
     name: 'External Link'
@@ -1980,6 +2030,23 @@ matrixBlockTypes:
           localizeRelations: false
         contentColumnType: string
         fieldGroup: null
+      61d79e8d-9cb2-4871-a8f8-ca91a4edfbff:
+        name: 'Id Link'
+        handle: idLink
+        instructions: ''
+        searchable: true
+        translationMethod: none
+        translationKeyFormat: null
+        type: craft\fields\PlainText
+        settings:
+          placeholder: ''
+          code: ''
+          multiline: ''
+          initialRows: '4'
+          charLimit: ''
+          columnType: text
+        contentColumnType: text
+        fieldGroup: null
     fieldLayouts:
       0e9e03db-a033-401b-865c-bbad56285c5c:
         tabs:
@@ -1993,6 +2060,9 @@ matrixBlockTypes:
               e0d4ec3e-4387-4725-af26-eb887abcb252:
                 required: true
                 sortOrder: 2
+              61d79e8d-9cb2-4871-a8f8-ca91a4edfbff:
+                required: false
+                sortOrder: 3
   0d2f2a32-884f-46c0-b6d8-244532cb7e12:
     field: e634ebb6-0f7f-42aa-bed4-7881f8dbaea3
     name: 'External Link'
@@ -2084,6 +2154,23 @@ matrixBlockTypes:
           localizeRelations: false
         contentColumnType: string
         fieldGroup: null
+      77a6aa97-00f2-42ed-8a99-dc7a59d00d99:
+        name: 'Id Link'
+        handle: idLink
+        instructions: ''
+        searchable: true
+        translationMethod: none
+        translationKeyFormat: null
+        type: craft\fields\PlainText
+        settings:
+          placeholder: ''
+          code: ''
+          multiline: ''
+          initialRows: '4'
+          charLimit: ''
+          columnType: text
+        contentColumnType: text
+        fieldGroup: null
     fieldLayouts:
       e1134a08-49a0-463b-aa55-2f0e041c95b5:
         tabs:
@@ -2097,6 +2184,9 @@ matrixBlockTypes:
               9bc2ab0a-798c-4ee1-b803-78861b0abb04:
                 required: true
                 sortOrder: 2
+              77a6aa97-00f2-42ed-8a99-dc7a59d00d99:
+                required: false
+                sortOrder: 3
   90081975-b013-4bb8-a977-7a725da6adae:
     field: cda3b463-d22f-4fc0-8605-d01ad245d3db
     name: 'External Link'
@@ -2188,6 +2278,23 @@ matrixBlockTypes:
           localizeRelations: false
         contentColumnType: string
         fieldGroup: null
+      10228de8-c133-4dcc-89c2-f5a00263c175:
+        name: 'Id Link'
+        handle: idLink
+        instructions: ''
+        searchable: true
+        translationMethod: none
+        translationKeyFormat: null
+        type: craft\fields\PlainText
+        settings:
+          placeholder: ''
+          code: ''
+          multiline: ''
+          initialRows: '4'
+          charLimit: ''
+          columnType: text
+        contentColumnType: text
+        fieldGroup: null
     fieldLayouts:
       f4ed8e5c-57dd-44b1-99c0-dd4198c3c3b7:
         tabs:
@@ -2201,6 +2308,9 @@ matrixBlockTypes:
               826be77c-f80f-484d-ac81-c54254173741:
                 required: true
                 sortOrder: 2
+              10228de8-c133-4dcc-89c2-f5a00263c175:
+                required: false
+                sortOrder: 3
   bf6f9e07-3f8f-4d6a-b4ff-5f08ae9e93d5:
     field: 073601c0-d3b0-4766-b902-70a6ce50f3b6
     name: 'External Link'
@@ -2292,6 +2402,23 @@ matrixBlockTypes:
           localizeRelations: false
         contentColumnType: string
         fieldGroup: null
+      a24cebbc-d9fb-4f9b-8ab3-e1a1bbf92076:
+        name: 'Id Link'
+        handle: idLink
+        instructions: ''
+        searchable: true
+        translationMethod: none
+        translationKeyFormat: null
+        type: craft\fields\PlainText
+        settings:
+          placeholder: ''
+          code: ''
+          multiline: ''
+          initialRows: '4'
+          charLimit: ''
+          columnType: text
+        contentColumnType: text
+        fieldGroup: null
     fieldLayouts:
       3e2c9797-05dc-401f-9269-da7c75010709:
         tabs:
@@ -2305,6 +2432,9 @@ matrixBlockTypes:
               4612d5d4-5d3e-4d44-8578-6662a9f01c0b:
                 required: true
                 sortOrder: 2
+              a24cebbc-d9fb-4f9b-8ab3-e1a1bbf92076:
+                required: false
+                sortOrder: 3
   f53a999c-687e-4ade-b2c7-d67080ea30a4:
     field: 434f3608-aaf4-42c6-a97e-3a4bd104072d
     name: 'External Link'
@@ -2371,17 +2501,17 @@ matrixBlockTypes:
         settings:
           minRows: '1'
           maxRows: ''
-          contentTable: '{{%stc_35_features}}'
+          contentTable: '{{%stc_12_features}}'
           localizeBlocks: false
           staticField: ''
           columns:
-            170:
+            87:
               width: ''
-            171:
+            88:
               width: ''
-            172:
+            89:
               width: ''
-            173:
+            90:
               width: ''
           fieldLayout: table
           selectionLabel: 'Add feature'
@@ -2454,6 +2584,23 @@ matrixBlockTypes:
           localizeRelations: false
         contentColumnType: string
         fieldGroup: null
+      2f216513-a6fd-412b-9873-cfaa9c1f1f2a:
+        name: 'Id Link'
+        handle: idLink
+        instructions: ''
+        searchable: true
+        translationMethod: none
+        translationKeyFormat: null
+        type: craft\fields\PlainText
+        settings:
+          placeholder: ''
+          code: ''
+          multiline: ''
+          initialRows: '4'
+          charLimit: ''
+          columnType: text
+        contentColumnType: text
+        fieldGroup: null
     fieldLayouts:
       a866e98f-6409-4cd7-afdc-6a9428d6ecba:
         tabs:
@@ -2467,6 +2614,9 @@ matrixBlockTypes:
               e4b3f1f6-0f40-4691-ba90-f84fe1e954e4:
                 required: true
                 sortOrder: 2
+              2f216513-a6fd-412b-9873-cfaa9c1f1f2a:
+                required: false
+                sortOrder: 3
   665b0f57-c57e-487f-aae6-c08cdf90e73b:
     field: 4b42adf3-73c6-4ba3-8b1f-02a317a887c0
     name: 'External Link'
