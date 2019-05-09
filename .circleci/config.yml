@@ -44,9 +44,12 @@ jobs:
           name: Install expect command
           command: sudo apt-get install expect
       - run:
+          name: Inspect working directory
+          command: ls -a
+      - run:
           name: Deploy Over SSH
           command: |
-            expect -c 'spawn scp readme.md $::env(SSH_USER)@$::env(SSH_HOST):.; expect "assword:"; send "$::env(PASSWORD)\r"; interact'
+            expect -c 'spawn scp ~/repo/readme.md $::env(SSH_USER)@$::env(SSH_HOST):.; expect "assword:"; send "$::env(PASSWORD)\r"; interact'
 
 workflows:
   version: 2
