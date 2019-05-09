@@ -1,8 +1,20 @@
-window.accordionClickHandler = function(event) {
+const elementsArray = document.getElementsByClassName("accordion-header");
+
+for (var i = 0; i < elementsArray.length; i++){
+    elementsArray[i].addEventListener('click', accordionClickHandler, false);
+}
+
+function accordionClickHandler(event) {
 
 	// Setup variables
-	const el = event.target;
-	const sibling = el.parentNode.nextElementSibling;
+	let el;
+	if(event.target.classList.contains('accordion-header')) {
+		el = event.target;
+	} else {
+		el = event.target.parentNode;
+	}
+	const elBtn =  el.getElementsByClassName('btn-accordion')[0];
+	const sibling = el.nextElementSibling;
 	const activeBtn = document.getElementsByClassName("btn-accordion");
 	const expandedAcc = document.getElementsByClassName("accordion-text");
 	let expanded;
@@ -32,11 +44,11 @@ window.accordionClickHandler = function(event) {
 	// Set appropriate classes and maxHeight depending on state of event.target
 	if (expanded) {
 		sibling.style.maxHeight = null;
-		el.classList.remove('active');
+		elBtn.classList.remove('active');
 		sibling.classList.remove('expanded-accordion');
 	  } else {
 		sibling.style.maxHeight = sibling.scrollHeight + "px";
-		el.classList.add('active');
+		elBtn.classList.add('active');
 		sibling.classList.add('expanded-accordion');
 	}
 }

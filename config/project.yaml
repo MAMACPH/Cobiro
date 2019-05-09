@@ -1,4 +1,4 @@
-dateModified: 1557394140
+dateModified: 1557402028
 email:
   fromEmail: bo@cobiro.com
   fromName: Cobiro
@@ -2687,6 +2687,10 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 1.0.0
+  google-tag-manager:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.2
 sections:
   aebcc222-f778-4b0b-8456-c203042d4448:
     name: Pages
