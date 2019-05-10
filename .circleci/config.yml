@@ -52,12 +52,9 @@ jobs:
           name: Install expect command
           command: sudo apt-get install expect
       - run:
-          name: Install rsync command
-          command: sudo apt-get update && sudo apt-get install rsync
-      - run:
           name: Deploy templates
           command: |
-            expect -c 'spawn rsync -va ./templates $::env(SSH_USER)@$::env(SSH_HOST):.; expect "assword:"; send "$::env(PASSWORD)\r"; interact'
+            expect -c 'spawn scp -r templates $::env(SSH_USER)@$::env(SSH_HOST):.; expect "assword:"; send "$::env(PASSWORD)\r"; interact'
       - run:
           name: Deploy assets
           command: |
