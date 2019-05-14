@@ -1,6 +1,11 @@
 const path = require('path')
 const webpack = require('webpack')
+const glob = require('glob')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
+const PurgecssPlugin = require('purgecss-webpack-plugin')
+const PATHS = {
+	src: path.join(__dirname, './templates')
+  }
 
 module.exports = env => {
 
@@ -49,6 +54,9 @@ module.exports = env => {
 		},
 		plugins: [
 			new ExtractTextPlugin('css/style.css'),
+			new PurgecssPlugin({
+				paths: glob.sync(`${PATHS.src}/*`, { nodir: true })
+			  })
 		]
 	}
 }
