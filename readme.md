@@ -7,6 +7,18 @@ Uses scss-framework from [baseguide](https://basegui.de)
 ## Requirements
 Local server and database using docker.
 
+SSH into the server and install the following:
+
+``` bash
+apt-get install webp
+```
+``` bash
+apt-get install jpegoptim​
+```
+``` bash
+apt-get install optipng​
+```
+
 Needs [composer](https://getcomposer.org/download/) installed in the project directory - then run: `php composer.phar install`
 
 The Craft setup page will be available at `http://<Hostname>/index.php?p=admin/install (substituting <Hostname>)`

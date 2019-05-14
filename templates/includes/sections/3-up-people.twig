@@ -19,7 +19,12 @@
 			<div class="col col-xs-12 col-md-6 col-lg-4">
 				<div class="card people">
 					<div class="card-header-wrapper">
-						<img class="card-img-large" src="{{ person.image.one.url() }}" alt="{{ person.personTitle }}"/>
+						{% import 'macros/transformed-image' as transformedImage %}
+						{{ transformedImage.image(person.image.one, person.personTitle, "card-img-large", [
+								{ width: 640 },
+								{ width: 360 },
+								{ width: 180, jpegQuality: 65 },
+								{ width: 80, jpegQuality: 65 }], "(max-width: 679px) 80px, 180px" ) }}
 						<div class="flex middle-xs between-xs space-md-up text-left">
 							<div>
 								<h4>{{ person.personTitle }}</h4>

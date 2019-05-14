@@ -18,7 +18,14 @@
 			{% for card in cards %}
 			<div class="col col-xs-12 col-md-4">
 				<div class="card">
-					<img class="three-up-icon" src="{{ card.image.one.url }}" alt="{{ card.image.one.title }}"/>
+					{% import 'macros/transformed-image' as transformedImage %}
+					{{ transformedImage.image(card.image.one(), card.image.one.title, "three-up-icon", [
+						{ width: 900 },
+						{ width: 600 },
+						{ width: 300, jpegQuality: 65 },
+						{ width: 200, jpegQuality: 65 },
+						{ width: 150, jpegQuality: 65 },
+						{ width: 120, jpegQuality: 60 }], "(max-width: 679px) 118px, (max-width: 900px) 200px, 120px" ) }}
 					<div class="text-left text-center-md">
 						<h4>{{ card.titleCard }}</h4>
 						<p class="small">{{ card.text }}</p>

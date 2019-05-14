@@ -14,7 +14,12 @@
 			<div class="col">
 				<div class="bg-lightgrey flex testimonal-box middle-md">
 					<div class="testimonial-image-wrapper">
-						<img class="testimonial-image" src="{{ image.url }}" alt="{{ image.title }}"/>
+						{% import 'macros/transformed-image' as transformedImage %}
+						{{ transformedImage.image(image, image.title, "testimonial-image", [
+								{ width: 600 },
+								{ width: 400 },
+								{ width: 200, jpegQuality: 65 },
+								{ width: 150, jpegQuality: 65 }], "(max-width: 679px) 48px, 120px" ) }}
 					</div>
 					<div>
 						<h4>“{{ quote }}”</h4>

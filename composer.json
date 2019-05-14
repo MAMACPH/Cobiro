@@ -1,6 +1,7 @@
 {
   "require": {
-    "craftcms/cms": "3.1.25",
+    "aelvan/imager": "v2.1.10",
+    "craftcms/cms": "3.1.26",
     "craftcms/redactor": "2.3.3.2",
     "dolphiq/sitemap": "1.0.9",
     "la-haute-societe/craft-google-tag-manager": "1.0.2",

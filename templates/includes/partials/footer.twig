@@ -20,7 +20,16 @@
 						{% elseif block.type == "image" %}
 							<li>
 							{% if block.href %}<a href="{{ block.href }}">{% endif %}
-								<img class="footer-image" src="{{ block.image.one().url }}" alt="{{ block.image.one().title }}"/>
+								{% import 'macros/transformed-image' as transformedImage %}
+								{{ transformedImage.image(block.image.one(), block.image.one.title, "footer-image", [
+									{ width: 1200 },
+									{ width: 900 },
+									{ width: 600 },
+									{ width: 400 },
+									{ width: 300, jpegQuality: 65 },
+									{ width: 240, jpegQuality: 65 },
+									{ width: 200, jpegQuality: 65 },
+									{ width: 165, jpegQuality: 65 }], "(max-width: 400px) 98vw, (max-width: 679px) 45vw, (max-width: 960px) 30vw, (max-width: 1200px) 20vw, 165px" ) }}
 							{% if block.href %}</a>{% endif %}
 							</li>
 						{% endif %}

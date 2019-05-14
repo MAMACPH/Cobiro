@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
-    "baseguide": "^3.2.1"
+    "baseguide": "^3.2.1",
+    "lazysizes": "^5.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.4.4",
@@ -31,7 +32,8 @@
   "scripts": {
     "build": "webpack --env.NODE_ENV=production",
     "dev": "webpack --watch --progress --colors --env.NODE_ENV=development",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "ssh": "ssh labcademy.dk@linux239.unoeuro.com"
   },
   "browserslist": [
     "> 1%",
