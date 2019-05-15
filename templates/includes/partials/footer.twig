@@ -4,7 +4,7 @@
 			<div class="container">
 				<div class="row section end-sm">
 					<div class="col col-xs-12 col-sm-12 col-md-4 col-lg-4 text-left-lg center-xs start-lg space-xs space-sm space-md">
-						<a href="/"><img class="footer-logo space-xs space-sm space-md" src="includes/img/cobiro-logo.svg" alt="Cobiro logo" /></a>
+						<a href="/"><img class="footer-logo space-xs space-sm space-md" src="static/img/cobiro-logo.svg" alt="Cobiro logo" /></a>
 					</div>
 					{% for menuItem in footerMenu %}
 					<div class="col col-xs-12 col-sm-6 col-md-4 col-lg-2 text-left-lg center-xs start-lg space-xs space-sm space-md">
@@ -53,19 +53,19 @@
 						</div>
 						<div class="col col-xs-12 col-md-6 text-right text-center-xs text-center-sm text-right-md">
 							<a href="https://www.facebook.com/CobiroAI/" class="social-link" target="_blank">
-								<img src="includes/img/facebook.svg" alt="Facebook" />
+								<img src="static/img/facebook.svg" alt="Facebook" />
 							</a>
 							<a href="https://twitter.com/cobiroai" class="social-link" target="_blank">
-								<img src="includes/img/twitter.svg" alt="Twitter" />
+								<img src="static/img/twitter.svg" alt="Twitter" />
 							</a>
 							<a href="https://www.instagram.com/cobiroai/" class="social-link" target="_blank">
-								<img src="includes/img/instagram.svg" alt="Instagram" />
+								<img src="static/img/instagram.svg" alt="Instagram" />
 							</a>
 						</div>
 					</div>
 				</div>
 			</div>
 		</footer>
-		<script src="includes/js/bundle.min.js"></script>
+		<script src="{{ rev('bundle.js') }}"></script>
 	</body>
 </html>

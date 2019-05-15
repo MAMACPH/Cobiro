@@ -1,7 +1,7 @@
 const path = require('path');
 const webpack = require('webpack');
 const glob = require('glob');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const PurgecssPlugin = require('purgecss-webpack-plugin');
 const ManifestPlugin = require('webpack-manifest-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
@@ -16,7 +16,7 @@ module.exports = env => {
 		mode: env.NODE_ENV,
 		output: {
 			path: path.resolve(__dirname, './web/includes'),
-			publicPath: '/web/includes/js',
+			publicPath: '/web/includes/',
 			filename: 'js/[name].[contenthash].js'
 		},
 		module: {
@@ -33,27 +33,35 @@ module.exports = env => {
 				},
 				{
 					test: /\.(css|scss)$/,
-					use: ExtractTextPlugin.extract({
-						fallback: 'style-loader',
 						use: [
+							{
+								loader: MiniCssExtractPlugin.loader,
+								options: {
+								  hmr: process.env.NODE_ENV === 'development'
+								}
+							},
 							{
 								loader: 'css-loader',
 								options: { importLoaders: 2 }
 							},
 							{
-								loader: 'postcss-loader',
+								loader: 'postcss-loader'
 							},
 							{
 								loader: 'sass-loader'
 							}
 						]
-					})
 				}
 			]
 		},
 		plugins: [
 			new CleanWebpackPlugin(),
-			new ExtractTextPlugin('css/style.css'),
+			new MiniCssExtractPlugin({
+				// Options similar to the same options in webpackOptions.output
+				// both options are optional
+				filename: 'css/style.[contenthash].css',
+				chunkFilename: 'css/[id].css',
+			  }),
 			new PurgecssPlugin({
 				paths: glob.sync(
 					path.join(__dirname, 'templates/**/*.twig'),
@@ -69,7 +77,10 @@ module.exports = env => {
 					'submenu-expanded'
 				  ]
 			}),
-			new ManifestPlugin()
+			new ManifestPlugin({
+				filename: '../../manifest.json',
+				publicPath: 'includes/'
+			})
 		]
 	}
 }
