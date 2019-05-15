@@ -37,6 +37,7 @@
   "scripts": {
     "build": "webpack --env.NODE_ENV=production",
     "dev": "webpack --watch --progress --colors --env.NODE_ENV=development",
+    "server": "docker-compose up",
     "test": "echo \"Error: no test specified\" && exit 1",
     "ssh": "ssh labcademy.dk@linux239.unoeuro.com"
   },

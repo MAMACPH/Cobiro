@@ -88,7 +88,7 @@
 		} %}
 	{% include 'includes/sections/accordion-faq.twig' with blockContent %}
 	{% elseif block.type == "textEditor" %}
-		{% set blockContent = { text : block.text, backgroundColor : block.backgroundColor } %}
+		{% set blockContent = { text : block.text, backgroundColor : block.backgroundColor, idValue : block.idLink } %}
 	{% include 'includes/sections/text-editor.twig' with blockContent %}
 	{% elseif block.type == "listPricing" %}
 		{% set blockContent = {
