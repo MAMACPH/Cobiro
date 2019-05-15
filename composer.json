@@ -1,12 +1,14 @@
 {
   "require": {
-    "craftcms/cms": "3.1.25",
+    "aelvan/imager": "v2.1.10",
+    "clubstudioltd/craft-asset-rev": "6.0.2",
+    "craftcms/cms": "3.1.27",
     "craftcms/redactor": "2.3.3.2",
     "dolphiq/sitemap": "1.0.9",
     "la-haute-societe/craft-google-tag-manager": "1.0.2",
     "lukeyouell/craft-fetch": "1.2.0",
     "monachilada/craft-matrixtoolbar": "1.0.6",
-    "verbb/super-table": "2.1.18",
+    "verbb/super-table": "2.1.19",
     "vlucas/phpdotenv": "^2.4.0"
   },
   "autoload": {

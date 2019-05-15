@@ -59,7 +59,7 @@
 	#}
 
 	{# Favicons #}
-	{% set faviconPath = 'includes/img/favicons' %}
+	{% set faviconPath = 'static/img/favicons' %}
 	<link rel="apple-touch-icon-precomposed" sizes="57x57" href="{{ faviconPath }}/apple-touch-icon-57x57.png" />
 	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{ faviconPath }}/apple-touch-icon-114x114.png" />
 	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{ faviconPath }}/apple-touch-icon-72x72.png" />
@@ -76,7 +76,7 @@
 
 	{# CSS #}
 	<link rel="stylesheet" href="https://use.typekit.net/dpj5gga.css">
-	<link rel="stylesheet" type="text/css" href="includes/css/style.css">
+	<link rel="stylesheet" type="text/css" href="{{ rev('bundle.css') }}">
 </head>
 <body>
 {{ craft.googleTagManager.bodySection() }}

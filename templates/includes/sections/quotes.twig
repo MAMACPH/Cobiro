@@ -23,7 +23,11 @@
 					<div class="card quote text-left-xs between-xs flex flex-column">
 						<h5 class="space-xs-up">{{ row.quote }}</h5>
 						<div class="flex start-xs middle-xs">
-							<img class="img-fluid" src="{{ row.image.one().url }}" alt="{{ row.image.one().title }}"/>
+							{% import 'macros/transformed-image' as transformedImage %}
+							{{ transformedImage.image(row.image.one(), row.image.one().title, "img-fluid", [
+									{ width: 144 },
+									{ width: 96, jpegQuality: 65 },
+									{ width: 48, jpegQuality: 65 }], "48px" ) }}
 							<div>
 								<p class="small">{{ row.personName }}</p>
 								<p class="small">{{ row.organisation }}</p>

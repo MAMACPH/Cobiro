@@ -7,7 +7,7 @@
 		<div class="row between-xs middle-xs">
 			<div class="col col-auto-lg navbar-mobile">
 				<div class="brand">
-					<a href="/" ><img src="includes/img/logo.svg" alt="Cobiro logo"/></a>
+					<a href="/" ><img src="static/img/logo.svg" alt="Cobiro logo"/></a>
 				</div>
 				<button class="menu-toggle btn" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="icon-bar top-bar"></span>
@@ -41,7 +41,11 @@
 																{% endif %}
 																<a class="submenu-title" href="{{ subLink }}" {{ subMenuItems.openInNewWindow ? 'target="_blank"' }}>
 																		{% if subMenuItems.icon %}
-																		<img class="submenu-icon" src="{{ subMenuItems.icon.one().url }}" alt="{{ subMenuItems.icon.one().title }}"/>
+																		{% import 'macros/transformed-image' as transformedImage %}
+																		{{ transformedImage.image(subMenuItems.icon.one(), subMenuItems.icon.one().title, "submenu-icon", [
+																			{ width: 150, jpegQuality: 65 },
+																			{ width: 100, jpegQuality: 65 },
+																			{ width: 50, jpegQuality: 65 }], "50px" ) }}
 																	{% endif %}
 																	{{ subMenuItems.title }}</a>
 																{% if subMenuItems.hasDescendants() %}

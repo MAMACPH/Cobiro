@@ -13,7 +13,15 @@
 		<div class="row middle-xs reverse">
 			<div class="col col-sm-12 col-md-6">
 				<div class="img-responsive space-sm space-xs">
-					<img src="{{ image.url }}" alt="{{ image.title }}" />
+						{% import 'macros/transformed-image' as transformedImage %}
+						{{ transformedImage.image(image, image.title, "", [
+							{ width: 1800 },
+							{ width: 1500 },
+							{ width: 1200 },
+							{ width: 900 },
+							{ width: 600, jpegQuality: 65 },
+							{ width: 400, jpegQuality: 65 },
+							{ width: 300, jpegQuality: 65 }], "(max-width: 679px) 96vw, (max-width: 1200px) 45vw, 600px" ) }}
 				</div>
 			</div>
 			<div class="col col-sm-12 col-md-6">

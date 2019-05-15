@@ -19,7 +19,12 @@
 				{% set images = images.all() %}
 				{% for image in images %}
 				<div class="customer-logo col col-xs-6 col-md-3">
-					<img src="{{ image.url }}" alt="{{ image.title }}" />
+					{% import 'macros/transformed-image' as transformedImage %}
+					{{ transformedImage.image(image, image.title, "", [
+							{ width: 600 },
+							{ width: 400 },
+							{ width: 200, jpegQuality: 65 },
+							{ width: 150, jpegQuality: 65 }], "(max-width: 470px) 45vw, 200px" ) }}
 				</div>
 				{% endfor %}
 			</div>

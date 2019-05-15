@@ -1,4 +1,4 @@
-dateModified: 1557402028
+dateModified: 1557918863
 email:
   fromEmail: bo@cobiro.com
   fromName: Cobiro
@@ -2678,7 +2678,7 @@ plugins:
   super-table:
     edition: standard
     enabled: true
-    schemaVersion: 2.0.10
+    schemaVersion: 2.0.11
   sitemap:
     edition: standard
     enabled: true
@@ -2691,6 +2691,14 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 1.0.2
+  imager:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.0.0
+  assetrev:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
 sections:
   aebcc222-f778-4b0b-8456-c203042d4448:
     name: Pages
@@ -3432,7 +3440,7 @@ system:
   edition: solo
   live: true
   name: Cobiro
-  schemaVersion: 3.1.27
+  schemaVersion: 3.1.28
   timeZone: America/Los_Angeles
 users:
   allowPublicRegistration: false
