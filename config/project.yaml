@@ -1,4 +1,4 @@
-dateModified: 1557908812
+dateModified: 1557918863
 email:
   fromEmail: bo@cobiro.com
   fromName: Cobiro
@@ -2678,7 +2678,7 @@ plugins:
   super-table:
     edition: standard
     enabled: true
-    schemaVersion: 2.0.10
+    schemaVersion: 2.0.11
   sitemap:
     edition: standard
     enabled: true
