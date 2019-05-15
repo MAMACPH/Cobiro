@@ -1,11 +1,10 @@
-const path = require('path')
-const webpack = require('webpack')
-const glob = require('glob')
-const ExtractTextPlugin = require('extract-text-webpack-plugin')
-const PurgecssPlugin = require('purgecss-webpack-plugin')
-const PATHS = {
-	src: path.join(__dirname, './templates')
-  }
+const path = require('path');
+const webpack = require('webpack');
+const glob = require('glob');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const PurgecssPlugin = require('purgecss-webpack-plugin');
+const ManifestPlugin = require('webpack-manifest-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = env => {
 
@@ -18,7 +17,7 @@ module.exports = env => {
 		output: {
 			path: path.resolve(__dirname, './web/includes'),
 			publicPath: '/web/includes/js',
-			filename: 'js/[name].min.js'
+			filename: 'js/[name].[contenthash].js'
 		},
 		module: {
 			rules: [
@@ -53,10 +52,24 @@ module.exports = env => {
 			]
 		},
 		plugins: [
+			new CleanWebpackPlugin(),
 			new ExtractTextPlugin('css/style.css'),
 			new PurgecssPlugin({
-				paths: glob.sync(`${PATHS.src}/*`, { nodir: true })
-			  })
+				paths: glob.sync(
+					path.join(__dirname, 'templates/**/*.twig'),
+					path.join(__dirname, 'src/**/*.js')
+				),
+				whitelist: [
+					'active',
+					'expanded-accordion',
+					'has-submenu',
+					'has-subsubmenu',
+					'expanded',
+					'expand',
+					'submenu-expanded'
+				  ]
+			}),
+			new ManifestPlugin()
 		]
 	}
 }
