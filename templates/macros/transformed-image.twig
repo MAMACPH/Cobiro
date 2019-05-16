@@ -12,7 +12,7 @@
 			<source sizes="{{ sizes }}" srcset="{{ craft.imager.srcset(transformedImagesWebP) }}" type="image/webp">
 		{% endif %}
 		<img
-			data-src="{{ craft.imager.base64Pixel(2,1) }}"
+			data-src="{{ craft.imager.transformImage(image, { width: 20 }, { jpegQuality: 1 }, { fillTransforms: false }) }}"
 			data-sizes="{{ sizes }}"
 			data-srcset="{{ craft.imager.srcset(transformedImages) }}"
 			class="{{ classes ? classes ~ ' lazyload' : 'lazyload' }}"
@@ -24,4 +24,3 @@
 {% endif %}
 
 {% endmacro %}
-
