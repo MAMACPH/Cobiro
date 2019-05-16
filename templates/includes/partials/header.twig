@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html lang="{{ craft.app.locale }}">
+{% cache %}
+{% set entry = entry %}
 <head>
 	{{ craft.googleTagManager.headSection() }}
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -9,13 +11,14 @@
 		{% set pageTitleDivider = '|' %}
 	{% endif %}
 	<title>{{ [pageTitle ?? null, pageTitleDivider ?? null, siteName]|join(' ')|trim }}</title>
+	{#
 	<script>document.documentElement.className = document.documentElement.className.replace(/(\s|^)no-js(\s|$)/, '$1js$2');window.isTouch = !!("ontouchstart" in window); if (!window.isTouch) {document.documentElement.className += " no-touch";}</script>
 	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 	})(window,document,'script','dataLayer','GTM-WNJH22W');</script>
-
+	#}
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 
 	{# SEO Tags #}
@@ -78,6 +81,7 @@
 	<link rel="stylesheet" href="https://use.typekit.net/dpj5gga.css">
 	<link rel="stylesheet" type="text/css" href="{{ rev('bundle.css') }}">
 </head>
+{% endcache %}
 <body>
 {{ craft.googleTagManager.bodySection() }}
 {% include 'includes/partials/menu.twig' %}

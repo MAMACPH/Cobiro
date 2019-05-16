@@ -33,6 +33,12 @@ return [
         // Dev Mode (see https://craftcms.com/guides/what-dev-mode-does)
 		'devMode' => true,
 		'disableIndexing' => true,
+		'bootstrap' => ['debug'],
+		'modules' => [
+			'debug' => [
+				'class' => 'yii\debug\Module',
+			]
+		]
     ],
 
     // Staging environment settings

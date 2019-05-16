@@ -2,7 +2,24 @@
 {% set entry = entry %}
 {% set pageContent = { title : entry.title } %}
 {% include 'includes/partials/header.twig' with pageContent %}
-{% for block in entry.sections.all() %}
+{% set blocks = entry.sections.with(
+	['jumboHeader.children.children.children',
+	'featuredTestimonalSingle.children.children.children',
+	'threeUp.children.children.children',
+	'featuredCompanies.children.children.children',
+	'explanationLeft.children.children.children',
+	'explanationRight.children.children.children',
+	'jumboCta.children.children.children',
+	'threeUpPeople.children.children.children',
+	'accordionFaq.children.children.children',
+	'textEditor.children.children.children',
+	'listPricing.children.children.children',
+	'video.children.children.children',
+	'quotes.children.children.children',
+	'featureList.children.children.children',]).all()
+	%}
+
+{% for block in blocks %}
 	{% if block.type == "jumboHeader" %}
 		{% set blockContent = {
 			heading : block.heading,
@@ -35,7 +52,7 @@
 		{% set blockContent = {
 			heading : block.heading,
 			text : block.text,
-			images : block.images,
+			images : block.images.all(),
 			backgroundColor : block.backgroundColor,
 			idValue : block.idLink
 		} %}
@@ -88,7 +105,10 @@
 		} %}
 	{% include 'includes/sections/accordion-faq.twig' with blockContent %}
 	{% elseif block.type == "textEditor" %}
-		{% set blockContent = { text : block.text, backgroundColor : block.backgroundColor, idValue : block.idLink } %}
+		{% set blockContent = {
+			text : block.text,
+			backgroundColor : block.backgroundColor,
+			idValue : block.idLink } %}
 	{% include 'includes/sections/text-editor.twig' with blockContent %}
 	{% elseif block.type == "listPricing" %}
 		{% set blockContent = {

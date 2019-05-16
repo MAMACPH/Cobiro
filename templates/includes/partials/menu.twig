@@ -1,6 +1,6 @@
-
+{% cache %}
 {# Create an entry query with the 'section' and 'limit' parameters #}
-{% set mainMenu = craft.entries.section('mainMenu').level(1).all() %}
+{% set mainMenu = craft.entries.section('mainMenu').all() %}
 <!-- <div class="navbar-overlay"></div> -->
 <nav class="main-menu closed" id="navbar">
 	<div class="container">
@@ -17,7 +17,7 @@
 			</div>
 						<div class="col col-auto-lg main-menu-inner">
 							<ul class="list-inline">
-								{% for menuItem in mainMenu %}
+								{% nav menuItem in mainMenu %}
 									{% if menuItem.level == 1 %}
 									{% set url = menuItem.linkedEntry.one() ? menuItem.linkedEntry.one().url : menuItem.externalUrl %}
 										<li {{ menuItem.hasDescendants() ? 'class="submenu-parent"' }}>
@@ -75,7 +75,7 @@
 											{% endif %}
 										</li>
 									{% endif %}
-								{% endfor %}
+								{% endnav %}
 							</ul>
 
 							{% set mainMenuCTA = craft.entries.section('mainMenuCta').all() %}
@@ -89,3 +89,4 @@
 		</div>
 	</div>
 </nav>
+{% endcache %}

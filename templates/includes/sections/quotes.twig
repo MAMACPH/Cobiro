@@ -17,8 +17,7 @@
 			</div>
 		</div>
 		<div class="row center-xs cards">
-			{% set allQuotes = quotes.all() %}
-			{% for row in allQuotes %}
+			{% for row in quotes %}
 			<div class="col col-xs-12 col-md-6 col-lg-4 flex between-xs">
 					<div class="card quote text-left-xs between-xs flex flex-column">
 						<h5 class="space-xs-up">{{ row.quote }}</h5>

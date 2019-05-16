@@ -16,7 +16,6 @@
 					<h2>{{ heading }}</h2>
 					{{ text }}
 				</div>
-				{% set images = images.all() %}
 				{% for image in images %}
 				<div class="customer-logo col col-xs-6 col-md-3">
 					{% import 'macros/transformed-image' as transformedImage %}
